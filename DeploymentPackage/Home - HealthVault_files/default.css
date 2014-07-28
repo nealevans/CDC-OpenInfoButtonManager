@@ -1,0 +1,8292 @@
+﻿/** Global **/
+
+.center {
+  margin: auto;
+}
+/* Begin: HTML overrides */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+p {
+  margin-bottom: 15px;
+}
+hr {
+  color: #dddddd;
+  background-color: #dddddd;
+  border: 0;
+  height: 1px;
+  margin: 10px 0;
+}
+hr.lighter {
+  background-color: #eeeeee;
+}
+/* End: HTML */
+
+/* Begin: Div Containers */
+
+#ctlContentContainer {
+  overflow: hidden;
+  padding: 17px 20px 20px 20px;
+  _float: left;
+}
+#ctlContentContainer li.links {
+  margin-bottom: 20px;
+}
+#ctlContentContainer a {
+  color: #00a8cc;
+}
+#ctlContentContainer #appLogo {
+  float: left;
+  margin-top: auto;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: auto;
+}
+/* End: Page Containers */
+
+/* Begin: Common */
+
+.clearRight {
+  clear: right;
+}
+.marginTop15 {
+  margin-top: 15px;
+}
+.cmnLightText {
+  color: #666666;
+}
+.radioButton {
+  vertical-align: middle;
+}
+.cmnIcon16 {
+  width: 16px;
+  height: 16px;
+  border: 0em;
+  vertical-align: middle;
+}
+.noPadding {
+  padding: 0px !important;
+}
+.noMargin {
+  margin: 0px !important;
+}
+.cmnFullWidth {
+  width: 100%;
+}
+.cmnLeftAlign {
+  text-align: left;
+}
+.reconcileDetailColumn {
+  float: right;
+  padding-top: 4px;
+}
+.lineHeight20 {
+  line-height: 20px;
+}
+/* End: Common */
+
+/* Begin: Utilities */
+
+.plainBG {
+  background: white;
+  min-width: 0px;
+  margin: 35px 35px 0 35px;
+}
+.bullet {
+  margin-left: 20px;
+  list-style: disc;
+}
+.bullet li {
+  margin-bottom: 10px;
+}
+.actionDescriptionButton {
+  margin-bottom: 30px;
+  padding-top: 15px;
+}
+.actionDescriptionButton .buttons {
+  margin-top: 10px;
+  text-align: center;
+}
+.clear {
+  display: block;
+  clear: both;
+  height: 1px !important;
+  overflow: hidden;
+  font-size: 1px;
+  line-height: 1px;
+  float: none !important;
+  text-indent: -9999px;
+}
+.contentPadding {
+  height: 50px;
+}
+/* End: Utilities */
+
+/* Begin: Skip Nav */
+
+#skip,
+#skip:hover,
+#skip:visited {
+  position: absolute;
+  left: 0px;
+  top: -500px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+#skip:active,
+#skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+/* End: Skip Nav */
+
+/* Begin: History */
+
+.ctlHistoryDDBox {
+  width: 100%;
+  float: left;
+  clear: left;
+}
+.ctlHistoryTbl td.thing {
+  padding: 12px;
+}
+.ctlHistoryTbl {
+  border-collapse: collapse;
+  border: 0px !important;
+  margin-top: 15px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 750px;
+}
+.ctlHistoryTbl .historyTimeStamp {
+  color: #666666;
+  padding-right: 12px;
+}
+.ctlHistoryTbl td {
+  border: 0px !important;
+  padding-top: 6px;
+}
+.ctlHistoryTbl tr {
+  border: 0px !important;
+}
+span.grayTitle {
+  color: #666666;
+  line-height: 25px;
+}
+/* End: History */
+
+/* Begin: ViewItems */
+
+.separator {
+  width: 3px;
+  background: url(../imgs/backgrounds/toolbar_separator.gif) 0 0 no-repeat;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 1px;
+  margin-left: 2px;
+}
+#viewItemsNavigation {
+  padding: 5px 3px;
+  background-image: url(../imgs/backgrounds/toolbar_bg.gif);
+}
+.viewItemsHeaderContainer {
+  border-style: solid;
+  border-color: #d4d5dc;
+  border-width: 1px 1px 0px 1px;
+  -moz-margin-start: -1px;
+}
+.immutableDataWarning {
+  background-color: #ffffa7;
+  margin: 5px 5px 0px 5px;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  padding-left: 13px;
+  padding-right: 5px;
+}
+.immutableDataWarning div {
+  padding-left: 5px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+.ctlItemDetailContainer {
+  padding: 8px;
+  background: #e5f0f9;
+  border-right: 1px solid #e5f0f9;
+  border-left: 1px solid #e5f0f9;
+  border-bottom: 1px solid #e5f0f9;
+}
+.ctlItemDetailContainerSummaryOnly {
+  padding: 8px;
+  background: #e5f0f9;
+  border-right: 1px solid #e5f0f9;
+  border-left: 1px solid #e5f0f9;
+  border-bottom: 3px double #e5f0f9;
+  display: block;
+  height: 100%;
+}
+.ctlItemDetailNavContainer {
+  float: left;
+  background: #e5f0f9;
+  overflow: hidden;
+  position: relative;
+  clear: both;
+  margin-bottom: -1px;
+}
+.ctlTabActive {
+  vertical-align: middle;
+  text-align: center;
+  background-color: white;
+  border: solid #d4d5dc;
+  border-width: 1px 1px 1px 1px;
+  border-bottom: 1px solid white;
+  float: left;
+}
+.ctlTabActive a:link,
+.ctlTabActive a:visited {
+  text-decoration: none !important;
+}
+.ctlTabActive a:hover {
+  text-decoration: underline !important;
+}
+.ctlTabInactive {
+  vertical-align: middle;
+  text-align: center;
+  background: url(../imgs/backgrounds/toolbar_bg.gif) 0 0 repeat-x;
+  border: solid #d4d5dc;
+  border-width: 1px 1px 1px 1px;
+  float: left;
+}
+.ctlTabActive a,
+.ctlTabInactive a {
+  padding: 5px 0 0 0;
+  height: 20px;
+  width: 83px;
+  display: block;
+}
+.ctlTabInactive a:link,
+.ctlTabInactive a:visited {
+  text-decoration: none !important;
+}
+.ctlTabInactive a:hover {
+  text-decoration: underline !important;
+  background-color: white;
+}
+.viewItemsActiveTab {
+  vertical-align: middle;
+  text-align: center;
+  color: #0072c6;
+  font-size: 21px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  float: left;
+}
+.viewItemsActiveTab a:link,
+.viewItemsActiveTab a:hover,
+.viewItemsActiveTab a:visited {
+  text-decoration: none !important;
+}
+.viewItemsInActiveTab {
+  vertical-align: middle;
+  text-align: center;
+  color: #666666 !important;
+  font-size: 21px;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  float: left;
+}
+.viewItemsInActiveTab a {
+  color: #666666 !important;
+  text-decoration: none !important;
+}
+.viewItemsInActiveTab a:hover {
+  color: #0072c6 !important;
+  text-decoration: none !important;
+}
+.viewItemsInActiveTab a:visited {
+  text-decoration: none !important;
+}
+.ctlItemDetailContent {
+  width: 100%;
+  max-height: 800px;
+  overflow: auto;
+  float: left;
+  background: white;
+  border: 1px solid #d4d5dc;
+  clear: both;
+}
+.ctlItemDetailContentLarge {
+  width: 100%;
+  max-height: 800px;
+  overflow: auto;
+  float: left;
+  background: white;
+  border: 1px solid #d4d5dc;
+  clear: both;
+  max-height: 500px;
+}
+.ctlItemDetailContentSummaryOnly {
+  width: 100%;
+  float: left;
+  background: white;
+  border: 1px solid #d4d5dc;
+}
+.ctlItemDetailTop {
+  float: right;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+.ctlItemDetailMid {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 0;
+  padding-left: 10px;
+  clear: both;
+  width: 98.5%;
+  float: right;
+}
+#genTabSUMMARY,
+#genTabHISTORY table,
+#genTabSIGNATURE table,
+#genTabRELATED table {
+  width: 95%;
+  border-collapse: collapse !important;
+}
+.genTabSUMMARY {
+  width: 95%;
+  max-width: 1150px;
+  margin-top: 16px;
+}
+.genTabSIGNATURE {
+  width: 95%;
+  border-collapse: collapse !important;
+  padding-top: 20px;
+}
+.ctlActionLinks {
+  display: inline;
+  height: 20px;
+  float: left;
+  padding: 5px 5px 0 5px;
+  vertical-align: middle;
+  text-align: center;
+}
+.ctlToolbarLinks a {
+  vertical-align: top;
+  color: #666666 !important;
+}
+.ctlToolbarLinks a:hover {
+  text-decoration: none !important;
+  color: black !important;
+}
+.ctlToolbarLinks img {
+  margin-right: 3px;
+  vertical-align: top;
+}
+.ctlToolbarLinks {
+  height: 18px;
+  padding-left: 2px;
+  padding-right: 6px;
+  margin: 0;
+  display: inline;
+  overflow: hidden;
+  vertical-align: middle;
+  *z-index: 1;
+}
+.gridFilteredDates {
+  color: #0072c6 !important;
+  font-size: 12px !important;
+  padding-left: 2px !important;
+  vertical-align: top !important;
+}
+/* End: ViewItems */
+
+/* Begin: datagrid */
+
+.ctlDataGrid .alternativeRow {
+  background-color: #f2f2f2;
+}
+.ctlDataGrid table,
+.ctlDataGridNoPointer table {
+  width: 100%;
+  margin-bottom: 30px;
+  border: 1px solid #d4d5dc;
+  border-collapse: collapse;
+}
+.ctlDataGrid th,
+.ctlDataGridNoPointer th {
+  color: #757575;
+  border: 1px solid #d4d5dc;
+  background-color: #ededed;
+  padding: 0.5em;
+  white-space: normal;
+}
+.ctlDataGrid td,
+.ctlDataGridNoPointer td {
+  border: 1px solid #d4d5dc;
+  padding: 0.5em;
+}
+.ctlDataGrid tr,
+.ctlDataGridNoPointer tr {
+  background: white;
+}
+.ctlDataGrid tr.headerHover {
+  background: #e5f0f9;
+}
+.ctlDataGrid tr.rowHover {
+  background: #e5f0f9;
+  cursor: pointer;
+}
+.ctlDataGrid tr.rowSelected {
+  background: #e5f0f9;
+  cursor: pointer;
+}
+.ctlDataGrid tr.rowHover td {
+  cursor: pointer;
+}
+.breakWord {
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+  overflow: hidden;
+}
+.breakWords {
+  word-wrap: break-word;
+}
+.ctlDataGridNoPointer td {
+  cursor: auto;
+}
+.ctlExpando {
+  cursor: pointer;
+}
+.ctlGridMoreInfo {
+  margin: auto;
+  text-align: right;
+  padding-right: 0.5em;
+}
+.ctlDetails {
+  float: right;
+  white-space: nowrap;
+}
+.ctlDataGridPager table {
+  width: auto;
+  border: 0;
+}
+.ctlDataGridPager td {
+  border: 1px solid #d4d5dc;
+}
+.ctlDataGrid .statusWrapper {
+  display: block;
+  width: 205px;
+}
+.ctlDataGrid .status {
+  float: left;
+  width: 41px;
+  padding: 0 0.5em 0.5em 0.5em;
+  margin-top: 2px;
+}
+.ctlDataGrid .statusLinks {
+  width: 152px;
+}
+.replaceDataGrid {
+  padding: 1px;
+}
+.replaceDataGrid table {
+  width: 685px;
+}
+/* End: datagrid */
+
+/* Begin: transforms */
+
+.xslThingTable {
+  border: none 0px !important;
+  margin-top: 18px;
+}
+.xslThingTable td {
+  border: none 0px !important;
+  padding-top: 5px!important;
+  padding-right: 12px !important;
+  padding-bottom: 5px!important;
+  padding-left: 0px !important;
+  font-size: 13px;
+}
+.xslThingTable table {
+  border: none 0px !important;
+}
+.xslThingValue {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.xslTitleColumn {
+  padding: .3em;
+  color: #666666;
+  vertical-align: top;
+  width: 1%;
+  white-space: nowrap;
+}
+.xslValueColumn {
+  padding: .3em;
+  vertical-align: top;
+}
+.xslThingTable#relatedTable {
+  width: 100%;
+  max-width: 750px;
+  font-size: 14px;
+}
+.xslThingTable#relatedTable a {
+  color: #333333;
+}
+.xslThingTable#relatedTable tr td:nth-child(1) {
+  color: #666666;
+  width: 160px;
+}
+.xslThingTable#relatedTable tr td:nth-child(2) {
+  color: #333333;
+}
+.xslThingTable#relatedTable td {
+  vertical-align: top;
+}
+.xslHorizontalLine {
+  background-color: #dddddd;
+  height: 1px;
+  padding: 0 !important;
+}
+.xslSpace {
+  width: 1em;
+}
+.xslThingTitle {
+  visibility: hidden;
+  position: absolute;
+}
+.xslTRVerticleSpace {
+  height: 1em;
+}
+/* End: transforms */
+
+/* Begin: Forms */
+
+.cmnForms h5 {
+  margin-top: 15px;
+}
+.cmnFormsTable {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+.cmnFormsTable .text {
+  width: 15em;
+}
+.cmnFormsTable .short.text {
+  width: 7em;
+}
+.cmnFormsTable td {
+  padding: .5em;
+}
+.cmnFormsTable td.label {
+  text-align: right;
+  white-space: nowrap;
+  min-width: 10em;
+  vertical-align: top;
+}
+.cmnFormsTable td.form {
+  width: 30em;
+}
+.cmnFormsTable div.radioButtons {
+  margin-left: -4px;
+}
+.cmnFormsTable textarea.text {
+  width: 30em;
+  height: 6em;
+  border: 1px solid #777777;
+  padding: .2em;
+}
+.cmnFormsTable td.footer {
+  text-align: center;
+}
+.cmnFormsTable td.footer input {
+  width: 15em;
+}
+.cmnRecFormsTable .innerTable {
+  width: 720px;
+  padding: 0;
+  margin: -3px;
+  table-layout: fixed;
+}
+.cmnRecFormsTable .text {
+  width: 15em;
+}
+.cmnRecFormsTable {
+  width: 100%;
+  margin: 10px 0 10px 0;
+}
+.cmnRecFormsTable .formLabel {
+  float: none;
+  margin-right: 0px;
+  text-align: left;
+}
+.cmnRecFormsTable .formInput {
+  float: none;
+  margin-right: 0px;
+}
+.cmnRecFormsTable .formMessage {
+  float: none;
+}
+.cmnRecFormsTable td {
+  padding-right: 5px;
+  padding-bottom: 6px;
+}
+.cmnRecFormsTable .error {
+  display: block;
+  margin-bottom: 5px;
+}
+.cmnRecFormsTable .footer {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.cmnRecFormsTable .message {
+  display: block;
+}
+.cmdRecFormsTable label {
+  margin-right: 10px;
+}
+.error {
+  display: block;
+  color: Red;
+}
+/* End: Forms */
+
+/* Begin: Miscellaneous */
+
+.ctlNoScriptWarning {
+  text-align: left;
+  margin-bottom: 10px;
+  color: Red;
+}
+.cmnFooterPadding {
+  height: 300px;
+}
+.boldFont {
+  font-weight: bold;
+}
+/* End: Miscellaneous */
+
+/* Begin: Errors/Alerts */
+
+.infoBox {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  padding-left: 32px;
+  margin-bottom: 15px;
+  border: 1px solid #dedede;
+  color: black;
+  background: #ffffcc url(../imgs/backgrounds/icon-information-small.png) 5px center no-repeat;
+  position: relative;
+  min-height: 32px;
+}
+.alertBox {
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-bottom: 15px;
+  color: black;
+  background-color: #ffffa7;
+}
+#emailWarning {
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #333333;
+}
+.alertBox h3 {
+  font-size: 1.0em;
+}
+* html .alertBox {
+  height: 12px;
+}
+.alertBox .attention {
+  color: Red;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+/* End: Errors/Alerts */
+
+/* Begin: CloseAccount */
+
+.ctlCloseAccountSpaceOrCheckBoxCell {
+  text-align: right;
+  width: 2em;
+  overflow: hidden;
+}
+.ctlCloseAccountTextImageCell {
+  width: 20em;
+  overflow: hidden;
+}
+/* End: CloseAccount */
+
+.subText {
+  color: #666666;
+  font-weight: 100;
+}
+.expired {
+  color: Red;
+  margin-right: 10px;
+}
+/* Begin: LiveID/cobranding */
+
+#LiveIDFooterFrame {
+  position: relative;
+  width: 96em;
+  margin-left: 90px;
+  padding-top: 15px;
+}
+#LiveIDFooterFrame .footer {
+  margin: 0;
+  border-top: 1px solid #cccccc;
+  padding-top: 5px;
+}
+/* End: LiveID/cobranding */
+
+.inline {
+  display: inline !important;
+}
+/* Begin: RecordList */
+
+.ctlHealthRecord {
+  width: 230px;
+  margin: 10px 5px 20px 5px;
+  float: left;
+  position: relative;
+  white-space: normal;
+}
+.ctlHealthRecord img {
+  border: 1px solid #cccccc !important;
+}
+.ctlHealthRecordInfo {
+  margin-left: 10px;
+  float: left;
+  overflow: hidden;
+}
+.access img {
+  padding-left: 4px;
+}
+/* End: RecordList */
+
+/* Begin: Image Selector */
+
+.grayBox {
+  padding: 10px;
+  border: 1px solid #e4e4e4;
+  position: relative;
+}
+#imageSelector img {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-right: 10px;
+  margin-left: 0;
+  width: 60px;
+  height: 60px;
+}
+#imageSelector img.selected,
+#imageSelector img.hover {
+  border: 2px solid #f37739 !important;
+}
+#imageSelector img.deselected {
+  border: 2px solid #666666 !important;
+}
+/* End: Image Selector */
+
+.itemTypesTitle {
+  margin-bottom: 0px !important;
+}
+.itemTypeCategory {
+  margin-bottom: 25px;
+}
+.itemTypeCategory h3,
+.itemTypesItem {
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+#actionsList li {
+  margin-bottom: 10px;
+}
+.itemTypesContacts,
+#actionsList {
+  margin-left: -10px;
+}
+table.noCellPadding td {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 10px;
+  padding-left: 0;
+}
+.noCellPaddingCon fieldset {
+  padding: 5px 5px 5px 5px;
+  margin-left: 5px;
+}
+/*sharing pages*/
+
+.sharingPageSections {
+  padding-right: 10px;
+}
+.authorizedPeople {
+  padding: 10px 10px 0 10px;
+  border: 1px solid #dadada;
+  background-color: White;
+  margin-bottom: 10px;
+  line-height: 15px;
+}
+.pendingInvite {
+  margin: 5px 0 5px 0;
+}
+/*END:sharing pages*/
+
+/*new appAuth*/
+
+.appAuthAppInfo {
+  margin: 15px 0 15px 0;
+  width: 650px;
+}
+/*END:new appAuth*/
+
+#signOutWarning {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+#captchaPromptTitle {
+  margin-top: 15px;
+}
+#captchaAudioReloadButtons {
+  float: left;
+  margin-left: 5px;
+}
+.captchaTable {
+  margin-left: 5px;
+}
+#captchaAudioReloadButtons a img {
+  border: 0px;
+}
+.ctlQuotaMessage {
+  color: red;
+}
+form .ctlQuotaMessage {
+  margin-bottom: 15px;
+}
+img.appLogo {
+  width: 120px;
+  height: 60px;
+  border: 1px solid #e4e4e4;
+  padding: 4px;
+}
+#ctlAppLogo .why {
+  position: absolute;
+}
+#ctlAppLogo {
+  float: left;
+  padding: 2px;
+  margin-right: 20px;
+}
+#ctlAppLogo .appTitle {
+  font-size: 16px;
+  color: #888888;
+}
+#ctlUserThumbsPane {
+  min-height: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 0;
+}
+#ctlUserThumbsPane .cmnCobrandLogo {
+  float: left;
+  width: 150px;
+}
+#ctlUserThumbsPane #middleText {
+  float: left;
+  width: 230px;
+  margin: 0 10px;
+}
+#ctlUserThumbsPane input {
+  margin-top: 30px;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 2px;
+  float: left;
+}
+#ctlUserThumbsPane .recordInfo {
+  position: relative;
+  margin: 5px 5px;
+  width: 275px;
+  float: left;
+  font-weight: bold;
+}
+#ctlUserThumbsPane .recordInfo div {
+  float: left;
+  font-size: .9em;
+  margin-top: 5px;
+  width: 205px;
+}
+#ctlUserThumbsPane .disabled .recordInfo .name {
+  color: #888888;
+}
+#ctlUserThumbsPane .recordInfo .name {
+  font-size: 1.1em;
+  margin-top: 20px;
+  color: black;
+}
+#ctlUserThumbsPane .recordInfo .relation {
+  color: #d8d8d8;
+}
+#ctlUserThumbsPane .recordInfo .status {
+  color: black;
+  font-weight: normal;
+}
+#ctlUserThumbsPane img {
+  float: left;
+  margin-right: 5px;
+}
+#thumbnailList {
+  width: 750px;
+  float: left;
+}
+#thumbnailList img {
+  width: 60px !important;
+  height: 60px !important;
+  border: 1px solid #cccccc !important;
+}
+#thumbnailList .disabled img {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30);
+  opacity: 0.3;
+}
+.newPerson {
+  float: none!important;
+}
+#footNote {
+  text-align: right;
+  padding-right: 1.2em;
+}
+/** EMR **/
+
+#emrPage {
+  margin-bottom: 3em;
+}
+#emrPage #left {
+  width: 65%;
+  padding-right: 5%;
+  float: left;
+}
+#emrPage #right {
+  float: right;
+  width: 24%;
+  border: 1px solid #cccccc;
+  padding: 1em;
+}
+#emrPage #right h2 {
+  margin-bottom: 1em;
+}
+#emrPage #right img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+#instructionList {
+  margin: 1em 0;
+}
+#instructionList li {
+  list-style-type: decimal;
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-right: 0;
+  margin-left: 20px;
+  padding: 0;
+}
+#verifyIdentityCodeList {
+  float: left;
+  margin-right: 10px;
+}
+#verifyIdentityCodeList input {
+  text-transform: uppercase;
+}
+#verifyIdentityCodeList li {
+  display: inline;
+}
+#identityCodeValidation {
+  float: left;
+  width: 100px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+#verifyIdentityCodeList li input {
+  width: 40px !important;
+}
+#answer input {
+  float: left;
+  margin-bottom: 15px;
+}
+.verificationQuestion {
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  padding-left: 20px;
+}
+/** END:EMR **/
+
+.simpleDotList {
+  margin-bottom: 15px;
+  padding-left: 18px;
+  list-style-type: disc;
+}
+.thingType {
+  padding-right: 4em;
+  display: block;
+}
+#breadcrumbWrapper {
+  padding-top: 12px;
+  padding-left: 95px;
+  width: 55em;
+}
+.lastBreadCrumb {
+  color: gray;
+}
+#appKeepSignedIn {
+  font-size: 0.9em !important;
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 5px;
+}
+.openIDTextBox {
+  margin: 5px 0;
+  padding: 3px;
+  border: 1px solid #99ccff;
+  width: 17em;
+  padding-left: 20px !important;
+  background: white url(../imgs/logos/openid_small.gif) no-repeat 1px 2px;
+}
+.openIDSubmitButton {
+  height: 4ex;
+  margin-bottom: 1ex;
+  padding: 0 1em;
+  font-size: 0.9em;
+}
+/* Dopu */
+
+.dopuContentTitle {
+  width: 550px;
+  margin-left: 140px;
+}
+.dopuSuccessMessageContainer {
+  width: 600px;
+}
+.dopuSuccessMessage {
+  margin-right: 6px;
+}
+.dopuContentColumn {
+  float: left;
+  width: 95%;
+  margin-left: 20px;
+}
+.note {
+  margin-top: 10px;
+  color: Gray;
+}
+#selectRecord #ctlUserThumbsPane {
+  width: 700px;
+}
+/* Utility */
+
+.displayNone {
+  display: none;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.nobr {
+  white-space: nowrap;
+}
+.autoWidth {
+  width: auto;
+}
+/* END:Utility */
+
+.popUpControl {
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #c0d8f1;
+  width: 370px;
+  min-height: 60px;
+  background: white;
+  z-index: 1000;
+}
+.popUpControl .label {
+  float: left;
+  width: 45px;
+  margin-top: 3px;
+  margin-bottom: 0;
+  margin-right: 8px;
+  margin-left: 0;
+}
+.spacer {
+  margin-bottom: 10px;
+}
+/* END:Popup */
+
+/* other button stuff */
+
+.buttons {
+  padding-bottom: 30px;
+  width: 700px;
+}
+.smButtons {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  margin-left: 0;
+  padding-bottom: 15px;
+  width: 500px;
+}
+.viewItemsTitle {
+  padding-bottom: 2px;
+  font-size: 24px;
+  color: #333333;
+  margin-top: -8px;
+}
+.viewItemsTabs {
+  padding-top: 4px;
+  padding-bottom: 12px;
+}
+.viewItemsChartView {
+  padding-top: 20px;
+  width: 95%;
+}
+.viewItemsChartView .loadingLightbox {
+  margin-left: 45%;
+  margin-top: 200px;
+}
+.viewItemGridWrapperLinks {
+  padding-bottom: 15px;
+  min-width: 550px;
+  white-space: nowrap;
+}
+.viewItemGridWrapperLinks table {
+  table-layout: fixed;
+  width: 100%;
+}
+.viewItemGridWrapperLinks table .gridWrapperActionLinksContainer {
+  margin-left: -5px;
+  margin-top: -5px;
+}
+#ctlSharingPanel {
+  border-top: 1px solid #d7d7d7;
+  padding: 10px;
+  margin-top: 10px;
+}
+#sharingLoading {
+  position: absolute;
+  padding-top: 20px;
+  left: 50%;
+}
+#ctlChartPanel {
+  border-top: 1px solid #c0d8f1;
+}
+.tblStandard {
+  width: 100%;
+  border: 1px solid #c0d8f1;
+}
+.tblStandard th {
+  background-color: #f6f6f6;
+  color: #757575;
+  border-bottom: 1px solid #c0d8f1;
+  padding: 5px;
+}
+.tblStandard td {
+  padding: 5px;
+  border: 1px solid #c0d8f1;
+  border-collapse: collapse;
+}
+.tblStandard .label {
+  text-align: right;
+}
+.reconcileTables {
+  padding-left: 1px;
+}
+.tblReconcile {
+  width: 100%;
+  border: 1px solid #d4d5dc;
+  margin-top: .5em;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+.tblReconcile tr td div.ctlItemDetailContainer {
+  width: 100%;
+  margin: 23px;
+}
+.tblReconcile th {
+  color: #757575;
+  border: 1px solid #d4d5dc;
+  background-color: #f6f6f6;
+  padding: .5em;
+}
+.tblReconcile .ddlHeader {
+  color: black;
+  font-weight: bold;
+  width: 175px;
+}
+.tblReconcile .ddlItem {
+  background-color: #f6f6f6;
+  width: 195px;
+  padding: .5em;
+  text-align: left;
+}
+.tblReconcile td {
+  border: 1px solid #d4d5dc;
+  padding: .5em;
+}
+.checkboxCol {
+  padding: 0;
+  margin: 0;
+}
+.previousReconciliationAlert {
+  border: 1px solid #eeeeee;
+  color: black;
+  background-color: #ffffaf;
+  padding: 2px;
+}
+.ctlPrintRecord .heading {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-size: 22px;
+}
+.ctlPrintRecord .semibold {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+}
+.ctlPrintRecord .smallText {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-size: 13px;
+  color: #666666;
+}
+.ctlPrintRecord h1 {
+  position: relative;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 16px;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+}
+.ctlPrintRecord h5 {
+  font-size: 16px;
+}
+.ctlPrintRecord .genHealthInfo {
+  margin-top: 25px;
+}
+.ctlPrintRecord .section {
+  margin-bottom: 25px;
+}
+.ctlPrintRecord table {
+  border-spacing: 0;
+}
+.ctlPrintRecord table tr {
+  font-size: 14px;
+}
+.ctlPrintRecord .xslTitleColumn {
+  padding: 0.3em 0.3em 0.3em 0;
+}
+.printIcon {
+  border: 0px;
+  margin-top: 0;
+  margin-bottom: -2px;
+  margin-right: 5px;
+  margin-left: 0;
+}
+.reconcileReturn {
+  background: transparent url(../imgs/icons/icon_right_arrow.gif) no-repeat scroll 0 0;
+  font-weight: bold;
+  padding-bottom: 2px;
+  padding-left: 20px;
+}
+#multipleIdPOI {
+  display: none;
+}
+#multipleIdPOI #links a {
+  margin-right: 20px;
+}
+#contentContainer {
+  float: left;
+  width: 755px;
+}
+#contentContainer hr {
+  color: #e4e4e4;
+}
+#headerTextWrapper {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-right: 0;
+  margin-left: 5px;
+}
+#headerTextWrapper .image {
+  float: left;
+  margin-right: 5px;
+  display: block;
+}
+#headerTextWrapper .text {
+  float: none;
+  margin: 0;
+  padding-bottom: 5px;
+}
+.appRecord {
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  margin-left: 0;
+  padding: 3px;
+  width: 310px;
+  border: 1px solid transparent;
+}
+.appRecord.selected {
+  border: 1px solid #cccccc;
+}
+#patientConnectHeader {
+  margin-left: 20px;
+}
+.validationError {
+  background: url(../imgs/icons/icn_stop.png) no-repeat left top;
+  padding-left: 20px;
+  color: #ff3300;
+  font-weight: bold;
+  float: left;
+}
+/* Start App Auth Rules Table */
+
+.authRulesContainer {
+  padding-left: 30px;
+  width: 672px;
+}
+.extraAuthText {
+  padding-top: 10px;
+}
+.authRulesTable {
+  margin-bottom: 40px;
+}
+.authSection {
+  margin-bottom: 10px;
+}
+.authReviewText {
+  margin-bottom: 30px;
+}
+.authRowHeader {
+  margin-bottom: 5px;
+}
+.authCategories {
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+.authOptionalRow {
+  margin-bottom: 2px;
+  padding-left: 30px;
+}
+.authOptionalRow input[type=checkbox] {
+  vertical-align: middle;
+}
+.requiredToggleText {
+  padding-right: 20px;
+  display: block;
+}
+.requiredToggleImg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.appAuthRequiredTextCell {
+  width: 70px;
+  vertical-align: top;
+}
+.appAuthLogoText {
+  margin-left: 10px;
+  width: 500px;
+}
+/* End App Auth Rules Table */
+
+html > body .IE7relativePositioner {
+  *position: relative;
+}
+html > body .IE7relativePositioner .ajax__calendar_title {
+  *border: 1px solid white;
+}
+/* Begin ajax toolkit related fixes */
+
+.ajax__calendar td {
+  padding: 0px;
+  margin: 0px;
+}
+/*IE 8 calendar arrows bug */
+
+.ajax__calendar_title {
+  border: 0px;
+}
+.ajax__calendar_container {
+  z-index: 1001;
+}
+/*IE 6 overlap fix */
+
+.ajax__calendar {
+  _position: relative;
+  _left: 0px !important;
+  _top: 0px !important;
+  _visibility: visible;
+  _display: block;
+}
+.ajax__calendar iframe {
+  _left: 0px !important;
+  _top: 0px !important;
+}
+/* End ajax toolkit related fixes */
+
+.datePickerVisualHint {
+  color: gray;
+  vertical-align: top;
+}
+.legendTitle {
+  text-align: right;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+/* Begin: ItemControls overrides */
+
+.ctlEditorPanel h2 {
+  font-size: 1.4em;
+  font-weight: 300;
+  color: #333333;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+.itemControlButtons,
+.wizardControlButtons {
+  font-size: 1.2em;
+  padding-top: 15px;
+  padding-bottom: 0;
+  padding-right: 0;
+  padding-left: 15px;
+  *left: -10px;
+  *margin-bottom: -19px;
+  border-top: 1px solid #cccccc;
+}
+.wizardControlButtons {
+  zoom: 1;
+  *margin-bottom: -15px;
+}
+#itemControl {
+  padding: 5px 10px 0 10px;
+  background-color: white;
+  overflow-x: hidden;
+  _width: 602px;
+  position: relative;
+}
+.hv_editor_info_text {
+  width: 96% !important;
+}
+.hv_legend_title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  margin-left: 0;
+  float: right;
+  font-size: 0.9em;
+}
+/* End: ItemControls overrides */
+
+.messageBox {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 30px;
+  margin: 5px 0 10px 0;
+  /* for itemtypes page */
+  color: Green;
+  background: #d7f0db url(../imgs/icons/checkmark.png) no-repeat 10px 10px;
+}
+.edmontonMessage {
+  margin: -10px 0px 10px 0 !important;
+}
+/* Edmonton View Mode override */
+
+.hv_reviewMode .hv_l {
+  float: left;
+  width: 180px;
+  padding-right: 20px;
+  color: #666666;
+  clear: both;
+}
+.hv_reviewMode .hv_emailCntr,
+.hv_reviewMode .hv_addrCntr,
+.hv_reviewMode .hv_phoneCntr,
+.hv_emdbPerson {
+  margin: 20px 0 20px 0;
+  *margin: 10px 0 10px 0;
+}
+.hv_emdbContact .hv_emailCntr,
+.hv_emdbContact .hv_addrCntr,
+.hv_emdbContact .hv_phoneCntr {
+  margin: 0;
+}
+.hv_reviewMode .hv_horElementWithExample,
+.hv_reviewMode .hv_emailE,
+.hv_reviewMode .hv_phoneE {
+  margin-bottom: 2px;
+}
+.hv_reviewMode .hv_e {
+  margin-bottom: 2px;
+}
+.hv_reviewMode .hv_emdbContact {
+  margin-left: 200px;
+}
+.hv_reviewMode .hv_unit_u {
+  display: inline;
+}
+.hv_reviewMode .hv_unit_v {
+  width: 80px;
+}
+.hv_reviewMode #str_units,
+.hv_reviewMode #str_units div,
+.hv_reviewMode #dos_units,
+.hv_reviewMode #dos_units div {
+  display: inline;
+}
+.hv_reviewMode .hv_note .hv_i {
+  float: left;
+  width: 70%;
+}
+.hv_viewContacts .hv_email,
+.hv_viewContacts .hv_address,
+.hv_viewContacts .hv_phone {
+  margin-bottom: 20px;
+}
+.hv_reviewMode .hv_hidden {
+  display: none;
+}
+/* End Edmonton View Mode override */
+
+/**START FB LOGIN BUTTON*****************************************************/
+
+.fb_button {
+  padding-bottom: 0px;
+  outline-style: none;
+  outline-color: invert;
+  padding-left: 1px;
+  outline-width: medium;
+  padding-right: 0px;
+  display: inline-block;
+  background: url(../imgs/fb_bg.png) #29447e no-repeat;
+  cursor: pointer;
+  text-decoration: none;
+  padding-top: 0px;
+}
+.fb_button .fb_button_text {
+  padding-bottom: 3px;
+  margin-top: 1px;
+  margin-bottom: 0;
+  margin-right: 1px;
+  margin-left: 21px;
+  padding-left: 6px;
+  padding-right: 6px;
+  display: block;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  background: url(../imgs/fb_bg.png) #5f78ab;
+  color: white;
+  border-top: #879ac0 1px solid;
+  border-bottom: #1a356e 1px solid;
+  border-left: #1a356e 1px solid;
+  border-right: #5f78ab 1px solid;
+  font-weight: bold;
+  padding-top: 2px;
+}
+.fb_button:active .fb_button_text {
+  border-bottom: #29447e 1px solid;
+  background: #4f6aa3;
+  border-top: #45619d 1px solid;
+}
+.fb_button:hover {
+  text-decoration: none;
+}
+.fb_button_medium {
+  line-height: 14px;
+  background-position: left -188px;
+  font-size: 11px;
+}
+a.fb_button_medium:active {
+  background-position: left -210px;
+}
+/**END FB LOGIN BUTTON*******************************************************/
+
+/**START Clinical Wizard****************************************************/
+
+.checklistItem {
+  margin-bottom: 15px;
+}
+.checklistItem .checkbox input {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 5px;
+  margin-left: 0;
+  vertical-align: middle;
+}
+.checklistItem .checkbox label {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+.checklistItem .description {
+  padding-left: 24px;
+  width: 600px;
+}
+/**END Clinical Wizard*******************************************************/
+
+/**START Signup Override****************************************************/
+
+.signupHeader {
+  width: 920px;
+  height: 77px;
+  margin: auto;
+  background: url(../imgs/backgrounds/ribbon.gif) no-repeat top right;
+}
+.signupHeader .logo {
+  margin-top: 40px;
+}
+.signinButton {
+  width: 150px;
+  display: block;
+  margin: auto;
+  float: none;
+}
+.oldSignInLeft {
+  padding: 10px 20px 0px 20px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.oldSignInLeft .headingText {
+  font-size: 20px;
+}
+.leftArrowOutline {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+  padding-left: 15px;
+  background: url(../imgs/bullets/leftArrowOutline.gif) no-repeat left center;
+  width: 250px;
+}
+/**END Signup Override****************************************************/
+
+.editProfile .textWidth {
+  width: 600px;
+}
+.editProfile .cmnFormsTable {
+  width: 600px;
+}
+.editProfile td.label {
+  font-weight: bold;
+  width: 150px;
+  white-space: normal;
+  vertical-align: top;
+}
+.editProfile td.form .text {
+  width: 200px;
+}
+.editProfile td.form .select {
+  width: 208px;
+}
+.editProfile .checkbox input {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 5px;
+  margin-left: 0;
+}
+.profileInfoTypes {
+  border-top: 1px solid #d7d7d7;
+  padding-bottom: 20px;
+}
+.securityInfo {
+  margin-left: 18px;
+}
+.callStatus {
+  width: 600px;
+  margin: auto;
+  text-align: center;
+}
+.callStatus h3 {
+  display: block;
+  margin: 4px 0 10px 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+.phoneIcon {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.ghostText {
+  margin-top: 5px;
+  color: #888888;
+}
+.marginTop35 {
+  margin-top: 35px;
+}
+.editProfile .enabled {
+  color: #333333;
+}
+.editProfile .disabled {
+  color: #333333;
+}
+.nobackground {
+  background: none!important;
+  padding: 0px!important;
+}
+.medicalImageDescription {
+  font-size: 13px;
+}
+.medicalImageDescription ol {
+  margin-left: 0;
+  padding-left: 0;
+}
+.medicalImageDescription ol li {
+  margin-left: 30px;
+  list-style-type: decimal;
+}
+/* Shell 3 Stuff */
+
+.toolbarTextContainer {
+  width: 500px;
+}
+#browserWarning {
+  margin-right: 35px;
+  display: none;
+}
+.appointmentItem {
+  padding: 5px 0;
+  padding-left: 2px;
+}
+/* Error page wrapping for mobile devices */
+
+@media (max-device-width: 360px) {
+  .newPageHeader {
+    max-width: 340px;
+  }
+  #formContainer {
+    max-width: 290px;
+    padding: 20px 20px 20px 20px;
+  }
+}
+/****************************************************************************/
+
+/* END
+/****************************************************************************/
+
+html {
+  overflow-y: auto;
+}
+/*Sizes*/
+
+.maxTextWidth {
+  width: 600px;
+}
+.textContentMaxWidth {
+  max-width: 750px;
+}
+.indented {
+  margin-left: 20px;
+}
+.collapse {
+  height: 1px;
+  font-size: 1px;
+  line-height: 1px;
+}
+.largeButtonWidth {
+  min-width: 150px;
+}
+.narrowFormWidth {
+  width: 175px;
+}
+/*VERTICAL SPACING*/
+
+.verticalSpaceBlock {
+  height: 150px;
+}
+.verticalSpaceLarge {
+  height: 35px;
+}
+.verticalSpaceSmall {
+  height: 17px;
+}
+.verticalSpaceSmaller {
+  height: 3px;
+}
+.verticalSpaceMedium {
+  height: 28px;
+}
+.verticalSpaceNormal {
+  height: 10px;
+  font-size: 1px;
+  line-height: 1px;
+}
+.verticalSpaceGutter {
+  height: 20px;
+}
+/*HORIZONTAL SPACING*/
+
+.horizontalGutterSmall {
+  width: 10px;
+}
+.horizontalGutter {
+  width: 20px;
+}
+.horizontalSpaceLarge {
+  width: 30px;
+}
+/*MARGIN AND PADDING*/
+
+.boxPadding {
+  padding: 10px 13px;
+}
+.underlinePadding {
+  padding-bottom: 5px;
+}
+.lineSpace {
+  margin-bottom: 4px;
+}
+.lineSpaceLarge {
+  margin-bottom: 10px;
+}
+.horizontalGutterPadding {
+  padding: 0 20px 0 20px;
+}
+.bottomGutterMargin {
+  margin-bottom: 20px;
+}
+.gutterPadding {
+  padding: 20px;
+}
+.smallPaddingRight {
+  padding-right: 10px;
+}
+/* LIST */
+
+ul {
+  margin-top: 6px;
+}
+ul li {
+  line-height: 12px;
+  margin-bottom: 6px;
+  padding-left: 0px;
+}
+.noBullet {
+  list-style-type: none;
+  list-style-image: none;
+  padding: 0px;
+  margin: 0px;
+}
+.noBullet li {
+  line-height: 15px;
+  padding: 0px;
+  margin-bottom: 3px;
+}
+.weightGoalBullet li {
+  line-height: 15px;
+  margin-bottom: 12px;
+}
+/*MISC*/
+
+.positionRight {
+  right: 0px;
+  top: 0px;
+}
+.lineHeight {
+  line-height: 17px;
+}
+.noLineHeight {
+  line-height: normal!important;
+}
+.caps {
+  text-transform: capitalize;
+}
+.allCaps {
+  text-transform: uppercase;
+}
+.ellipsis {
+  display: block !important;
+  margin-right: -10000px !important;
+  white-space: nowrap !important;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.wordWrap {
+  word-break: break-all;
+}
+.block {
+  display: block;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.clear {
+  display: block;
+  clear: both;
+  font-size: 1px;
+}
+.hide {
+  display: none;
+}
+.hidden {
+  visibility: hidden;
+  position: absolute;
+}
+.visible {
+  visibility: visible;
+}
+.show {
+  display: block;
+}
+.absolute {
+  position: absolute;
+}
+.relative,
+.box,
+.visible {
+  position: relative;
+  *zoom: 1;
+}
+.inlineBlock {
+  display: inline-block;
+}
+.floatWrapper {
+  overflow: hidden;
+}
+.textLeft {
+  text-align: left !important;
+}
+.textRight {
+  text-align: right !important;
+}
+.menu {
+  visibility: hidden;
+  overflow: hidden;
+  position: absolute;
+  display: none;
+}
+.menu-on {
+  visibility: visible;
+  position: relative;
+  display: none;
+}
+.noPadding {
+  padding: 0px !important;
+}
+.hr {
+  font-size: 1px;
+  height: 1px;
+}
+.bold,
+.validation-summary-errors ul li {
+  font-weight: 600;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+}
+.center,
+.page {
+  margin: auto;
+}
+.centerText {
+  text-align: center;
+}
+.noBorder,
+img {
+  border: 0px!important;
+}
+.noMinWidth {
+  min-width: 0px;
+}
+.iconAlign {
+  vertical-align: text-top;
+}
+/*OVERRIDES*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0px;
+  font-weight: normal;
+}
+/*BOX*/
+
+.box .boxToolbar {
+  position: absolute;
+  z-index: 2;
+}
+/*BREADCRUMB*/
+
+.breadCrumb {
+  margin-bottom: 10px;
+}
+.spacer {
+  margin: 0 6px;
+}
+.breadCrumb .spacer,
+.spacer.wide {
+  margin: 0 10px;
+}
+/*PAGE OVERLAY*/
+
+.bannerOverlay {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  display: none;
+  overflow-y: auto;
+  overflow-x: auto;
+  background: url(../imgs/backgrounds/overlayBackground.png);
+  background: rgba(0, 0, 0, 0.3);
+}
+.pageOverlay {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  display: none;
+  overflow-y: auto;
+  overflow-x: auto;
+  background: url(../imgs/backgrounds/overlayBackground_white.png);
+  background: rgba(255, 255, 255, 0.6);
+}
+.prewrap {
+  white-space: pre-wrap;
+}
+/* DatePicker */
+
+.ui-widget-content {
+  border: 1px solid #cccccc;
+  background: white;
+  color: #333333;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+}
+.ui-datepicker-header {
+  color: #333333;
+  line-height: 30px;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: #0072c6;
+  background: #0072c6;
+}
+.ui-datepicker .ui-datepicker-title select {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+}
+.ui-datepicker-title {
+  text-align: center;
+}
+.ui-datepicker-month {
+  border: 1px solid #0072c6;
+}
+.ui-datepicker-year {
+  border: 1px solid #0072c6;
+}
+.ui-datepicker thead {
+  background-color: white;
+  border-bottom: 1px solid white;
+}
+.ui-datepicker th {
+  text-transform: uppercase;
+  font-size: 9px;
+  color: #666666;
+}
+.ui-datepicker tbody td {
+  padding: 0;
+  border-right: 1px solid white;
+}
+.ui-datepicker tbody td:last-child {
+  border-right: 0px;
+}
+.ui-datepicker tbody tr {
+  border-bottom: 1px solid white;
+}
+.ui-datepicker tbody tr:last-child {
+  border-bottom: 0px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  color: #666666;
+}
+.ui-datepicker-calendar .ui-state-default {
+  background: white;
+  border: none;
+  font-weight: bold;
+  color: #333333;
+}
+.ui-datepicker-calendar .ui-state-hover {
+  background: #0072c6;
+  color: white;
+  border: none;
+}
+.ui-datepicker-calendar .ui-state-active {
+  background: #0072c6;
+  color: white;
+  border: none;
+  position: relative;
+  margin: -1px;
+}
+.ui-datepicker-unselectable .ui-state-default {
+  background: white;
+  border: none;
+  color: #333333;
+}
+.ui-datepicker-calendar td:first-child .ui-state-active {
+  width: 24px;
+  margin-left: 0;
+}
+.ui-datepicker-calendar td:last-child .ui-state-active {
+  width: 24px;
+  margin-right: 0;
+}
+.ui-datepicker-calendar tr:last-child .ui-state-active {
+  height: 24px;
+  margin-bottom: 0;
+}
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon {
+  background-image: url(../js/jquery-ui/images/ui-icons_ffffff_256x240.png);
+}
+.ui-widget-header .ui-state-hover {
+  border: 1px solid #0072c6;
+  background: none;
+  background-color: #0072c6;
+  cursor: pointer;
+}
+.thumbSmall {
+  width: 100px;
+  margin: auto;
+}
+.app {
+  width: 119px;
+  margin-right: 60px;
+}
+.app .title {
+  margin: 0 0 2px 0;
+}
+.appVertical {
+  width: 350px;
+  margin-bottom: 30px;
+}
+.appVertical .appThumbnail {
+  float: left;
+  margin-right: 10px;
+}
+.appVertical .appDetails {
+  width: 200px;
+}
+.appThumbnail {
+  position: relative;
+  width: 119px;
+  height: 119px;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  display: block;
+  line-height: 117px;
+}
+.appThumbnail + h1 {
+  width: 825px !important;
+}
+.appThumbnail .thumb {
+  width: 119px;
+  height: 119px;
+  display: block;
+  *display: inline;
+  text-align: center;
+  line-height: 117px;
+  vertical-align: middle;
+}
+.appThumbnail .thumb img,
+.appThumbnail img {
+  width: 100px;
+  vertical-align: middle;
+}
+.appThumbnail .iconClose16 {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  z-index: 1;
+}
+.appRow {
+  margin-bottom: 15px;
+}
+/* AppAuth */
+
+.appauth .sectionHeader {
+  font-size: 21px;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  color: #333333;
+}
+.appauth .faded {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+.appauth .darkGray {
+  color: #333333;
+}
+.appauth a {
+  font-weight: normal;
+}
+.appauth .authAppContainer {
+  padding-left: 135px;
+}
+.appauth .authAppContainer .column {
+  float: left;
+  position: relative;
+}
+.appauth .authAppContainer .logoContainer {
+  width: 135px;
+  right: 135px;
+  margin-left: -100%;
+}
+.appauth .authAppContainer .logoContainer .logoBorder {
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  border: 1px solid #cccccc;
+}
+.appauth .authAppContainer .logoContainer .logoBorder img {
+  max-width: 110px;
+  max-height: 110px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.appauth .authAppContainer .reviewContainer {
+  width: 100%;
+}
+.appauth .recordListContainer label,
+.appauth .authAppContainer label {
+  display: inline-block;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+.appauth .recordListContainer label input,
+.appauth .authAppContainer label input {
+  width: 13px;
+  height: 13px;
+  padding-bottom: 0;
+  padding-top: 0;
+  padding-right: 3px;
+  padding-left: 0;
+  margin: 20px 0 0 0;
+  vertical-align: top;
+  position: relative;
+  *overflow: hidden;
+}
+.appauth .recordListContainer label img,
+.appauth .authAppContainer label img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #dedede !important;
+}
+.appauth .recordListContainer label .recordName,
+.appauth .authAppContainer label .recordName {
+  display: inline-block;
+  text-indent: 0;
+  vertical-align: top;
+  margin-top: 14px;
+  padding-top: 0px;
+  padding-left: 5px;
+}
+.appauth .recordListContainer label .recordName.hasStatus,
+.appauth .authAppContainer label .recordName.hasStatus {
+  margin-top: 10px;
+}
+.appauth .largeIndent {
+  padding-left: 15px;
+}
+.appauth .statusIndent {
+  padding-left: 20px;
+}
+.appauth .rulesToggle {
+  background: url(~/imgs/backgrounds/moreInfo_defaultArrow.png) no-repeat left 6px;
+}
+.appauth .rulesToggle.up {
+  background: url(~/imgs/backgrounds/moreInfo_openArrow.png) no-repeat left 8px;
+}
+.appauth .ruleHeader {
+  padding-bottom: 3px;
+}
+.appauth .ruleContainer {
+  margin-left: 15px;
+  padding-bottom: 3px;
+}
+.appauth .ruleContainer .optionalWhyText {
+  margin-top: 3px;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.appauth .newRecordContainer {
+  position: relative;
+  background-color: #f0f0f0;
+  padding: 15px;
+}
+.appauth .newRecordContainer .formRow {
+  margin-bottom: 8px;
+  clear: both;
+}
+.appauth .newRecordContainer .formRow .formLabel {
+  width: auto;
+  float: none;
+  text-align: left;
+  padding-top: 0;
+  padding-bottom: 2px;
+  font-weight: normal;
+  font-size: 13px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.appauth .newRecordContainer .formRow .formLabel span.lighterText {
+  color: #666666;
+}
+.appauth .newRecordContainer .formRow .formInput {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  width: 405px;
+}
+.appauth .newRecordContainer .formRow .formInput input {
+  width: 400px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.appauth .newRecordContainer .formRow .formInput input[type="checkbox"] {
+  width: auto;
+}
+.appauth .newRecordContainer .formRow .formInput input[type="text"],
+.appauth .newRecordContainer .formRow .formInput input[type="password"] {
+  height: 22px;
+  padding-left: 5px !important;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.appauth .newRecordContainer .formRow .formInput select {
+  height: 28px;
+  width: 405px;
+  padding-left: 3px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.appauth .newRecordContainer .formRow .formInput select.monthFragment {
+  width: 198px;
+}
+.appauth .newRecordContainer .formRow .formInput select.dayFragment {
+  width: 97px;
+}
+.appauth .newRecordContainer .formRow .formInput select.yearFragment {
+  width: 97px;
+}
+.appauth .newRecordContainer .formRow .formInput #hip span {
+  font-weight: normal;
+  font-size: 13px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.appauth .newRecordContainer .formRow .nameInput {
+  float: left;
+  width: 200px;
+  margin-right: 5px;
+}
+.appauth .newRecordContainer .formRow .nameInput input {
+  width: 195px;
+  height: 22px;
+  padding-left: 5px !important;
+}
+.appauth .newRecordContainer .formRow .nameInput .watermark {
+  font-style: normal;
+  font-size: 14px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.appauth .newRecordContainer .formRow .formMessage {
+  padding-top: 4px;
+  float: left;
+  position: relative;
+  width: 400px;
+  height: 20px;
+  overflow: visible;
+}
+.appauth .disabledLink {
+  color: black !important;
+  text-decoration: none !important;
+  cursor: default !important;
+}
+.hv-editor-phonenumber,
+.hv-editor-emailaddress {
+  width: 280px;
+}
+.hv-editor-phonetype,
+.hv-editor-emailtype {
+  width: 180px;
+}
+.hv-editor-addlink,
+.noteLink {
+  background: url(../imgs/icons/iconEditor_addItem_blue.png) no-repeat left center;
+  font-size: 13px;
+  padding-left: 12px;
+}
+.hv-editor-addlink:hover,
+.noteLink:hover {
+  text-decoration: none;
+}
+.hv-editor-addlink-secondary {
+  background: url(../imgs/icons/iconEditor_addItem.png) no-repeat left center;
+  font-size: 13px;
+  padding-left: 12px;
+  color: #666666;
+}
+.hv-editor-addlink-secondary:hover {
+  text-decoration: none;
+  color: #666666;
+}
+.hv-editor-addlink:hover,
+.noteLink:hover {
+  text-decoration: none;
+}
+.hv-editor-expandlink {
+  background: url(../imgs/icons/iconEditor_arrow_closed.png) no-repeat left center;
+  padding-left: 9px;
+  padding-bottom: 2px;
+  color: #333333 !important;
+  font-size: 13px;
+}
+.hv-editor-expandlink:hover {
+  text-decoration: none;
+}
+.hv-editor-expandlink-open {
+  background: url(../imgs/icons/iconEditor_arrow_open.png) no-repeat left center;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  padding-left: 11px;
+  color: #333333 !important;
+}
+.hv-editor-expandlink-open:hover {
+  text-decoration: none;
+}
+.hv-editor-successmessage {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 30px;
+  color: Green;
+  background: #d7f0db url(../imgs/icons/checkmark.png) no-repeat 10px 10px;
+}
+.hv-editor-successmessage-black {
+  color: #333333;
+}
+.hv-editor-date .datePortion {
+  float: left;
+  width: 140px;
+}
+.hv-editor-date .timePortion {
+  float: left;
+  width: 325px;
+}
+.timePortion .timeTextbox {
+  margin-top: 1px;
+}
+.hv-editor-medium {
+  min-width: 450px;
+}
+.hv-editor-large {
+  min-width: 550px;
+}
+.hv-editor-venti {
+  min-width: 600px;
+}
+.hv-editor-remove {
+  color: #0072c6;
+  position: absolute;
+  padding-left: 12px;
+  right: 0px;
+  top: 0px;
+  z-index: 1;
+}
+.hv-editor-skinny-container {
+  width: 275px;
+}
+.hv-editor-readonly-table table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.hv-editor-readonly-table td:first {
+  color: #666666;
+}
+.hv-editor-readonly-table td {
+  padding-top: 5px;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 0;
+}
+.hv-editor-nutrition {
+  width: 490px;
+}
+.hv-editor-nutrition .formRow {
+  float: left;
+  margin-bottom: 10px;
+  clear: none;
+}
+.hv-editor-nutrition .formTextBox {
+  width: 60px !important;
+}
+.hv-editor-nutrition .formLabel {
+  color: #666666;
+  text-align: left;
+  width: 132px;
+}
+.hv-editor-nutrition .formInput {
+  width: 120px;
+  float: none;
+}
+.hv-editor-nutrition input.input-validation-error {
+  border: 2px solid red;
+  margin-bottom: -1px;
+}
+.hv-editor-insurance {
+  width: 530px;
+}
+.hv-editor-plancode,
+.hv-editor-personcode {
+  width: 115px;
+}
+.hv-editor-subscribercode {
+  width: 175px;
+}
+.hv-editor-coveragetype {
+  width: 280px;
+}
+/* Edmonton Styles */
+
+.hv_base {
+  background-color: white !important;
+}
+label.hv_l,
+span.hv_l,
+.hv_element_title_primary {
+  font-weight: normal !important;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+}
+.hv_element_list,
+.hv_element_list_input {
+  width: auto !important;
+}
+.endItemContainer {
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  top: -1px;
+  left: -224px;
+  width: 200px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 2px solid black;
+}
+.endItemContainer .closeEndItem {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+}
+.endItemContainer input[type='text'] {
+  border: 1px solid #cccccc;
+  color: #666666;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 14px;
+  padding: 4px 8px;
+}
+.endItemContainer input.error[name='dateStopped'] {
+  display: inline-block;
+}
+.downloadCCDContainer {
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  top: -1px;
+  left: -224px;
+  width: 200px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 2px solid black;
+  width: 300px;
+  padding-top: 10px;
+}
+.downloadCCDContainer .closeDownloadCCD {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+}
+.changeDateRangeContainer {
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  top: -1px;
+  left: -224px;
+  width: 200px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 2px solid black;
+  width: 350px;
+  padding-top: 10px;
+}
+.changeDateRangeContainer .closeChangeDateRange {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+}
+.changeDateRangeContainer input[type='text'] {
+  border: 1px solid #cccccc;
+  color: #333333;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 14px;
+  padding: 4px 8px;
+}
+.appInitiatedCreateRecordLabel {
+  width: 100px;
+  float: left;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 10px;
+}
+.rangeHyphen {
+  text-align: center;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+/* New Editor */
+
+.editorbox .toolbar {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 2;
+  height: 12px;
+}
+.editorbox .toolbar a.close {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+.editorbox .editorContents {
+  margin-bottom: 30px;
+  position: absolute;
+  top: 105px;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.editorbox .h2,
+.editorbox h2 {
+  padding-bottom: 15px;
+  margin-top: -8px;
+  font-size: 24px;
+}
+.editorbox .h14 {
+  font-size: 13px;
+  color: #333333;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-weight: normal !important;
+  margin-bottom: 3px;
+}
+.editorbox input[type="text"] {
+  border: 1px solid #cccccc;
+  color: #333333;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 14px;
+  padding: 4px 8px;
+}
+.editorbox span.select {
+  margin: 2px 0 2px 0;
+}
+.editorbox select {
+  border: none;
+  color: #333333;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 14px;
+  height: 27px;
+  margin: 0;
+  padding-left: 5px;
+  padding-bottom: 1px;
+}
+.editorbox .group {
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 12px;
+  margin-bottom: 10px;
+}
+.editorbox .groupGutter {
+  padding-bottom: 70px;
+}
+.editorbox .removeCondition {
+  right: 10px;
+}
+.editorbox .actionsBox {
+  border-bottom: 1px solid #d7d7d7;
+  position: relative;
+  z-index: 1;
+  padding-top: 20px;
+  background-color: white;
+}
+.editorbox .actionsBox .actionLinks {
+  padding-bottom: 15px;
+}
+.editorbox .actionsBox .editorLegend {
+  float: right;
+  font-size: 12px !important;
+}
+.editorbox textarea {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 14px;
+  padding: 6px 6px 6px 9px;
+  border: 1px solid #cccccc;
+}
+.editorbox .contactSection,
+.editorbox .newContactSection {
+  border-bottom: 1px solid #d7d7d7;
+  border-top: 1px solid #d7d7d7;
+  padding: 15px 0;
+}
+.editorbox .formExample {
+  margin-bottom: 3px;
+  margin-top: -2px;
+}
+.editorbox .editorSave {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #666666 !important;
+  background: url(../imgs/icons/icon_Save.png) no-repeat left center;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+.editorbox .editorSave:hover {
+  background: url(../imgs/icons/icon_Save_hover.png) no-repeat left center;
+  text-decoration: none;
+  color: black !important;
+}
+.editorbox .editorAddAnother {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #666666 !important;
+  background: url(../imgs/icons/icon_SaveAndAddAnother.png) no-repeat left center;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+.editorbox .editorAddAnother:hover {
+  background: url(../imgs/icons/icon_SaveAndAddAnother_hover.png) no-repeat left center;
+  text-decoration: none;
+  color: black !important;
+}
+.editorbox .editorImport {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #666666 !important;
+  background: url(../imgs/icons/icon_Import.png) no-repeat left center;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+.editorbox .editorImport:hover {
+  background: url(../imgs/icons/icon_IMport_hover.png) no-repeat left center;
+  text-decoration: none;
+  color: black !important;
+}
+.editorbox .editorCancel {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #666666 !important;
+  background: url(../imgs/icons/icon_Cancel.png) no-repeat left center;
+  padding-left: 20px;
+}
+.editorbox .editorCancel:hover {
+  background: url(../imgs/icons/icon_Cancel_hover.png) no-repeat left center;
+  text-decoration: none;
+  color: black !important;
+}
+.footer {
+  margin: 0;
+  position: relative;
+  height: 30px;
+  color: #666666;
+  font-size: 12px;
+  border-top: 1px solid #cccccc;
+  min-width: 400px;
+}
+.footer .linkContainer {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.footer .links {
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.footer .links a,
+.footer .links span {
+  display: inline-block;
+}
+.footer a {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #666666 !important;
+}
+.footer a:hover {
+  text-decoration: none !important;
+}
+.footer .location img {
+  margin-top: 0;
+  margin-bottom: 2px;
+  margin-right: 5px;
+  margin-left: 0;
+  vertical-align: bottom;
+}
+.footer .languagePicker {
+  display: inline-block;
+  padding: 0px 5px 4px 5px;
+  vertical-align: middle;
+}
+.footer .languagePicker img {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.footer .languageDropdownArrow {
+  width: 9px;
+  height: 6px;
+  margin-left: 5px;
+  margin-bottom: 1px;
+}
+.wwwFooter {
+  margin: 20px 0 40px 0;
+  position: relative;
+  height: 40px;
+  color: #666666;
+  font-size: 12px;
+}
+.wwwFooter .wwwLinks {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.wwwFooter .wwwLinks a,
+.wwwFooter .wwwLinks span {
+  display: inline-block;
+}
+.wwwFooter a {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #666666 !important;
+}
+.wwwFooter .wwwLogo {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.wwwFooter .location img {
+  margin-top: 0;
+  margin-bottom: 2px;
+  margin-right: 5px;
+  margin-left: 0;
+  vertical-align: bottom;
+}
+.wwwFooter .languagePicker {
+  display: inline-block;
+  padding: 0px 5px 4px 5px;
+  vertical-align: middle;
+}
+.wwwFooter .languagePicker img {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.wwwFooter .languageDropdownArrow {
+  width: 9px;
+  height: 6px;
+  margin-left: 5px;
+  margin-bottom: 1px;
+}
+.wwwFooter .wwwCopyright {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#languagePicker-1 {
+  position: absolute;
+  display: block;
+}
+.header {
+  margin: 0;
+  background-color: #0072c6 !important;
+  padding-left: 2px;
+}
+.header .logoLink {
+  display: inline-block;
+  height: 40px;
+  padding-left: 10px;
+}
+.header .logoLink .logo {
+  margin-top: 8px;
+}
+.header .logoLink:hover {
+  text-decoration: none !important;
+  background-color: #005899;
+}
+.header .links {
+  font-size: 14px !important;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  white-space: nowrap;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+.header .links a {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: white !important;
+  display: inline-block;
+  padding: 0 10px;
+}
+.header .links a:hover {
+  text-decoration: none !important;
+  background-color: #005899;
+}
+.header .links .spacer {
+  display: inline-block;
+}
+.header .signInArrow {
+  vertical-align: text-bottom;
+  margin-bottom: -3px;
+  margin-left: 6px;
+  -moz-transform: scaleX(1);
+  /* For Mozilla Firefox */
+  -o-transform: scaleX(1);
+  /* For Opera */
+  -webkit-transform: scaleX(1);
+  /* For Safari, Google chrome */
+
+}
+.header .helpIcon {
+  margin-bottom: -4px;
+}
+#headerProfileMenuLink .accountDownArrow {
+  margin-left: 3px;
+}
+#headerProfileMenuLink.headerProfileMenuOpen {
+  background-color: #005797;
+}
+#headerProfileMenu {
+  z-index: 1000;
+  position: absolute;
+  top: 39px;
+  right: 45px;
+  border: 2px solid #0072c6;
+  background: white;
+  width: 200px;
+  font-size: 14px;
+  padding: 6px 0;
+}
+#headerProfileMenu .menuItem a {
+  display: block;
+  color: #333333 !important;
+  padding: 10px 18px;
+}
+#headerProfileMenu .menuItem a:hover {
+  text-decoration: none;
+  background-color: #e7e7e7;
+}
+#headerProfileMenu .menuItem a:active {
+  text-decoration: none;
+  color: white !important;
+  background-color: #0072c6;
+}
+#headerAddMenuLink {
+  float: left;
+  top: 0;
+  bottom: 0;
+  color: white;
+  padding: 0 10px;
+  display: inline-block;
+  height: 40px;
+}
+#headerAddMenuLink .addButton {
+  float: left;
+  margin-top: 7px;
+}
+#headerAddMenuLink .addText {
+  float: left;
+  font-size: 16px;
+  margin-left: 6px;
+  margin-top: 7px;
+}
+#headerAddMenuLink .addDownArrow {
+  margin-left: 6px;
+  margin-top: 19px;
+}
+#headerAddMenuLink:hover {
+  text-decoration: none !important;
+  background-color: #005899;
+}
+#headerAddMenuLink.headerAddMenuOpen {
+  background-color: #005797;
+}
+#headerAddMenu {
+  z-index: 1000;
+  position: absolute;
+  top: 39px;
+  left: 270px;
+  border: 2px solid #0072c6;
+  background: white;
+  width: 772px;
+  height: 520px;
+}
+#headerAddMenu #editorLinksContainer {
+  padding: 20px;
+  height: 340px;
+}
+#headerAddMenu #otherwaysAddInfoContainer {
+  background-color: #f0f0f0;
+  height: 100px;
+  padding: 20px;
+}
+#headerAddMenu .sectionLbl {
+  font-size: 18px;
+  padding-bottom: 10px;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+}
+#headerAddMenu .recentSeparator {
+  border-right: 1px solid #cccccc;
+  height: 340px;
+  margin: 0 20px;
+}
+#headerAddMenu .recentLinksColumn {
+  width: 220px;
+  height: 150px;
+}
+#headerAddMenu .recentLinksColumn label {
+  color: #666666 !important;
+  font-size: 13px;
+}
+#headerAddMenu .editorLinksColumn,
+#headerAddMenu recentEditorsContainer {
+  width: 220px;
+}
+#headerAddMenu .otherwaysLinksColumn {
+  width: 320px;
+}
+#headerAddMenu .editorColumnGutter {
+  width: 30px;
+}
+#headerAddMenu .menuLinks {
+  font-size: 14px;
+}
+#headerAddMenu .menuLinks span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+}
+.headerLinksContainer {
+  position: absolute;
+  top: 0;
+  left: 265px;
+}
+.headerLinksContainer div {
+  font-size: 16px;
+  float: left;
+  margin-top: 0px;
+  cursor: pointer;
+}
+.headerLinksContainer div a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 21px;
+  height: 40px;
+  line-height: 40px;
+}
+.headerLinksContainer div:hover {
+  background-color: #005899;
+  text-decoration: none;
+}
+.wwwHeader {
+  margin: 40px 0 20px 0;
+  position: relative;
+}
+.wwwHeader .wwwLogo {
+  width: 142px;
+  display: block;
+  margin-top: 40px;
+}
+.wwwHeader .wwwLinks {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  white-space: nowrap;
+}
+.wwwHeader .wwwLinks a {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #333333;
+  display: inline-block;
+}
+.wwwHeader .wwwLinks .spacer {
+  display: inline-block;
+}
+.wwwHeader .wwwSignInArrow {
+  vertical-align: text-bottom;
+  margin-left: 6px;
+  -moz-transform: scaleX(1);
+  /* For Mozilla Firefox */
+  -o-transform: scaleX(1);
+  /* For Opera */
+  -webkit-transform: scaleX(1);
+  /* For Safari, Google chrome */
+
+}
+#wwwSignUpOrIn {
+  font-size: 16px;
+}
+.HealthInfoGrid {
+  margin-bottom: 35px;
+}
+.HealthInfoGrid .head {
+  padding: 0 0 5px 0;
+}
+.HealthInfoGrid .item .iconAdd16 {
+  margin-right: 10px;
+}
+.HealthInfoGrid .item {
+  padding: 8px 0 8px 0;
+}
+.HealthInfoGrid .margin {
+  margin-bottom: 20px;
+}
+.HealthInfoGrid .halfPageSize {
+  width: 45% !important;
+}
+.blueAddIcon {
+  background: url(../imgs/icons/blue-add2.gif) no-repeat left center;
+  padding-left: 15px;
+}
+.icon16 {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+.iconAdd16 {
+  width: 16px;
+  height: 16px;
+  background: url(../imgs/icons/add-black-icon.gif) no-repeat center center;
+  display: block;
+}
+.iconClose16 {
+  width: 16px;
+  height: 16px;
+  background: url(../imgs/icons/X-graphic.gif) no-repeat center center;
+  display: block;
+}
+.iconLinkArrowRight {
+  background: url(../imgs/icons/blue-arrow.gif) no-repeat right center;
+  display: block;
+  padding-right: 15px;
+}
+.iconLinkArrowLeft {
+  background: url(../imgs/icons/blue-arrow-left2.gif) no-repeat left center;
+  display: block;
+  padding-left: 15px;
+}
+.iconLinkAddBlue {
+  background: url(../imgs/icons/blue-add2.gif) no-repeat left center;
+  display: block;
+  padding-left: 12px;
+}
+.iconLinkPlus {
+  background: url(../imgs/icons/plus-on-button.gif) no-repeat left 2px;
+  display: block;
+  padding-left: 15px;
+}
+.iconLinkNew {
+  background: url(../imgs/icons/new.gif) no-repeat left center;
+  display: block;
+  padding-left: 25px;
+}
+.iconLink {
+  padding-left: 20px;
+  padding-right: 4px;
+  padding-top: 1px;
+  display: inline-block;
+}
+.uploadLink {
+  background: url(../imgs/icons/icon-upload.png) 0px 0px no-repeat;
+}
+.restoreLink {
+  background: url(../imgs/icons/icon-restore.png) 0px 0px no-repeat;
+  padding-left: 22px;
+}
+.deleteLink {
+  background: url(../imgs/icons/icon-delete.png) 0px 0px no-repeat;
+  padding-left: 22px;
+}
+.arrowLink {
+  background: url(../imgs/icons/icon_blue_arrow.gif) 0px 0px no-repeat;
+}
+.richCheckbox {
+  background: url(../imgs/icons/checkbox-off.png) 0px 2px no-repeat;
+  padding-left: 25px;
+}
+.richCheckbox.on {
+  background: url(../imgs/icons/checkbox-on.png) 0px 2px no-repeat;
+}
+.navContent {
+  padding: 10px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 75px;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 255px;
+}
+.categoryContainer {
+  padding: 6px 0;
+}
+.categoryContainer a {
+  position: relative;
+  padding: 0 12px;
+  display: block;
+  *display: block;
+  font-size: 14px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif !important;
+  font-weight: normal;
+  color: #333333 !important;
+  line-height: 17px;
+  clear: both;
+}
+.categoryContainer a:hover {
+  text-decoration: none;
+}
+.categoryContainer .toggleLink {
+  padding: 6px 12px;
+  margin: -6px 0;
+}
+.categoryContainer .toggleLink:hover {
+  background-color: #e0e0e0;
+}
+.categoryContainer .categoryItemsContainer {
+  padding-top: 6px;
+}
+.categoryContainer .itemContainer {
+  padding: 6px 0;
+}
+.categoryContainer .itemContainer .itemSubContainer {
+  padding-left: 15px;
+}
+.categoryContainer .itemContainer .itemTypeCount {
+  font-size: 11px;
+  color: #666666;
+  margin-left: 1px;
+}
+.categoryContainer .navigation-category-expandlink {
+  background: url(../imgs/icons/iconEditor_arrow_closed.png) no-repeat left center;
+  padding-left: 9px;
+  color: #333333 !important;
+  font-size: 14px;
+}
+.categoryContainer .navigation-category-expandlink:hover {
+  text-decoration: none;
+  color: #333333 !important;
+}
+.categoryContainer .navigation-category-expandlink-open {
+  background: url(../imgs/icons/iconEditor_arrow_open.png) no-repeat left center;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif !important;
+  padding-left: 11px;
+  color: #333333 !important;
+  font-size: 14px;
+}
+.categoryContainer .navigation-category-expandlink-open:hover {
+  text-decoration: none;
+  color: #666666 !important;
+}
+.categorySelected,
+.itemSelected {
+  background-color: #cccccc;
+}
+.hoverItem:hover {
+  background-color: #e0e0e0;
+}
+.quickLinks .left {
+  width: 126px;
+  padding: 0 10px 0 10px;
+}
+.quickLinks .large {
+  padding: 0 0 0 10px;
+  margin-left: 15px;
+}
+.quickLinks .head {
+  margin-bottom: 10px;
+}
+.quickLinks .large .title {
+  margin: 0px;
+  line-height: 32px;
+}
+.quickLinks .title {
+  margin: 0px;
+}
+.quickLinks .left a {
+  margin-top: 5px;
+  display: block;
+}
+body {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-size: 12px;
+}
+/*LINKS*/
+
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a.noUnderline:hover {
+  text-decoration: none;
+}
+/* SIZE */
+
+h1,
+.h1 {
+  font-size: 28px;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  margin-bottom: 17px;
+  margin-top: -8px;
+}
+h2,
+.h2 {
+  font-size: 28px;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+}
+h3,
+.h3 {
+  font-size: 28px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+h4,
+.h4 {
+  font-size: 20px;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-weight: 600;
+}
+h5,
+.h5 {
+  font-size: 20px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+h6,
+.h6 {
+  font-size: 18px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.h7 {
+  font-size: 16px;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-weight: 600;
+}
+.h8 {
+  font-size: 16px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.h9 {
+  font-size: 14px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.h10 {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+.h11 {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-size: 13px;
+}
+.h12 {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-weight: 600;
+  font-size: 13px;
+}
+.h13 {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-size: 12px;
+}
+.h14,
+.formLabel,
+.button {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-weight: 600;
+  font-size: 12px;
+}
+.h15 {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-weight: 600;
+}
+.h16 {
+  font-size: 11px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.h17 {
+  font-size: 62px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.h18 {
+  font-size: 40px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.h19 {
+  font-size: 24px;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  color: #333333;
+}
+.pageSubHeader {
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  font-size: 21px;
+  color: #333333;
+}
+.pageSubHeader:hover {
+  color: #333333;
+}
+.italic {
+  font-style: italic;
+}
+.arial {
+  font-family: Arial, Verdana, Sans-Serif;
+}
+.semibold {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-weight: 600;
+}
+.light {
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+}
+.regular {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.lighter {
+  font-weight: lighter;
+}
+.allCaps {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.bold {
+  font-weight: bold;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
+  color: #333333;
+  text-align: left;
+}
+.pageBackground {
+  padding: 20px 0 35px 0;
+  background: #f0f0f0;
+  border-top: 1px solid #dedede;
+}
+.page {
+  width: 996px;
+}
+.appPageContainer {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.rightContentWithoutNavigation {
+  left: 0;
+}
+.rightContentWithNavigation {
+  left: 255px;
+}
+.newPageHeader {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding-top: 0;
+  line-height: 25px;
+  z-index: 3;
+  min-width: 750px;
+}
+.newPageFooter {
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.newMainContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  zoom: 1;
+  overflow: hidden;
+}
+.newLeftContent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40px;
+  bottom: 0;
+  overflow: hidden;
+  width: 255px;
+  background-color: #f0f0f0;
+}
+.newRightContent {
+  right: 0;
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  padding: 0;
+  overflow: auto;
+}
+.newRightContent .mainContentContainer {
+  min-height: 100%;
+  margin-bottom: -32px;
+}
+.newRightContent .mainContentContainer .renderBodyContainer {
+  padding: 20px;
+}
+.newRightContent .mainContentContainer .editorContainer {
+  padding: 0 20px;
+}
+.newRightContent .mainContentContainer .renderBodyContainerNoNav {
+  padding: 20px 20px 20px 50px;
+}
+.newRightContent .mainContentContainer .renderBodyContainerContent {
+  margin-bottom: 30px;
+}
+.fullContentWidth {
+  width: 956px;
+}
+.halfPageSize {
+  width: 360px;
+}
+.fullContentWidth .halfPageSize {
+  width: 460px;
+}
+.textContentWidth {
+  width: 550px;
+}
+.normalContentWidth {
+  width: 750px;
+}
+.page .sidebar {
+  width: 193px;
+  float: left;
+}
+.pageContent {
+  padding: 20px;
+}
+.homePageHeading {
+  margin-bottom: 17px;
+  margin-top: -5px;
+  font-size: 30px;
+}
+.homePageHeading .homeTab {
+  margin-right: 20px;
+  float: left;
+}
+.homePageHeading .homeTab a {
+  color: #666666;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+.homePageHeading .homeTab a:hover {
+  color: #318ccf;
+}
+.homePageHeading .homeTab a:active {
+  color: #0072c6;
+}
+.homePageHeading .homeTab.selected a {
+  color: #0072c6;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  cursor: default;
+}
+.homePageHeading #actionsContainer {
+  float: right;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-right: 12px;
+  color: #666666;
+}
+.homePageHeading #actionsContainer .printAllLink {
+  background: url(../imgs/icons/icon_Print.png) no-repeat left 3px;
+  float: left;
+  padding-left: 22px;
+  cursor: pointer;
+}
+.homePageHeading #actionsContainer .printAllLink:hover {
+  background: url(../imgs/icons/icon_Print_hover.png) no-repeat left 3px;
+  color: #333333;
+}
+.homePageHeading #actionsContainer .exportAllLink {
+  background: url(../imgs/icons/icon_Export.png) no-repeat left 3px;
+  float: left;
+  padding-left: 22px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.homePageHeading #actionsContainer .exportAllLink:hover {
+  background: url(../imgs/icons/icon_Export_hover.png) no-repeat left 3px;
+  color: #333333;
+}
+.homePageHeading #actionsContainer .manageTilesLink {
+  background: url(../imgs/icons/icon_ManageTiles.png) no-repeat left 1px;
+  float: left;
+  padding-left: 22px;
+  cursor: pointer;
+  margin-left: 15px;
+  text-transform: uppercase;
+}
+.homePageHeading #actionsContainer .manageTilesLink:hover {
+  background: url(../imgs/icons/icon_ManageTiles_hover.png) no-repeat left 1px;
+  color: #333333;
+}
+.homePageHeading #actionsContainer .manageTilesLink a {
+  color: #666666;
+  text-decoration: none;
+}
+.homePageHeading #actionsContainer .manageTilesLink a:hover {
+  color: #333333;
+  text-decoration: none;
+}
+.pageHeading {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 17px;
+  position: relative;
+  *z-index: 1;
+}
+.pageHeading h1 {
+  padding: 0;
+  border: none;
+  margin: 0;
+  width: 600px;
+  /* h1's in pageHeading usually share with others */
+
+}
+.pageHeadingWide h1 {
+  padding: 0;
+  border: none;
+  margin: 0;
+  width: 700px;
+  /* h1's in pageHeading usually share with others */
+
+}
+.warningMessage,
+.infoMessage {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  top: 40px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  position: absolute;
+}
+.warningMessage {
+  background: #ee1c24;
+}
+.infoMessage {
+  background: #ff9900;
+}
+.warningMessage a:hover {
+  text-decoration: none;
+}
+.warningMessage a,
+.warningMessage a:visited,
+.warningMessage a:active {
+  color: white !important;
+  text-decoration: underline !important;
+}
+/* webkit scrollbar */
+
+::-webkit-scrollbar {
+  background-color: #f0f0f0;
+  width: 17px;
+  height: 17px;
+  border: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border: 1px solid #f0f0f0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d7d7d7;
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: #444444;
+}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+::-webkit-scrollbar-button:horizontal:decrement {
+  background-image: url(../imgs/icons/iconScrollbar_Horizontal_leftArrow_Default.png);
+}
+::-webkit-scrollbar-button:horizontal:decrement:hover {
+  background-color: #cccccc;
+}
+::-webkit-scrollbar-button:horizontal:decrement:active {
+  background-image: url(../imgs/icons/iconScrollbar_Horizontal_leftArrow_mouseDown.png);
+  background-color: #444444;
+}
+::-webkit-scrollbar-button:horizontal:increment {
+  background-image: url(../imgs/icons/iconScrollbar_Horizontal_rightArrow_Default.png);
+}
+::-webkit-scrollbar-button:horizontal:increment:hover {
+  background-color: #cccccc;
+}
+::-webkit-scrollbar-button:horizontal:increment:active {
+  background-image: url(../imgs/icons/iconScrollbar_Horizontal_rightArrow_mouseDown.png);
+  background-color: #444444;
+}
+::-webkit-scrollbar-button:vertical:decrement {
+  background-image: url(../imgs/icons/iconScrollbar_Vertical_upArrow_Default.png);
+}
+::-webkit-scrollbar-button:vertical:decrement:hover {
+  background-color: #cccccc;
+}
+::-webkit-scrollbar-button:vertical:decrement:active {
+  background-image: url(../imgs/icons/iconScrollbar_Vertical_upArrow_mouseDown.png);
+  background-color: #444444;
+}
+::-webkit-scrollbar-button:vertical:increment {
+  background-image: url(../imgs/icons/iconScrollbar_Vertical_downArrow_Default.png);
+}
+::-webkit-scrollbar-button:vertical:increment:hover {
+  background-color: #cccccc;
+}
+::-webkit-scrollbar-button:vertical:increment:active {
+  background-image: url(../imgs/icons/iconScrollbar_Vertical_downArrow_mouseDown.png);
+  background-color: #444444;
+}
+/* notification bar */
+
+#notificationBar {
+  display: none;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  color: #333333;
+  border-top: 2px solid #333333;
+  font-size: 14px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+}
+.lightbox {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  display: none;
+  border: 2px solid #333333;
+  background-color: white;
+  padding: 20px 20px 20px 20px;
+  margin: 0 0 80px 0;
+}
+.iframeLightBoxBody/* used for iframes that don't have .lightbox as a parent */ {
+  margin: 0px;
+  padding: 0px;
+  background-image: none;
+  min-width: 0px;
+}
+.lightbox .toolbar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 12px;
+}
+.lightbox .toolbar a.close {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+.lightbox .editorContents {
+  margin-bottom: 30px;
+}
+.lightbox .h2,
+.lightbox h2 {
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  margin-top: -5px;
+  border-bottom: 1px solid #dedede;
+}
+.lightbox label {
+  font-size: 12px;
+}
+.lightbox .h14 {
+  color: #666666;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-weight: normal !important;
+  margin-bottom: 1px;
+}
+.lightbox .formExample {
+  color: #707070;
+  font-size: 11px;
+  margin-bottom: 2px;
+}
+.lightbox input[type="text"] {
+  border: 1px solid #cccccc;
+  color: #333333;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 13px;
+  padding: 4px 8px;
+}
+.lightbox input[type='submit'],
+input[type='button'],
+a.button {
+  display: inline-block;
+  border: 1px solid #0072c6;
+  background-color: #0072c6;
+  color: white !important;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 13px;
+  padding: 1px 18px 3px 18px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  margin-right: 8px;
+  margin-left: 0;
+  text-align: center;
+  text-decoration: none!important;
+  height: 30px;
+}
+.lightbox input[type='submit']:hover,
+input[type='button']:hover,
+a.button:hover {
+  background-color: #3d94d4;
+  border: 1px solid #3d94d4;
+}
+.lightbox input[type='submit']:active,
+input[type='button']:active,
+a.button:active {
+  background-color: #333333;
+  border: 1px solid #333333;
+}
+.lightbox input[type='submit'].secondary,
+input[type='button'].secondary,
+a.button.secondary {
+  background-color: #cde6f7;
+  border: 1px solid #92c0e0;
+  color: #333333 !important;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 13px;
+  padding: 1px 18px 3px 18px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  margin-right: 8px;
+  margin-left: 0;
+  text-align: center;
+  text-decoration: none!important;
+  height: 30px;
+}
+.lightbox input[type='submit'].secondary:hover,
+input[type='button'].secondary:hover,
+a.button.secondary:hover {
+  background-color: #e0effa;
+  border: 1px solid #92c0e0;
+}
+.lightbox input[type='submit'].secondary:active,
+input[type='button'].secondary:active,
+a.button.secondary:active {
+  color: white !important;
+  background-color: #333333 !important;
+  border: 1px solid #333333;
+}
+.lightbox input[type='button'].tertiary,
+input[type='submit'].tertiary,
+a.button.tertiary {
+  background-color: white;
+  border: 1px solid #cccccc;
+  color: #333333 !important;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 13px;
+  padding: 1px 18px 3px 18px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  margin-right: 8px;
+  margin-left: 0;
+  text-align: center;
+  text-decoration: none!important;
+  height: 30px;
+}
+.lightbox input[type='button'].tertiary:hover,
+input[type='submit'].tertiary:hover,
+a.button.tertiary:hover {
+  border: 1px solid #3d94d4;
+}
+.lightbox input[type='button'].tertiary:active,
+input[type='submit'].tertiary:active,
+a.button.tertiary:active {
+  color: white !important;
+  background-color: #333333 !important;
+  border: 1px solid #333333;
+}
+.lightbox span.select {
+  margin: 2px 0 2px 0;
+}
+.lightbox select {
+  border: none;
+  color: #333333;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 13px;
+  height: 25px;
+  margin: 0;
+  padding-left: 5px;
+}
+.lightbox .group {
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 12px;
+  margin-bottom: 10px;
+}
+.lightbox .groupGutter {
+  padding-bottom: 70px;
+}
+.iframeLightBoxBody .boxFooter {
+  padding-top: 20px;
+  border-top: 1px solid #dedede;
+}
+.lightbox .boxFooter {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  border-top: 1px solid #dedede;
+}
+.lightbox textarea {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  padding: 6px 6px 6px 9px;
+  border: 1px solid #cccccc;
+}
+/*MISC*/
+
+.headingActionLinks {
+  margin-top: 20px;
+}
+/*STANDARD HEADING*/
+
+.grayBottomDottedBorder {
+  padding-bottom: 9px;
+}
+/*STANDARD BLURB */
+
+.blurb {
+  max-width: 400px;
+}
+.blurb .h5 {
+  line-height: 23px;
+}
+.blurb p {
+  margin: 4px 0 4px 0;
+}
+.blurb .iconLinkArrowRight {
+  float: left;
+  clear: right;
+}
+/* Heading with Image to left */
+
+.leftImageHeading img {
+  width: 120px;
+  height: 120px;
+}
+.leftImageHeading .left {
+  width: 120px;
+}
+.leftImageHeading .right {
+  width: 460px;
+}
+/* EXPORT Dialog */
+
+.blueButtonTitle .right {
+  height: 50px;
+  width: 50px;
+}
+.blueButtonTitle .left {
+  margin: 8px 0;
+  width: 550px;
+}
+/* Signup */
+
+.ctlCloseAccountTextImageCell {
+  font-weight: bold;
+}
+.ctlCloseAccountTextImageCell img {
+  border: 1px solid #cccccc !important;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+/* Identity Code */
+
+#identityCodeHelp ul {
+  padding-top: 20px;
+}
+#identityCodeHelp ul li {
+  padding: 6px 0 0 0;
+  margin-left: 20px;
+}
+/* microsoft sign in */
+
+.signInLeft {
+  position: relative;
+  height: 420px;
+  background-color: #0072c6;
+  color: white;
+  margin-bottom: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.signInLeft a,
+.signInLeft a:visited,
+.signInLeft a:active,
+.signInLeft a:hover {
+  color: white !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-weight: bold;
+}
+.signInLeft .signInApp {
+  height: 370px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.signInLeft .signInApp .appSection {
+  height: 121px;
+  background-color: #005b9e;
+  text-align: center;
+}
+.signInLeft .signInApp .appSection img {
+  vertical-align: middle;
+}
+.signInLeft .signInApp .appSection .appLogoWrapper {
+  width: 140px;
+  height: 80px;
+  background-color: white;
+  display: inline-block;
+  line-height: 77px;
+  text-align: center;
+}
+.signInLeft .signInApp .appSection .appLogoWrapper .appLogo {
+  width: auto;
+  height: auto;
+  max-height: 60px;
+  max-width: 120px;
+  vertical-align: middle;
+}
+.signInLeft .signInApp .appSection .arrows {
+  padding: 0 20px;
+}
+.signInLeft .signInApp .description {
+  font-size: 24px;
+  font-weight: lighter;
+}
+.signInLeft .signInApp .signinText2,
+.signInLeft .signInApp .signinText3 {
+  padding-bottom: 5px;
+}
+.signInLeft .signInApp label {
+  font-size: 12px;
+}
+.signInLeft .learnMore {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 435px;
+}
+.signInLeft .shellWelcome {
+  padding: 8px 20px 0 20px;
+}
+.signInLeft .shellWelcome h2 {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif !important;
+  font-size: 21px !important;
+  line-height: 24px;
+}
+#learnMore,
+#learnMore:hover,
+#learnMore:active {
+  border: 1px solid white;
+}
+.otherSignIns,
+.onlyTwoSignIns {
+  height: 30px;
+  padding: 10px 15px 15px 15px;
+}
+.onlyTwoSignIns a.idp {
+  padding-left: 8px;
+  text-decoration: none;
+}
+.onlyTwoSignIns .right {
+  text-align: right;
+}
+.onlyTwoSignIns .left {
+  text-align: left;
+  color: white;
+}
+.otherSignIns a.idp {
+  padding-right: 8px;
+  text-decoration: none;
+}
+.otherSignIns a {
+  color: white !important;
+}
+.otherSignIns img,
+.onlyTwoSignIns img {
+  vertical-align: middle;
+}
+#signinLayout .topArea {
+  height: 40px;
+}
+#signinLayout .bodyArea {
+  width: 100%;
+}
+#signinLayout .bodyContainer {
+  width: 935px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#signinLayout .bodyContent {
+  width: 895px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#signinLayout .bodyContent .padding {
+  padding: 35px 0 15px 0;
+}
+#signinLayout .leftContent {
+  float: left;
+  color: white;
+}
+#signinLayout .smallWidth {
+  width: 320px;
+}
+#signinLayout .largerWidth {
+  width: 475px;
+}
+#signinLayout .rightContent {
+  float: left;
+  margin-left: 100px;
+}
+#signinLayout .rightContent .logo {
+  margin: 40px 0;
+}
+#signinLayout .rightContent .loginLogo {
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+#signinLayout .backgroundContainer {
+  background-color: #333333;
+  min-height: 277px;
+}
+#loginContent .signinContainer {
+  float: right;
+  text-align: right;
+  width: 160px;
+  height: 100px;
+  line-height: 100px;
+}
+#loginContent .signinContainer span {
+  line-height: normal;
+  display: inline-block;
+  vertical-align: middle;
+}
+#credentials .loginLogo {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #dedede !important;
+}
+#credentials a.idp {
+  text-decoration: none;
+}
+.recordPickerWrapper {
+  position: relative;
+  width: 255px;
+  z-index: 5;
+}
+.recordPicker {
+  position: absolute;
+  width: 255px;
+  background: #333333 !important;
+}
+.recordPicker .currentRecordBox {
+  width: 255px;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 75px;
+  line-height: 75px;
+}
+.recordPicker a,
+.recordPicker a:hover {
+  text-decoration: none;
+}
+.recordPicker .person {
+  position: relative;
+  margin-top: -4px;
+  display: block;
+  text-decoration: none;
+}
+.recordPicker .title {
+  padding-left: 5px;
+}
+.recordPicker #recordPhoto {
+  padding-left: 12px;
+}
+.recordPicker #recordPhoto img {
+  vertical-align: middle;
+}
+.recordPicker .recordInfo {
+  font-size: 16px;
+  width: 140px;
+}
+.recordPicker .recordSwitcherRule {
+  border-right: 1px solid #999999;
+  height: 30px;
+  margin-top: 23px;
+}
+.recordPicker .recordSwitcherIcon {
+  width: 37px;
+}
+.recordPicker .recordSwitcherIcon .recordPerson {
+  display: block;
+}
+.recordPicker .recordSwitcherIcon .recordPerson:hover {
+  background-color: #1e1e1e;
+}
+.recordPicker .recordSwitcherIcon .recordPerson img {
+  padding-left: 13px;
+}
+.recordPicker .links {
+  padding-top: 10px;
+}
+.recordPicker .recordListBox a {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 12px;
+}
+.recordPicker .recordListBox a:hover {
+  background-color: #1e1e1e;
+}
+.recordPicker .recordListBox .recordListName {
+  width: 165px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap !important;
+  display: inline-block;
+  padding-left: 8px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+.recordPicker .recordListBox img {
+  vertical-align: middle;
+}
+.recordPicker .recordListRule {
+  border-bottom: 1px solid #444444;
+}
+.recordPicker .links a {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.recordPicker .recordPickerLinkImg {
+  vertical-align: middle;
+}
+.recordPicker .recordPerson div {
+  width: 122px;
+  white-space: normal;
+}
+.recordPicker .recordPersonAdd {
+  font-size: 14px;
+  text-align: center;
+}
+.recordPicker .recordPersonAdd a {
+  display: block;
+  padding: 15px;
+}
+.recordPicker .recordPersonAdd a:hover {
+  background-color: #1e1e1e;
+}
+.recordPicker .recordPersonAdd img {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+  margin-bottom: 2px;
+}
+.recordPicker .recordPersonSeeAll {
+  font-size: 14px;
+  border-bottom: 1px solid #444444;
+}
+.recordPicker .recordPersonSeeAll a {
+  display: block;
+  padding: 8px 12px 20px 12px;
+}
+.recordPicker .recordPersonSeeAll a:hover {
+  background-color: #1e1e1e;
+}
+.recordPicker #recordMenu {
+  display: none;
+}
+.tip {
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  z-index: 104;
+  display: none;
+  background-color: white;
+  border: 2px solid #333333;
+  padding: 20px;
+  -moz-box-shadow: 0px 0px 3px 1px #cccccc;
+  -webkit-box-shadow: 0px 0px 3px 1px #cccccc;
+  box-shadow: 0px 0px 3px 1px #cccccc;
+}
+.tip .topArrow {
+  background: url(../imgs/backgrounds/tip_top.png) no-repeat;
+  width: 37px;
+  height: 30px;
+  position: absolute;
+  top: -27px;
+  z-index: 1;
+}
+.tip .bottomArrow {
+  background: url(../imgs/backgrounds/tip_bottom.png) no-repeat;
+  width: 37px;
+  height: 30px;
+  position: absolute;
+  bottom: -27px;
+  z-index: 1;
+}
+.tip .rightArrow {
+  background: url(../imgs/backgrounds/tip_right.png) no-repeat;
+  width: 30px;
+  height: 37px;
+  position: absolute;
+  right: -27px;
+  z-index: 1;
+}
+.tip .leftArrow {
+  background: url(../imgs/backgrounds/tip_left.png) no-repeat;
+  width: 30px;
+  height: 37px;
+  position: absolute;
+  left: -27px;
+  z-index: 1;
+}
+.tipBlue {
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  z-index: 104;
+  display: none;
+  background-color: white;
+  border: 1px solid #0072c6;
+  padding: 20px;
+}
+.tipBlue .leftArrow {
+  background: url(../imgs/backgrounds/tipBlue_left.png) no-repeat;
+  width: 10px;
+  height: 15px;
+  position: absolute;
+  left: -10px;
+  top: 25px;
+  z-index: 1;
+}
+.tipBlue .rightArrow {
+  background: url(../imgs/backgrounds/tipBlue_right.png) no-repeat;
+  width: 10px;
+  height: 15px;
+  position: absolute;
+  right: -10px;
+  top: 25px;
+  z-index: 1;
+}
+/* backgrounds */
+
+.blackBackground {
+  background-color: black;
+}
+.grayBackground {
+  background-color: #666666;
+}
+.darkGrayBackground {
+  background-color: #333333;
+}
+.lightGrayBackground {
+  background-color: #666666;
+}
+.warmGrayBackground {
+  background-color: #a5b2b5;
+}
+.lightGrayBackground {
+  background-color: #cccccc;
+}
+.lighterGrayBackground {
+  background-color: #e2e2e2;
+}
+.yellowBackground {
+  background-color: #ffffa7;
+}
+.whiteBackground,
+.header,
+.footer,
+.lightbox .boxHeader,
+.lightbox .boxFooter,
+.navigation,
+.whiteBox,
+.iframeLightBoxBody {
+  background-color: white;
+}
+.blueBackground {
+  background-color: #00a4ea;
+}
+.linkBlueBackground,
+.suggestionList li.active,
+.hv_autocomplete_highlightedListItem {
+  background: #0072c6 !important;
+}
+.lightBlueBackground {
+  background-color: #c7eafb;
+}
+.lightBlueTintedBackground {
+  background-color: #e6f3ff;
+}
+.redBackground {
+  background-color: red;
+}
+.menuHoverBackground {
+  background-color: #1082d6;
+}
+.disabledBackground {
+  background-color: #f0f0f0 !important;
+}
+.greenBackground,
+.greenBox {
+  background-color: #8cc63f;
+}
+.notificationBackground {
+  background-color: #e5f0f9;
+}
+/* fonts */
+
+.blackText,
+.navlinks a {
+  color: #333333 !important;
+}
+.linkBlueText,
+a,
+a:hover,
+a:visited {
+  color: #0072c6;
+}
+.navlinks a:hover,
+.navlinks .selected {
+  color: #0072c6 !important;
+}
+.grayText,
+.footer .links a {
+  color: #666666 !important;
+}
+.warmGrayText,
+.formExample {
+  color: #666666;
+}
+.whiteText,
+.suggestionList li.active,
+.hv_autocomplete_highlightedListItem {
+  color: white !important;
+}
+.redText,
+.field-validation-error,
+.validation-summary-errors ul li {
+  color: red !important;
+}
+.disabledText {
+  color: #cccccc !important;
+}
+a.disabledText {
+  text-decoration: none !important;
+  cursor: default !important;
+}
+.greenText,
+.success {
+  color: #009900;
+}
+/* borders */
+
+.lightGrayBottomBorder {
+  border-bottom: 1px solid #dedede;
+}
+.lightGrayTopBorder {
+  border-top: 1px solid #dedede;
+}
+.lightGrayTopBorder {
+  border-top: 1px solid #dedede;
+}
+.lightGrayLeftBorder {
+  border-left: 1px solid #dedede;
+}
+.lightGrayRightBorder {
+  border-right: 1px solid #dedede;
+}
+.grayBottomDottedBorder {
+  border-bottom: 1px dotted #cccccc;
+}
+.grayTopDottedBorder,
+.formFooter {
+  border-top: 1px dotted #cccccc;
+}
+.blackDottedBorder,
+a.button:focus,
+a.centerButton:focus {
+  border: 1px dotted black;
+}
+.darkBlueBottomBorder {
+  border-bottom: 1px solid #09a4e4;
+}
+.menuBorder,
+.progressbar,
+.appThumbnail {
+  border: 1px solid #cccccc !important;
+}
+.blackBottomBorder {
+  border-bottom: 1px solid black;
+}
+.blackRightBorder {
+  border-right: 1px solid black;
+}
+.blackLeftBorder {
+  border-left: 1px solid black;
+}
+input[type='button'],
+input[type='submit'],
+a.button,
+a.button:focus {
+  display: inline-block;
+  border: 1px solid #0072c6;
+  background-color: #0072c6;
+  color: white !important;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 12px;
+  height: inherit;
+  padding: 4px 18px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 0;
+  cursor: default;
+  text-align: center;
+  text-decoration: none!important;
+}
+input[type='button']:hover,
+input[type='submit']:hover,
+a.button:hover {
+  background-color: #1082d6;
+}
+input[type='button']:active,
+input[type='submit']:active,
+a.button:active {
+  background-color: #0072c6;
+}
+input[type='button'].secondary,
+input[type='submit'].secondary,
+a.button.secondary {
+  display: inline-block;
+  border: 1px solid #cccccc;
+  background-color: white;
+  color: #0072c6 !important;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 12px;
+  height: inherit;
+  padding: 4px 18px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 0;
+  cursor: default;
+  text-align: center;
+  text-decoration: none!important;
+}
+input[type='button'].large,
+input[type='submit'].large,
+a.button.large {
+  font-size: 16px;
+  padding: 4px 20px 7px 20px;
+  padding-top: 4px;
+  padding-bottom: 7px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+input[type='button'].secondary:hover,
+input[type='submit'].secondary:hover,
+a.button.secondary:hover {
+  background-color: white;
+  border: 1px solid #666666;
+}
+input[type='button'].secondary:active,
+input[type='submit'].secondary:active,
+a.button.secondary:active {
+  background-color: white;
+  border: 1px solid #cccccc;
+}
+input[type='button'] img,
+input[type='submit'] img,
+a.button img {
+  vertical-align: text-bottom;
+  margin-right: 3px;
+}
+input[type='button'].facebook,
+input[type='submit'].facebook,
+a.button.facebook {
+  background-image: url(../imgs/icons/icon-facebook.gif);
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  padding-left: 30px;
+}
+input[type='button'].openId,
+input[type='submit'].openId,
+a.button.openId {
+  background-image: url(../imgs/icons/icon-openid.gif);
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  padding-left: 30px;
+}
+input[type='button'].wlid,
+input[type='submit'].wlid,
+a.button.wlid {
+  background-image: url(../imgs/icons/icon-windows.gif);
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  padding-left: 30px;
+}
+/* disabled */
+
+input[type='button'][disabled],
+input[type='submit'][disabled],
+a.button[data-disabled-href],
+input[type='button'][disabled]:hover,
+input[type='submit'][disabled]:hover,
+a.button[data-disabled-href]:hover,
+input[type='button'][disabled]:active,
+input[type='submit'][disabled]:active,
+a.button[data-disabled-href]:active {
+  background-color: #dedede !important;
+  color: #666666 !important;
+}
+input[type='button'][disabled].secondary,
+input[type='submit'][disabled].secondary,
+a.button[data-disabled-href].secondary,
+input[type='button'][disabled].secondary:hover,
+input[type='submit'][disabled].secondary:hover,
+a.button[data-disabled-href].secondary:hover,
+input[type='button'][disabled].secondary:active,
+input[type='submit'][disabled].secondary:active,
+a.button[data-disabled-href].secondary:active {
+  background-color: white !important;
+  border-color: #cccccc !important;
+}
+input[type='text'],
+input[type='password'] {
+  border: 1px solid #cccccc;
+  padding: 2px;
+}
+select {
+  height: 20px;
+  *height: auto;
+  border: none;
+  margin: 0;
+}
+.accountForm select,
+#printSheetForm select,
+#printWalletCardForm select {
+  height: 28px;
+  *height: auto;
+  border: none;
+  margin: 0;
+  padding-left: 3px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.accountForm input[type='text'],
+input[type='password'] {
+  border: 1px solid #cccccc;
+  height: 22px;
+  padding-left: 5px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+span.select {
+  border: 1px solid #cccccc;
+  *border: none;
+  display: inline-block;
+  position: relative;
+  margin: 1px 0 2px 0;
+}
+.formSection .formSection input[type='text'],
+.formSection .formSection input[type='password'],
+.formSection .formSection span.select {
+  border: 1px solid #666666;
+}
+.field-validation-valid {
+  display: none;
+}
+.formRow {
+  margin-bottom: 10px;
+  clear: both;
+}
+.formRow2 {
+  margin-bottom: 15px;
+  clear: both;
+}
+.formRow3 {
+  margin-bottom: 20px;
+  clear: both;
+}
+.formAddress {
+  margin-top: 10px;
+  clear: both;
+}
+.fullContentWidth .formRowRight {
+  float: left;
+}
+.normalContentWidth .formRowRight {
+  float: left;
+  width: 540px;
+}
+.formLabel {
+  float: left;
+  width: 200px;
+  text-align: right;
+  margin-right: 20px;
+  padding-top: 4px;
+}
+.normalContentWidth .formLabel {
+  width: 150px;
+}
+.nowidth {
+  width: auto;
+}
+.formInput {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  width: 270px;
+}
+.formInputWide {
+  width: 500px;
+}
+.normalContentWidth .formInput {
+  width: 220px;
+}
+.formContent {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  width: 500px;
+}
+input[type=radio],
+input[type=checkbox] {
+  vertical-align: middle;
+  margin-top: 1px;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  margin-left: 0;
+  padding: 0;
+}
+.formTextBox {
+  width: 250px;
+}
+.normalContentWidth .formTextBox {
+  width: 200px;
+}
+.formTextBox.wide {
+  width: 600px;
+}
+.formTextBox.narrow {
+  width: 150px;
+}
+.formTextBox.skinny {
+  width: 85px;
+}
+.formTextBox.small {
+  width: 65px;
+}
+select.formTextBox {
+  width: 265px;
+}
+select.formTextBox#CountryCode {
+  width: auto;
+}
+.normalContentWidth select.formTextBox {
+  width: 204px;
+}
+select.formTextBox.wide {
+  width: 604px;
+}
+select.formTextBox.narrow {
+  width: 163px;
+}
+select.formTextBox.skinny {
+  width: 85px;
+}
+.formMessage {
+  padding-top: 4px;
+  float: left;
+  position: relative;
+  width: 400px;
+}
+.normalContentWidth .formMessage {
+  width: 350px;
+}
+.formFooter {
+  padding-top: 10px;
+}
+.formSectionContainer {
+  background-color: white;
+}
+.formAdvancedInfoSection {
+  background-color: white;
+  padding: 10px;
+}
+.formSection {
+  background-color: #f3f3f3;
+  padding: 20px;
+  margin-top: 10px;
+}
+.field-validation-error,
+span.validation-summary-errors {
+  background: url(../imgs/icons/iconEditor_error.png) no-repeat left center;
+  padding-left: 15px;
+  font-weight: bold;
+  display: block;
+}
+.warning {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 30px;
+  background: white url(../imgs/warning22.gif) 3px 3px no-repeat;
+}
+.success {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 20px;
+  background: white url(../imgs/icons/icn_check.png) no-repeat left center;
+  font-weight: bold;
+}
+.loading {
+  height: 200px;
+  background: white url(../imgs/ProgressAnimation_30x30.gif) center center no-repeat;
+}
+#hip .loading {
+  height: 130px;
+  width: 250px;
+}
+.loadingLightbox {
+  width: 50px;
+  padding: 20px;
+  position: absolute;
+  background: transparent url(../imgs/ProgressAnimation_30x30.gif) 0 0 no-repeat;
+}
+.emailStatus.loading {
+  padding-top: 0;
+  padding-right: 5px;
+  padding-bottom: 0;
+  padding-left: 30px;
+  height: auto;
+  background: white url(../imgs/ProgressAnimation_30x30.gif) 3px 0px no-repeat;
+}
+.formCode {
+  width: 50px;
+  margin-right: 3px;
+}
+.validation-summary-errors {
+  margin-bottom: 25px;
+}
+.validation-summary-errors ul li {
+  line-height: 18px;
+  margin-bottom: 6px;
+  padding-left: 18px;
+  background: url(../imgs/icons/iconEditor_error.png) left top no-repeat;
+  list-style-image: none;
+  list-style-type: none;
+}
+.ui-datepicker-trigger {
+  margin-left: 2px;
+  cursor: pointer;
+}
+.suggestionList li {
+  line-height: 18px;
+  margin-bottom: 6px;
+  padding-left: 0px;
+  background: none;
+  cursor: pointer;
+}
+.watermark {
+  cursor: text;
+  padding-left: 5px;
+  position: absolute;
+  color: #a5b2b5;
+  font-style: italic;
+  background-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.requiredLegend {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+/*AutoComplete flyout */
+
+.hv_autocomplete_completionListElement {
+  background: white !important;
+  border: 1px solid black !important;
+}
+.hv_autocomplete_highlightedListItem {
+  padding: 5px!important;
+}
+.hv_autocomplete_listItem {
+  padding: 5px!important;
+}
+.monthFragment {
+  width: 130px;
+}
+.dayFragment {
+  width: 60px;
+}
+.yearFragment {
+  width: 60px;
+}
+/* directory carousel */
+
+.directoryCarouselNavigation {
+  width: 30px;
+  padding: 70px 0 0 0;
+}
+.directoryCarouselContentContainer {
+  overflow: hidden;
+  position: relative;
+  height: 235px;
+  width: 680px;
+}
+.directoryCarouselContent {
+  position: relative;
+}
+.directoryCarouselContent .directoryItem {
+  position: absolute;
+  width: 140px;
+  padding-right: 10px;
+}
+/* standard carousel */
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  padding: 0 40px;
+}
+.carousel .leftMover,
+.carousel .rightMover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 40px;
+  display: block;
+  cursor: default;
+}
+.carousel .leftMover {
+  left: 0;
+  background: white url(../imgs/buttons/carousel_left_disabled.png) no-repeat left center;
+}
+.carousel .leftMover.enabled {
+  background: white url(../imgs/buttons/carousel_left.png) no-repeat left center;
+  cursor: pointer;
+}
+.carousel .leftMover.enabled:hover {
+  background: white url(../imgs/buttons/carousel_left_rollover.png) no-repeat left center;
+}
+.carousel .leftMover.enabled:active {
+  background: white url(../imgs/buttons/carousel_left_select.png) no-repeat left center;
+}
+.carousel .rightMover {
+  right: 0;
+  background: white url(../imgs/buttons/carousel_right_disabled.png) no-repeat right center;
+}
+.carousel .rightMover.enabled {
+  background: white url(../imgs/buttons/carousel_right.png) no-repeat right center;
+  cursor: pointer;
+}
+.carousel .rightMover.enabled:hover {
+  background: white url(../imgs/buttons/carousel_right_rollover.png) no-repeat right center;
+}
+.carousel .rightMover.enabled:active {
+  background: white url(../imgs/buttons/carousel_right_select.png) no-repeat right center;
+}
+.carouselContent {
+  position: relative;
+}
+.chartRoot {
+  margin: 16px 0 25px 0;
+  min-height: 240px;
+}
+.chartDivider {
+  height: 1px;
+}
+.chartMenu {
+  position: relative;
+  z-index: 2;
+}
+.chartMenuActions {
+  display: inline;
+}
+.chartMenuItemSeparator {
+  padding: 0 5px;
+}
+.chartTimeFilterContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  padding: 3px 10px 5px 10px;
+  margin-top: -2px;
+  margin-bottom: 0;
+  margin-right: -5px;
+  margin-left: 0;
+  border: 1px solid white;
+  background-color: white;
+  z-index: 100;
+}
+.chartTimeActiveFilter {
+  background: url(../imgs/icons/arrow-small-down2.png) no-repeat right center;
+  padding-right: 15px;
+}
+.chartTimeActiveFilter a,
+.chartTimeActiveFilter a:hover,
+.chartTimeActiveFilter a:visited {
+  color: black;
+  text-decoration: none;
+}
+.chartTimeFilters div {
+  padding: 10px 0 0 0;
+  background-color: white;
+  z-index: 3;
+}
+.chartGraphContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.chartGraphArea {
+  width: 450px;
+  height: 170px;
+  margin-top: 10px;
+}
+.chartNoGraphData,
+.chartGraphContentLoading,
+.chartGraphLoadError {
+  padding-top: 77px;
+  height: 100px;
+  background: url(../imgs/emptychart.gif) no-repeat center top;
+}
+.chartGraphContentLoadingSmall,
+.chartGraphLoadErrorSmall {
+  padding-top: 30px;
+  height: 60px;
+  background: url(../imgs/emptychart.gif) no-repeat center top;
+  text-align: center;
+}
+.chartNoGraphDataSmall {
+  padding-left: 5px;
+}
+.chartEmptyGraph {
+  margin-left: 10px;
+  width: 223px;
+  height: 100px;
+}
+.chartNoGraphDataMsg {
+  padding-top: 33px;
+  text-align: center;
+  width: 100%;
+}
+.chartGraphContentLoading img {
+  display: block;
+  margin: auto;
+}
+.chartRightSummary {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 47px;
+  width: 228px;
+}
+.chartTitle {
+  width: 450px;
+  margin-bottom: 3px;
+}
+.chartSubtitle {
+  font-size: 18px;
+  font-color: #666666;
+  margin-bottom: 6px;
+}
+.chartValue {
+  font-size: 46px;
+  line-height: 0.8;
+}
+.chartCpfValue {
+  font-size: 46px;
+  line-height: 1;
+}
+.chartCpfWrapper {
+  display: table;
+}
+.chartCpfLegend {
+  width: 10px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.chartCpfLegendFat {
+  background-color: #99cc00;
+}
+.chartCpfLegendProtein {
+  background-color: #0062c4;
+}
+.chartCpfLegendCarb {
+  background-color: #ff9900;
+}
+.chartGoalSummaryWrapper {
+  margin: 5px 0 0px 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 4px;
+  padding-left: 6px;
+}
+.chartGoalSummary {
+  padding: 0 0 5px 0;
+}
+.chartSummarySpacer {
+  margin: 0 0 5px 0;
+}
+.chartGraphTooltip {
+  position: absolute;
+  display: none;
+  border-left: 1px solid #333333;
+  z-index: 101;
+}
+.chartGraphTooltipLeft {
+  width: 7px;
+  border-top: 1px solid #333333;
+}
+.chartGraphTooltipBottom {
+  height: 10px;
+  width: 7px;
+  position: relative;
+  border-width: 0px;
+}
+.chartGraphTooltipTop {
+  background-color: white;
+}
+.chartGraphTooltipBottomDiag {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-style: solid;
+  height: 0;
+  line-height: 0;
+  width: 0;
+}
+.chartGraphTooltipContent {
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-right: 1px solid #333333;
+  padding: 2px 7px 2px 0px;
+}
+.chartTooltipItemDate {
+  color: #666666;
+}
+.chartGraphTooltip2 {
+  position: absolute;
+  display: none;
+  border: 1px solid #ffdddd;
+  padding: 2px;
+  background-color: #ffeeee;
+  opacity: 0.80;
+}
+.chartTitleSeparator {
+  padding: 0px 10px;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  font-color: #666666;
+}
+a.chartTitle {
+  color: black;
+  text-decoration: none;
+}
+a.inActiveChartTitle:hover {
+  text-decoration: underline;
+}
+.chartAppsDevices {
+  height: 300px;
+}
+.newWeightSwitchMeticLegend {
+  text-align: right;
+  padding-bottom: 5px;
+}
+.newGoalFormRow {
+  padding-bottom: 10px;
+}
+#displayDisclaimer {
+  margin: 10px 0px 0px 0px;
+}
+.removeIconDisclaimer {
+  padding-left: 10px;
+}
+.removeDisclaimerText {
+  max-width: 700px;
+}
+.lighterGrayBackground {
+  background: #f7f7f7;
+}
+.removeDisclaimerTable {
+  border: solid #efefef 1px;
+}
+.removeDisclaimerTable tr {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.removeDisclaimerTable tr td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  vertical-align: top;
+  border: none;
+  border-width: 0px;
+}
+.itemGridChartContainer {
+  position: absolute;
+  top: 110px;
+  bottom: 30px;
+  left: 0px;
+  right: 0px;
+}
+.itemGridChartPrintContainer {
+  position: relative;
+  width: 700px;
+  height: 400px;
+}
+.itemGridChart {
+  position: relative;
+  padding: 20px;
+  width: 90%;
+  overflow: visible;
+}
+.itemGridChart .titleContainer {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.itemGridChart .titleContainer .moveLeft {
+  display: inline-block;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 11px solid #666666;
+  position: relative;
+  top: 1px;
+}
+.itemGridChart .titleContainer .moveLeft:hover {
+  border-right: 11px solid #333333;
+}
+.itemGridChart .titleContainer .moveLeft.disabled {
+  cursor: auto;
+  border-right: 11px solid #e5e5e5;
+}
+.itemGridChart .titleContainer .moveRight {
+  display: inline-block;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 11px solid #666666;
+  margin-top: 3px;
+  position: relative;
+  top: 1px;
+}
+.itemGridChart .titleContainer .moveRight:hover {
+  border-left: 11px solid #333333;
+}
+.itemGridChart .titleContainer .moveRight.disabled {
+  cursor: auto;
+  border-left: 11px solid #e5e5e5;
+}
+.itemGridChart .titleContainer .title {
+  display: inline-block;
+  padding: 0 15px;
+  min-width: 350px;
+  text-align: center;
+  color: #333333;
+  font-size: 16pt;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  font-weight: 300;
+}
+.itemGridChart .graphContainer {
+  position: relative;
+  height: 400px;
+}
+.itemGridChart .graphContainer .leftYAxisLabel {
+  position: absolute;
+  left: 30px;
+  top: 45%;
+  color: #666666;
+  font-size: 14px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+.itemGridChart .graphContainer .rightYAxisLabel {
+  position: absolute;
+  left: 100%;
+  margin-left: -10px;
+  top: 45%;
+  color: #666666;
+  font-size: 14px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+.itemGridChart .graphContainer .graphArea {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.itemGridChart .graphContainer .graphArea.hasLeftYAxisLabel {
+  left: 40px;
+}
+.itemGridChart .graphContainer .graphArea.hasRightYAxisLabel {
+  right: 40px;
+}
+.itemGridChart .graphContainer .graphArea .tickLabel {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 10px;
+  font-weight: normal;
+  color: #999999;
+}
+.itemGridChart .contentLoading {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+}
+.itemGridChart .changeViewContainer {
+  text-align: center;
+  padding: 20px 0 25px 0;
+  margin: 0 auto 0 auto;
+}
+.itemGridChart .changeViewContainer div {
+  color: #333333;
+  background-color: #cccccc;
+  width: 100px;
+  height: 40px;
+  font-weight: normal;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: middle;
+}
+.itemGridChart .changeViewContainer div:hover {
+  background-color: #d6d6d6;
+}
+.itemGridChart .changeViewContainer div.active {
+  background-color: #666666;
+  color: white;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+}
+.itemGridChart .changeViewContainer div.active:hover {
+  background-color: #666666;
+}
+.itemGridChart .changeViewContainer div:active {
+  background-color: #212121;
+  color: white;
+}
+.itemGridChartTooltip {
+  position: absolute;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  padding: 10px;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #262626;
+}
+.itemGridChartTooltip:after,
+.itemGridChartTooltip:before {
+  top: 100%;
+  border: solid transparent;
+  content: "";
+  height: 0px;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  padding: 0;
+}
+.itemGridChartTooltip:after {
+  border-top-color: white;
+  border-width: 15px;
+  left: 30px;
+  margin-left: -15px;
+}
+.itemGridChartTooltip:before {
+  border-top-color: #262626;
+  border-width: 18px;
+  left: 30px;
+  margin-left: -18px;
+}
+.itemGridChartTooltip .toolTipDate {
+  color: #666666;
+}
+.itemGridChartTooltip .toolTipValue {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 24pt;
+  color: #333333;
+}
+.itemGridChartTooltip .toolTipUnits {
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  font-size: 11pt;
+  color: #333333;
+  text-transform: lowercase;
+}
+.itemGridChartTooltip .toolTipLabel {
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  font-size: 12pt;
+  color: #333333;
+  padding-right: 15px;
+}
+/* App Directory */
+
+.directorySubTitle {
+  margin-left: 20px;
+}
+.directorySubTitleImg {
+  display: block;
+  margin: auto;
+}
+.search-box {
+  width: 285px;
+  height: 28px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  border-style: solid;
+  border-color: #dedede;
+  border-width: 2px 2px 2px 2px;
+  overflow: hidden;
+}
+.search-box img {
+  height: 28px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.search-box a {
+  height: 28px;
+  border: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 2px;
+  padding: 0;
+}
+.search-box input {
+  height: 26px;
+  font-size: 14px;
+  line-height: 26px;
+  width: 248px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-right: 2px;
+  padding-left: 4px;
+  margin: 0;
+  border: 0;
+  float: left;
+}
+.searchWatermark {
+  color: #cccccc;
+}
+a.openLink:link,
+a.openLink:active,
+a.openLink:visited {
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-style: hidden;
+  padding-bottom: 2px;
+}
+a.openLink:hover {
+  border-bottom-style: solid;
+}
+a.activeBrowseType {
+  color: Black;
+}
+.browseLinkOuter {
+  padding: 9px 0 9px 0;
+  border: 1px solid white;
+  margin: 0;
+}
+.browseLinkInner {
+  padding: 0 10px 0 10px;
+}
+#browseRecommended img {
+  margin-right: 3px;
+  vertical-align: text-bottom;
+}
+.browseLinkBorderRight {
+  border-right: 1px solid black;
+}
+#browseCategoryBorderEraser,
+#browseMobileBorderEraser {
+  position: absolute;
+  height: 6px;
+  background-color: White;
+  z-index: 1000;
+}
+#browseByCategory img,
+#browseByMobile img,
+#locationDropdown img {
+  padding-left: 5px;
+  vertical-align: middle;
+}
+#directoryTabs {
+  position: relative;
+  zoom: 1;
+}
+#directoryTabs div.tabContainer {
+  overflow: hidden;
+  height: 46px;
+  position: relative;
+  top: 2px;
+}
+#directoryTabs input.secondary.tab {
+  color: black;
+}
+#directoryTabs input.tab {
+  height: 50px;
+  line-height: 35px;
+  font-size: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#directoryTabs .actionLinks {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+#loadingError {
+  height: 300px;
+  padding: 20px 10px;
+}
+/* Installed */
+
+#installedAppList {
+  border-style: none;
+}
+#installedAppList .installedApp {
+  position: relative;
+  width: 330px;
+  height: 120px;
+  margin: 0;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-left: 0;
+}
+#installedAppList .installedApp .brokenConnection {
+  margin-bottom: 8px;
+}
+#installedAppList .installedApp .logoSection {
+  position: absolute;
+  width: 120px;
+  height: 200px;
+  top: 10px;
+  left: 0;
+}
+#installedAppList .installedApp .descriptionSection {
+  padding-left: 125px;
+}
+#installedAppList .installedApp .descriptionSection .appDescription {
+  overflow: hidden;
+  max-height: 48px;
+  padding: 0 0 5px 0;
+  font-size: 14px;
+}
+div.sodaTip div.sodaApp {
+  line-height: 1.7;
+}
+/* Browse */
+
+#directoryContent {
+  padding: 5px 0 5px 0;
+  border-top: 1px solid #dedede;
+  overflow: hidden;
+}
+.directoryItem {
+  width: 145px;
+  height: 195px;
+  margin: 0;
+  padding: 20px 20px 20px 20px;
+}
+.directoryItemText {
+  overflow: hidden;
+  max-height: 62px;
+  margin-top: 5px;
+}
+.directoryItem .recommended {
+  vertical-align: top;
+  padding-left: 5px;
+}
+.directoryItem:hover {
+  background-color: #ebf2fc;
+}
+.directoryItem .learnMoreText {
+  padding-top: 5px;
+  text-transform: uppercase;
+}
+.directoryItem .logoContainer {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.directoryItem .logoContainer * {
+  vertical-align: middle;
+}
+.directoryItem .logoContainer img {
+  max-height: 100px;
+  max-width: 100px;
+}
+.screenshot {
+  margin-right: 10px;
+  max-width: 200px;
+  max-height: 200px;
+}
+.browseByMobile {
+  position: absolute;
+  z-index: 105;
+}
+.browseByCategory {
+  position: absolute;
+  width: 610px;
+  z-index: 105;
+}
+.browseByPopupContent {
+  background-color: white;
+  border: 1px solid #cccccc;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 0;
+  padding-left: 20px;
+}
+.browseByPopupContentColumn {
+  width: 175px;
+  padding-top: 5px;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 0;
+  line-height: 1.5;
+}
+.browseByMobilePopupContentColumn {
+  width: 125px;
+  padding-top: 5px;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 0;
+  line-height: 1.5;
+}
+.longDescription {
+  padding-top: 10px;
+}
+.noResultsContent {
+  width: 350px;
+  margin: 25px auto 20px auto;
+  min-height: 300px;
+}
+.recommendedApp {
+  vertical-align: top;
+  padding-left: 5px;
+}
+.recommendedForHint {
+  margin-top: 5px;
+  text-align: right;
+  margin-right: 15px;
+}
+.directoryItemDetails {
+  position: relative;
+}
+.directoryItemDetails .itemImageContainer {
+  position: absolute;
+  width: 120px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  border: 1px solid #dedede;
+  line-height: 97px;
+  text-align: center;
+}
+.directoryItemDetails .itemImageContainer img {
+  max-height: 60px;
+  max-width: 120px;
+  vertical-align: middle;
+}
+.directoryItemDetails .itemDetailsContainer {
+  padding-left: 140px;
+}
+.directoryItemDetails .itemDetailsContainer .dataSourceMessage {
+  color: #666666;
+  font-size: 14px;
+}
+.connectionCenterContainer {
+  width: 185px;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+.connectionCenterContainer > img {
+  width: 120px;
+  padding: 15px;
+  margin-left: 15px;
+}
+.connectionCenterContainerText {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.connectionCenterStartUsing {
+  margin-top: 5px;
+}
+.connectionCenterDownload {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+#appsDescriptionToggle img {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+/* location */
+
+.locationFilter {
+  padding: 4px 16px;
+  margin-top: 13px;
+}
+#locationDropdown {
+  color: #333333;
+}
+#locationDropdown img {
+  margin-bottom: 1px;
+}
+.removeFamily img {
+  vertical-align: text-top;
+}
+.removeContact {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+/* manage codes */
+
+.codesTable {
+  width: 650px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.codesTable th {
+  color: #757575;
+  text-align: left;
+}
+.codesTable td,
+.codesTable th {
+  border-bottom: 1px solid #dedede;
+  padding: 3px 0;
+}
+.codesTable .col1 {
+  width: 60px;
+}
+.codesTable .col2 {
+  padding-left: 15px;
+  width: 170px;
+}
+.codesTable .col3 {
+  width: 165px;
+}
+.codesTable .col4 {
+  width: 240px;
+}
+/* Profile Page */
+
+.printEprepCont {
+  width: 600px;
+  padding-top: 5px;
+  padding-bottom: 0;
+  padding-right: 0;
+  padding-left: 30px;
+}
+.profileColumnItem {
+  width: 200px;
+  text-align: center;
+}
+.profileCol {
+  width: 210px;
+  padding-top: 10px;
+  padding-bottom: 0;
+  padding-right: 10px;
+  padding-left: 20px;
+}
+.profileCol1Border {
+  height: 220px;
+  width: 3px;
+  background-color: #f0f0f0;
+}
+/* Access Page */
+
+.eprepAccess .formTextBox {
+  width: 245px;
+}
+div.eprepAccess table.captchaTable .field-validation-error {
+  font-size: 12px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif !important;
+}
+/* Sharing Dialog */
+
+.removeRecipientContainier {
+  float: left;
+  position: relative;
+  margin-left: 10px;
+}
+.recipientEmailInput,
+.recipientEmailConfirmInput {
+  width: 200px;
+}
+.recipientEmailConfirmInput {
+  margin-left: 16px;
+}
+.requiredEmailErrorMessage,
+.emailMatchValidErrorMessage {
+  padding-top: 0px;
+  margin-left: 10px;
+  width: 190px;
+}
+/* Welcome page */
+
+.welcomeStep {
+  color: #0072c6;
+  float: left;
+  margin-top: -18px;
+}
+.welcomeStepDescription {
+  margin-left: 12px;
+  width: 185px;
+}
+.welcomePageAppLogoSection {
+  padding-right: 20px;
+}
+.welcomeImage {
+  float: right;
+  padding-bottom: 4px;
+}
+.welcomeStepSeparator {
+  width: 0px;
+  height: 120px;
+  border: 1px dotted #666666;
+  margin: 0 15px;
+}
+.welcomeNextButton {
+  width: 150px;
+}
+.alreadyMemberSignIn {
+  padding-top: 15px;
+}
+.retractVerticalSpaceLarge {
+  margin-bottom: -25px;
+}
+.welcomeStepText {
+  padding-top: 10px;
+}
+.pageHeading.cobranded {
+  padding-top: 18px;
+}
+.pageHeading .cobranding {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 5px;
+  width: 250px;
+}
+.pageHeading .cobranding img {
+  width: 120px;
+  height: 60px;
+  float: left;
+  margin-right: 10px;
+}
+.pageHeading .recommended {
+  float: left;
+  width: 120px;
+}
+/* inline welcome*/
+
+#learnMoreContent {
+  margin: 20px 40px 0 40px;
+}
+#learnMoreContent .steps {
+  width: 470px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  margin-right: 40px;
+  margin-left: 0;
+}
+#learnMoreContent .steps .step {
+  width: 415px;
+  padding: 8px 0 0 15px;
+  padding-top: 8px;
+  padding-bottom: 0;
+  padding-right: 0;
+  padding-left: 15px;
+}
+#learnMoreContent .bullets {
+  width: 340px;
+  padding-top: 8px;
+}
+/* signup page */
+
+.startSection {
+  position: relative;
+  zoom: 1;
+}
+.startSection .verticalSpaceLarge {
+  height: 27px;
+}
+.startSection.disabled {
+  border-color: #a5b2b5;
+}
+.startSection .head {
+  cursor: pointer;
+  border-bottom: 4px solid black;
+  padding: 0px 10px;
+}
+.startSection.closed .head {
+  border-bottom: 1px solid black;
+}
+.startSection.closed .head:hover {
+  color: #0072c6;
+}
+.startSection .number {
+  font-size: 30px;
+  line-height: 1;
+  background-color: black;
+  color: white;
+  height: 30px;
+  padding: 0px 10px 5px 10px;
+  margin-right: 10px;
+}
+.startSection .number.hover {
+  background-color: #0072c6;
+}
+.startSection.disabled .head {
+  color: #a5b2b5;
+  cursor: default;
+  border-bottom: 1px solid #a5b2b5;
+}
+.startSection.disabled .head:hover {
+  color: #a5b2b5;
+}
+.startSection.disabled .number {
+  cursor: default;
+  background-color: #a5b2b5;
+}
+.startSection .head .edit {
+  position: relative;
+  top: 14px;
+  float: right;
+  width: 22px;
+  height: 22px;
+  background: url(../imgs/icons/edit_icon_black.png) no-repeat;
+}
+.startSection.disabled .head .edit {
+  display: none;
+}
+.startSection.closed .head:hover .edit {
+  background: url(../imgs/icons/edit_icon_blue.png) no-repeat;
+}
+.startSection .content {
+  padding: 10px 20px;
+  margin-left: 40px;
+  zoom: 1;
+}
+.startSection .formLabel {
+  width: 150px;
+}
+.startSection .formInput {
+  width: auto;
+}
+.startSection .formTextBox {
+  width: 200px;
+}
+.startSection .formTextBox.narrow {
+  width: 150px;
+}
+.startSection .birthdate {
+  width: 130px;
+}
+.startSection .formMessage {
+  width: 250px;
+}
+.startSection #createAccount {
+  text-align: center;
+}
+.formInput.text {
+  padding: 4px 0px;
+}
+#accountSelect p.intro {
+  width: 75%;
+}
+#accountLoading {
+  height: 175px;
+  padding-top: 100px;
+}
+.healthItem {
+  position: relative;
+  margin-bottom: 2px;
+}
+.addMedication,
+.addAllergy,
+.addCondition,
+.addDevice {
+  line-height: 18px;
+}
+.removeHealthItem {
+  cursor: pointer;
+}
+.contactChooser {
+  margin-left: 30px;
+}
+.contact {
+  zoom: 1;
+}
+.disabledPerson {
+  margin-right: 30px;
+}
+/* record checklist */
+
+#recordChecklist {
+  position: absolute;
+  z-index: 1;
+  background: white;
+  right: 20px;
+}
+#recordChecklist .title {
+  padding-left: 15px;
+}
+.recordChecklist {
+  padding-left: 15px;
+}
+.recordChecklist.done {
+  background: url(../imgs/icons/gray_check.gif) 0px 5px no-repeat;
+}
+.recordChecklist.on {
+  background: url(../imgs/icons/black_arrow.gif) 0px 5px no-repeat;
+}
+/* weight */
+
+.weight .us,
+.weight .metric {
+  width: 400px;
+}
+.weight .formTextBox {
+  width: 50px;
+}
+.weight .formTextBox + span {
+  width: 40px;
+  display: inline-block;
+}
+.weight .metricToggle {
+  margin: 5px 0 0 41px;
+}
+.weight .monsterParen {
+  line-height: 1;
+  font-size: 75px;
+  color: #333333;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  padding-bottom: 10px;
+}
+.weight .recommendedValues {
+  margin-top: 13px;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 20px;
+}
+.bmi .value {
+  font-size: 22px;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+}
+.bmi .unit {
+  font-size: 22px;
+}
+.itemTableHeader {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+.itemTableHeader .links {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+.itemTableHeader .seeItemRow .left {
+  width: 150px;
+}
+.itemTable {
+  position: relative;
+}
+.itemTable .readonly * {
+  background-color: white !important;
+  cursor: default !important;
+}
+.itemTable .reloading {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent url(../imgs/ProgressAnimation_30x30.gif) center center no-repeat;
+}
+.itemTable table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border-bottom: 1px solid #dedede;
+}
+.itemTable table tr {
+  font-size: 14px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.itemTable table tr:hover {
+  background-color: #f0f0f0;
+}
+.itemTable table tr:first-child {
+  font-weight: bold;
+  color: #666666;
+  border-bottom: 1px solid black;
+  font-size: 11px;
+  cursor: default;
+}
+.itemTable table tr:first-child:hover {
+  background-color: transparent;
+}
+.itemTable table th {
+  text-align: left;
+  padding-top: 3px;
+  padding-bottom: 6px;
+  padding-right: 0;
+  padding-left: 10px;
+}
+.itemTable table th:first-child {
+  padding-left: 0;
+}
+.itemTable table td {
+  vertical-align: top;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 0;
+  padding-left: 10px;
+}
+.itemTable table td:first-child {
+  padding-left: 0;
+}
+.itemTable table .hv-dropdown-top {
+  position: relative;
+  border: none !important;
+}
+.itemTable table .hv-dropdown-top.open,
+.itemTable table .hv-dropdown-top:hover {
+  border: none !important;
+  background-color: transparent !important;
+}
+.itemTable table .hv-dropdown-content {
+  border: 2px solid black !important;
+  z-index: 3;
+}
+.itemTable table .actionsColumn {
+  width: 40px;
+}
+.itemTable table .actionsContainer {
+  margin: 0 7px;
+}
+.itemTable table .actionsDropDown {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 7px;
+  padding-left: 8px;
+  display: block;
+}
+.notTakingContainer {
+  position: absolute;
+  background-color: white;
+  z-index: 1;
+  top: -1px;
+  left: -224px;
+  width: 200px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 1px solid #cccccc;
+}
+.notTakingContainer .closeNotTaking {
+  position: absolute;
+  top: 5px;
+  right: 8px;
+}
+.notTakingContainer input[type='text'] {
+  width: 150px;
+}
+.itemTablePager {
+  margin-top: 5px;
+}
+#popup {
+  z-index: 105;
+  position: absolute;
+  top: 19px;
+  left: 0;
+  display: none;
+  background: white;
+  border: 1px solid #cccccc;
+  margin-top: 8px;
+}
+#popup .elements {
+  display: block;
+  position: relative;
+}
+#popup .sl_con {
+  position: relative;
+  padding: 5px;
+}
+#popup ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: outside !important;
+  list-style-image: none;
+  list-style-type: none !important;
+}
+#popup li {
+  font-size: 11px;
+  line-height: 16px;
+  padding: 3px 4px;
+}
+#popup .active {
+  background: #5391aa;
+  color: white;
+}
+.suggestionList {
+  position: relative;
+  z-index: 1000;
+}
+#popup iframe {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.oneline {
+  margin-bottom: 20px;
+}
+.oneline a {
+  font-size: 24px;
+}
+.healthSummary {
+  margin-bottom: 20px;
+}
+.healthInfo .title {
+  margin-bottom: 4px;
+}
+.healthInfo .title > a,
+.healthInfo .title > a:hover,
+.healthInfo .title > a:visited,
+.updates .update > a,
+.updates .update > a:hover,
+.updates .update > a:visited,
+.messages .subtitle > a,
+.messages .subtitle > a:hover,
+.messages .subtitle > a:visited {
+  color: #333333;
+}
+.updates .subtitle > a,
+.updates .subtitle > a:hover,
+.updates .subtitle > a:visited {
+  color: #0072c6;
+}
+.healthInfo .title img {
+  margin-left: 5px;
+}
+.healthSummary .item,
+.apps .item {
+  padding: 1px 0;
+}
+.healthSummary .item.dot {
+  background: url(imgs/icons/darkGrayDot.png) no-repeat right 8px;
+  padding-right: 20px;
+  margin-right: 10px;
+  line-height: 21px;
+  white-space: nowrap;
+  position: relative;
+}
+.healthSummary .item.viewall {
+  font-size: 12px;
+}
+.healthSummary table {
+  border-collapse: collapse;
+}
+.healthSummary .contactName {
+  width: 300px;
+}
+.healthSummary,
+.messages,
+.apps {
+  width: 460px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+.updates,
+.graphs {
+  width: 240px;
+}
+.updates .title,
+.apps .title {
+  margin: 15px 0;
+}
+.messages .title {
+  margin: 15px 0 5px 0;
+}
+.directAddress {
+  padding-right: 5px;
+  margin-top: 5px;
+}
+.directAddressWidth {
+  max-width: 420px;
+}
+.directAttachment {
+  padding-right: 5px;
+  margin-left: 4px;
+  margin-top: 3px;
+}
+.directTipLink {
+  position: relative;
+  left: 5px;
+  top: 2px;
+}
+.messageHeading {
+  margin-bottom: 2px;
+}
+.messageHeading img {
+  margin-bottom: 1px;
+}
+.messageHeading a {
+  color: #333333;
+}
+.updates .subtitle {
+  margin-top: 7px;
+}
+.updates .updateDay,
+.apps .appsList {
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.graph {
+  width: 235px;
+  height: 100px;
+  margin-bottom: 15px;
+  padding: 5px 5px 5px 0;
+  font-size: 12px;
+}
+.graphTitle {
+  width: 150px;
+}
+.graphTitleFilter {
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+.sectionTitle {
+  font-size: 22px;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+}
+.sectionContainer {
+  margin-top: 10px;
+  min-width: 788px;
+}
+.sectionContainer.lightGrayTile #updates,
+.sectionContainer.lightGrayTile #messages {
+  display: inline-block;
+  float: left;
+  width: 340px;
+  margin-right: 43px;
+}
+.sectionContainer.lightGrayTile .homeTile {
+  background-color: #f7f7f7;
+  height: 245px !important;
+}
+.sectionContainer.lightGrayTile .tileContents {
+  width: 100% !important;
+  height: 192px!important;
+}
+.sectionContainer.listView .homeTile {
+  height: 212px!important;
+}
+.sectionContainer.listView .homeTile.nodata {
+  height: 32px!important;
+}
+.sectionContainer .homeTile {
+  float: left;
+  display: inline-block;
+  outline: 1px solid #d7d7d7;
+  border: solid 3px transparent;
+  width: 340px;
+  height: 148px;
+  padding: 8px 13px 7px 12px;
+  margin-bottom: 12px;
+  margin-right: 12px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px #d7d7d7;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  overflow-y: hidden;
+}
+.sectionContainer .homeTile:hover {
+  border: solid 3px #d7d7d7;
+}
+.sectionContainer .homeTile .tileTitle {
+  float: left;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  color: #333333;
+  font-size: 16px;
+  line-height: 24px;
+  width: 80%;
+}
+.sectionContainer .homeTile .tileChart {
+  float: left;
+  background-color: #fff9db;
+  margin: 15px 10px 10px 0px;
+}
+.sectionContainer .homeTile .tileChart .graphContainer {
+  position: relative;
+  width: 100px;
+  height: 90px;
+}
+.sectionContainer .homeTile .tileChart .graphContainer .graphArea {
+  position: absolute;
+  top: 5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.sectionContainer .homeTile .tileContents {
+  float: left;
+  margin-left: 5px;
+  margin-top: 5px;
+  width: 210px;
+  word-wrap: break-word;
+}
+.sectionContainer .homeTile .tileContents a:hover,
+.sectionContainer .homeTile .tileContents a:active {
+  color: #004d85;
+  text-decoration: none;
+}
+.sectionContainer .homeTile .tileContents .itemValue {
+  font-size: 16px;
+  color: #0072c6;
+}
+.sectionContainer .homeTile .tileContents .itemValue .blackText {
+  font-size: 15px;
+}
+.sectionContainer .homeTile .tileContents .emphasized {
+  font-size: 24px;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+}
+.sectionContainer .homeTile .tileContents .emphasized.small {
+  font-size: 16px;
+}
+.sectionContainer .homeTile .tileContents .blackText,
+.sectionContainer .homeTile .tileContents .grayText {
+  margin-top: -1px;
+}
+.sectionContainer .homeTile .tileContents .percentage {
+  margin-right: -3px;
+}
+.sectionContainer .homeTile .tileContents .grayText {
+  font-size: 14px;
+}
+.sectionContainer .homeTile .tileContents .timestamp {
+  font-size: 13px;
+  color: #666666 !important;
+  margin-top: 2px;
+}
+.sectionContainer .homeTile .tileContents .timestamp.sentenceCase:first-letter {
+  text-transform: capitalize;
+}
+.sectionContainer .homeTile .tileContents .directAddress {
+  max-width: 300px;
+  margin-top: -3px;
+}
+.sectionContainer .homeTile .tileContents .directTipLink {
+  left: 3px;
+  top: 1px;
+}
+.sectionContainer .homeTile .addIcon {
+  float: right;
+  height: 15px;
+  width: 15px;
+  margin-top: 4px;
+}
+.sectionContainer .homeTile.nodata {
+  height: 31px;
+  padding: 11px 16px 0px 9px;
+  overflow-y: visible !important;
+}
+.sectionContainer .homeTile.nodata .tileTitle {
+  color: #666666;
+  margin-top: -1px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.sectionContainer .homeTile.nodata .tileIcon {
+  float: left;
+  margin-right: 8px;
+  margin-top: 1px;
+}
+.sectionContainer .homeTile.listView {
+  height: 230px;
+}
+.sectionContainer .homeTile.listView .tileContents {
+  margin-left: 0px;
+  margin-top: 10px;
+  width: 95%;
+  height: 158px;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.sectionContainer .homeTile.listView .tileContents .itemValue {
+  font-size: 16px;
+  color: #333333;
+}
+.sectionContainer .homeTile.listView .tileContents .itemValue a {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+}
+.sectionContainer .homeTile.listView .seeAllLink {
+  font-size: 14px !important;
+  color: #333333;
+  float: left;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif !important;
+}
+.sectionContainer .homeTile.listView .seeAllLink:hover {
+  text-decoration: none !important;
+  color: #0072c6 !important;
+}
+.sectionContainer .emptyTiles {
+  float: left;
+  display: inline-block;
+  width: 383px;
+  max-height: 260px;
+  height: auto;
+}
+.sectionContainer .emptyTiles .homeTile:last-child {
+  margin-bottom: 13px;
+}
+.sectionContainer .hv-dropdown-top.open,
+.sectionContainer .hv-dropdown-top:hover {
+  border: 1px solid transparent !important;
+  background-color: transparent !important;
+}
+.sectionContainer .hv-dropdown-content {
+  border: 2px solid black !important;
+  z-index: 3;
+}
+.sectionContainer .actionsColumn {
+  padding: 3px 5px 0px 5px;
+}
+.sectionContainer .actionsColumn:hover {
+  background-color: #dedede;
+}
+.sectionContainer .actionsColumn .actionsContent {
+  min-width: 130px !important;
+  top: 20px !important;
+}
+.sectionContainer .actionsColumn .actionsContent .action .actionSeparator {
+  border-top: solid 1px #c8c8c8;
+  margin: 5px 16px;
+}
+.sectionContainer .actionsColumn .actionsContent .action a {
+  font-size: 13px !important;
+}
+.credential {
+  padding: 10px 0px;
+  border-top: 1px solid #eeeeee;
+}
+.credential .viewer .credentialName {
+  display: inline-block;
+  padding-top: 4px;
+  padding-left: 3px;
+  font-size: 13px;
+  width: 350px;
+}
+.credential .viewer .credentialName .credentialText {
+  margin-left: 20px;
+}
+.credential .viewer a,
+.credential .viewer span.spacer {
+  display: inline-block;
+}
+.credential .labelInput {
+  padding-top: 3px;
+  padding-bottom: 4px;
+  margin-right: 5px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  margin-top: 0px;
+}
+.accountInfo {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #333333;
+}
+.accountSectionTitle {
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  font-size: 21px;
+  color: #333333 !important;
+}
+.accountInfoText {
+  font-size: 13px;
+  color: #666666;
+}
+.accountInfoTextLarger {
+  font-size: 14px;
+  color: #666666;
+}
+.accountSectionSubtitle {
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  font-size: 15px;
+  color: #666666 !important;
+}
+.accountValueText {
+  font-size: 14px;
+}
+.accountOptionText {
+  font-size: 13px;
+}
+.accountActionLink {
+  font-size: 12px;
+  color: #0072c6;
+}
+.credential .credentialIcon {
+  height: 15px;
+  width: 15px;
+}
+.credentialNameSpacer {
+  height: 15px;
+  width: 18px;
+  float: left;
+}
+#liveId .credentialIcon {
+  height: 15px;
+  width: 15px;
+}
+.greenBorder {
+  border: 2px solid #007233;
+}
+.languageChangeNotice {
+  float: left;
+  position: absolute;
+  left: 330px;
+  color: #007233;
+  width: 400px;
+  font-size: 13px;
+}
+.languageDropdown {
+  float: left;
+  width: 275px;
+}
+.wordPadding {
+  float: left;
+  margin-right: 5px;
+}
+.warningMessageBox {
+  width: 600px;
+  padding: 13px;
+  background-color: #fef0cc;
+}
+.recordIcon {
+  width: 50px;
+  height: 50px;
+  margin-right: 8px;
+  margin-bottom: 16px;
+  vertical-align: middle;
+  border: 1px solid #e2e2e2 !important;
+  float: left;
+}
+.recordIconSmall {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border: 1px solid #e2e2e2 !important;
+}
+.recordName {
+  padding-top: 5px;
+}
+.recordContainer {
+  height: 32px;
+  width: 500px;
+  margin-bottom: 12px;
+}
+.appContainer {
+  width: 500px;
+  margin-bottom: 25px;
+}
+.appIconContainer {
+  width: 70px;
+  height: 40px;
+  border: 1px solid #e2e2e2 !important;
+  margin-right: 10px;
+}
+.appIconSmall {
+  width: 60px;
+  height: 30px;
+  padding: 5px;
+}
+.appName {
+  padding-top: 10px;
+}
+.recordCheckbox {
+  float: left;
+  padding-top: 8px;
+  margin-right: 5px;
+}
+.recordContainerSmall {
+  float: left;
+  height: 50px;
+  width: 300px;
+  margin-bottom: 18px;
+}
+.yellowWarningBox {
+  background-color: #ffffaf;
+  padding: 8px;
+}
+#languagePopup ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+#languagePopup li {
+  font-size: 14px;
+  line-height: 14px;
+}
+.confirmationBoxContent {
+  width: 550px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.lighterText {
+  color: #666666;
+}
+label {
+  font-size: 13px;
+}
+/************START Restricted Account UI ************/
+
+.blueAlertBox {
+  background-color: #eff6fb;
+  padding: 20px;
+  color: #333333;
+}
+.restrictedAlertHeader {
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  color: #666666;
+  font-size: 22px;
+}
+.restrictedAlertText {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #333333;
+  font-size: 14px;
+}
+.horizontalFlip {
+  -moz-transform: scaleX(1);
+  /* For Mozilla Firefox */
+  -o-transform: scaleX(1);
+  /* For Opera */
+  -webkit-transform: scaleX(1);
+  /* For Safari, Google chrome */
+
+}
+/************END Restricted Account UI ************/
+
+.hv-dropdown-top {
+  position: relative;
+  border: 1px solid transparent;
+}
+.hv-dropdown-top.open,
+.hv-dropdown-top:hover {
+  border: 1px solid #cccccc;
+  background-color: white;
+}
+.hv-dropdown-top a,
+.hv-dropdown-top a:hover,
+.hv-dropdown-top a:active {
+  color: #333333;
+  text-decoration: none;
+}
+.hv-dropdown-hider {
+  position: absolute;
+  height: 1px;
+  left: 0px;
+  z-index: 2;
+  overflow: hidden;
+}
+.hv-dropdown-content {
+  border: 1px solid #cccccc;
+  position: absolute;
+  z-index: 1;
+}
+/* specific instances */
+
+.headerDropDownContainer {
+  position: absolute;
+  right: 0px;
+  bottom: 5px;
+}
+.headerDropDownContainer a,
+.headerDropDownContainer a:hover {
+  color: #333333;
+  text-decoration: none;
+  font-size: 18px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 8px;
+  padding-left: 16px;
+  display: block;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.headerDropDownContainer img {
+  margin-left: 5px;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 1px;
+}
+.standardDropDownContent {
+  padding: 5px 0;
+}
+.standardDropDownContent .action:hover {
+  background-color: #f0f0f0;
+}
+.standardDropDownContent .action > a,
+.standardDropDownContent .action > a:hover,
+.standardDropDownContent .action > a:visited {
+  font-size: 12px;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  color: #333333;
+  text-decoration: none;
+  padding: 5px 16px;
+  white-space: nowrap;
+  display: block;
+}
+.desktopSignup .signupSectionHeader {
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  margin-bottom: 10px;
+  clear: both;
+}
+.desktopSignup .formRow {
+  margin-bottom: 8px;
+  clear: both;
+}
+.desktopSignup .formRow .formLabel {
+  width: auto;
+  float: none;
+  text-align: left;
+  padding-top: 0;
+  padding-bottom: 2px;
+  font-weight: normal;
+  font-size: 13px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.desktopSignup .formRow .formLabel span.lighterText {
+  color: #666666;
+}
+.desktopSignup .formRow .mailOptInLabel {
+  font-weight: normal;
+  font-size: 13px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.desktopSignup .formRow .formInput {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  width: 405px;
+}
+.desktopSignup .formRow .formInput input {
+  width: 400px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.desktopSignup .formRow .formInput input[type="checkbox"] {
+  width: auto;
+}
+.desktopSignup .formRow .formInput input[type="text"],
+.desktopSignup .formRow .formInput input[type="password"] {
+  height: 22px;
+  padding-left: 5px !important;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.desktopSignup .formRow .formInput select {
+  height: 28px;
+  width: 405px;
+  padding-left: 3px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.desktopSignup .formRow .formInput select.monthFragment {
+  width: 195px;
+}
+.desktopSignup .formRow .formInput select.dayFragment {
+  width: 97px;
+}
+.desktopSignup .formRow .formInput select.yearFragment {
+  width: 97px;
+}
+.desktopSignup .formRow .formInput #hip span {
+  font-weight: normal;
+  font-size: 13px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.desktopSignup .formRow .nameInput {
+  float: left;
+  width: 200px;
+  margin-right: 5px;
+}
+.desktopSignup .formRow .nameInput input {
+  width: 195px;
+  height: 22px;
+  padding-left: 5px !important;
+}
+.desktopSignup .formRow .nameInput .watermark {
+  font-style: normal;
+  font-size: 14px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.desktopSignup .formRow .formMessage {
+  padding-top: 4px;
+  float: left;
+  position: relative;
+  width: 400px;
+  height: 20px;
+  overflow: visible;
+}
+.desktopSignupConfirm .pageHeading h1 {
+  width: auto;
+}
+.desktopSignupConfirm #hip .h14 {
+  font-size: 14px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-weight: normal;
+}
+.desktopSignupConfirm .confirmSectionHeader {
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  clear: both;
+  margin-bottom: 8px;
+}
+.desktopSignupConfirm .editInformationText {
+  font-weight: normal;
+  font-size: 13px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.desktopSignupConfirm #legal label {
+  display: block;
+  margin-left: 20px;
+}
+.desktopSignupConfirm #legal label .checkbox {
+  display: inline-block;
+  margin-left: -20px;
+  margin-right: 4px;
+}
+.desktopSignupConfirm .formRow {
+  margin-bottom: 8px;
+}
+.desktopSignupConfirm .formRow .infoLabel {
+  padding-right: 5px;
+}
+.desktopSignupConfirm .formRow .formLabel {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-weight: normal;
+  float: none;
+  width: auto;
+  padding: 0px;
+  margin-bottom: 4px;
+}
+.desktopSignupConfirm .formRow .formInput {
+  float: none;
+  font-size: 14px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  width: auto;
+}
+/*
+ Popup banner
+ */
+
+.bannerTable {
+  display: table;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.bannerTable .bannerTableCell {
+  display: table-cell;
+  vertical-align: middle;
+}
+.bannerTable .bannerTableCell .bannerWrapper {
+  background-color: white;
+  text-align: center;
+}
+.bannerTable .bannerTableCell .bannerWrapper .bannerContent {
+  display: inline-block;
+  text-align: left;
+  padding: 20px 0 30px 0;
+  min-height: 150px;
+}
+.bannerTable .bannerTableCell .bannerWrapper .bannerContent .loadingLightbox {
+  margin-top: 70px;
+}
+/*
+ FRE banner content
+ */
+
+.freBannerContent {
+  position: relative;
+}
+.freBannerContent .freInfoContainer {
+  width: 520px;
+}
+.freBannerContent .freInfoContainer .freBannerTitle {
+  font-size: 28px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.freBannerContent .freInfoContainer .freBannerSubTitle {
+  font-size: 14px;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  color: #333333;
+}
+.freBannerContent .freInfoContainer ul {
+  list-style: disc;
+  padding-left: 18px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.freBannerContent .freInfoContainer li {
+  font-size: 14px;
+  line-height: 16px;
+}
+.freBannerContent .freInfoContainer .freMobileText {
+  font-size: 14px;
+}
+.freBannerContent .freButtonContainer {
+  margin-top: 30px;
+  width: 570px;
+}
+.freBannerContent .freButtonContainer .freContinue {
+  margin-right: 20px;
+  margin-bottom: 0;
+  padding: 6px 24px;
+  font-size: 13px;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+}
+.freBannerContent .freButtonContainer .freContinue:hover {
+  background-color: #3d94d4;
+  border: 1px solid #3d94d4;
+}
+.freBannerContent .freButtonContainer .freContinue:active {
+  background-color: #212121;
+  border: 1px solid #212121;
+}
+.freBannerContent .freButtonContainer .freLearnMore {
+  margin-right: 0;
+  margin-bottom: 0;
+  background-color: #cccccc;
+  border: 1px solid #cccccc;
+  color: #333333 !important;
+  padding: 6px 24px;
+  font-size: 13px;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+}
+.freBannerContent .freButtonContainer .freLearnMore:hover {
+  background-color: #d6d6d6;
+  border: 1px solid #d6d6d6;
+}
+.freBannerContent .freButtonContainer .freLearnMore:active {
+  color: white !important;
+  background-color: #212121;
+  border: 1px solid #212121;
+}
+.brokenConnection {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 30px;
+  background: url(../imgs/icons/icn_stop.png) 10px 10px no-repeat;
+  background-color: #fcdcde;
+  color: red;
+}
+.brokenConnection a {
+  color: #333333;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+}
+.brokenConnection a:hover {
+  color: #333333;
+  text-decoration: underline;
+}
+.successMessage {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 30px;
+  color: Green;
+  background: #d7f0db url(../imgs/icons/checkmark.png) no-repeat 10px 10px;
+}
+/*
+ * Error Display
+ */
+
+.errorDisplay {
+  display: block;
+  padding: 8px;
+  margin-bottom: 15px;
+  color: black;
+  background-color: #d8e9f6;
+}
+.errorDisplay h3 {
+  font-size: 18px;
+  color: #666666;
+}
+/*
+ Export health information dialog   
+ */
+
+.exportHealthInfoDialog .faded {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+.exportHealthInfoDialog .sectionHeader {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-size: 16px;
+}
+.exportHealthInfoDialog .exportFormat select {
+  width: 360px;
+  line-height: 20px;
+  vertical-align: middle;
+  border: 1px solid #666666;
+}
+.exportHealthInfoDialog .exportSelection {
+  padding-bottom: 5px;
+}
+.exportHealthInfoDialog .itemTypeList {
+  width: 350px;
+  height: 200px;
+  border: 1px solid #666666;
+  overflow-y: scroll;
+  padding: 5px;
+}
+.exportHealthInfoDialog .dateRangeContainer {
+  height: 70px;
+}
+.exportHealthInfoDialog .dateRangeContainer .dateRangeSelection {
+  padding-left: 25px;
+  display: inline-block;
+  width: 175px;
+}
+.exportHealthInfoDialog .dateRangeContainer .dateRangeSelection input {
+  width: 150px;
+}
+/*
+ * Data Connect   
+ */
+
+.dataConnect {
+  width: 500px;
+}
+.dataConnect .connectionTitle {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+.dataConnect .logoAndDetails {
+  position: relative;
+  min-height: 102px;
+  padding-right: 20px;
+  padding-left: 0;
+}
+.dataConnect .logoAndDetails .logoSection {
+  position: absolute;
+  width: 120px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  border: 2px solid #dedede;
+  line-height: 97px;
+  text-align: center;
+}
+.dataConnect .logoAndDetails .logoSection img {
+  max-height: 60px;
+  max-width: 120px;
+  vertical-align: middle;
+}
+.dataConnect .logoAndDetails .detailsSection {
+  padding-left: 135px;
+}
+.dataConnect .logoAndDetails .detailsSection .appDetails {
+  overflow: hidden;
+  max-height: 48px;
+  padding: 0 0 5px 0;
+}
+.dataConnect .logoAndDetails .detailsSection .appLink a {
+  line-height: 1.5;
+  color: #666666;
+}
+.dataConnect .logoAndDetails .detailsSection .appLink a:hover {
+  color: #333333;
+}
+.dataConnect form .usageDescription {
+  color: #333333;
+}
+.dataConnect form .usageDescription .serviceName {
+  font-weight: bold;
+}
+.dataConnect form .buttonContainer {
+  text-align: right;
+}
+/*
+ * Data Manage   
+ */
+
+.dataManage {
+  position: relative;
+}
+.dataManage .dataManageContent {
+  padding-bottom: 60px;
+}
+.dataManage .dataManageContent .logoWrapper {
+  width: 110px;
+  height: 110px;
+  display: inline-block;
+  line-height: 110px;
+  text-align: center;
+  border: 1px solid #dedede;
+}
+.dataManage .dataManageContent .logoWrapper img {
+  max-height: 100px;
+  max-width: 100px;
+  vertical-align: middle;
+}
+.dataManage .dataManageContent .rightSide {
+  margin-left: 130px;
+  margine-bottom: 20px;
+}
+.dataManage .dataManageContent .rightSide .appTitle {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+.dataManage .dataManageContent .rightSide .updateTimes {
+  padding-bottom: 10px;
+}
+.dataManage .dataManageContent .appLink a {
+  line-height: 1.5;
+  color: #666666;
+}
+.dataManage .dataManageContent .appLink a:hover {
+  color: #333333;
+}
+.dataManage .footerButtons {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/* ImporterImporterImporter */
+
+/*borders*/
+
+.collapsingBorders {
+  border-collapse: collapse;
+}
+/*div*/
+
+.importDiv {
+  position: absolute;
+  overflow: auto;
+  top: 5px;
+  bottom: 0;
+  right: 15px;
+  left: 15px;
+  min-height: 500px;
+  min-width: 300px;
+}
+.importDiv .importHeader {
+  margin-top: 10px;
+}
+.importDiv .viewItemsTitle {
+  padding-bottom: 13px;
+}
+.importDiv .importInfoText {
+  font-size: 13px;
+  color: #666666;
+}
+.importDiv .errorInfoText {
+  font-size: 16px;
+  color: #666666;
+}
+.importDiv .ctlToolbarLinks a.disabled {
+  opacity: 0.5;
+}
+.importDiv .requiredFields {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  color: #333333;
+}
+.importDiv .config {
+  position: relative;
+}
+.importDiv .config .configSetting {
+  padding-bottom: 10px;
+}
+.importDiv .config .configSetting label {
+  display: block;
+  padding-bottom: 3px;
+  color: #666666;
+}
+.importDiv .config .configSetting span.select {
+  margin: 2px 0 2px 0;
+}
+.importDiv .config .configSetting span.select select {
+  min-width: 200px;
+  max-width: 220px;
+  color: #333333;
+  height: 25px;
+  font-size: 14px;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  padding-left: 5px;
+}
+.importDiv .config .typeConfig {
+  width: 240px;
+}
+.importDiv .config .dateConfig {
+  width: 240px;
+}
+.importDiv .config .dateConfig .dateLabel {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #666666;
+  font-size: 13px;
+}
+.importDiv .config .dateConfig .exampleDate {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 14px;
+  color: #333333;
+}
+.importDiv .tableText {
+  color: #333333;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-size: 12px;
+}
+.importDiv .tableDiv {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+}
+.importDiv .tableDiv .loadingLightbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: -15px;
+  z-index: 2;
+}
+.importDiv .tableDiv .columnHeaderText {
+  color: #757575;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  font-size: 12px;
+}
+.importDiv .tableDiv .importCell {
+  padding: .5em;
+  border-collapse: collapse;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.importDiv .tableDiv .tableHeaderDiv {
+  position: relative;
+}
+.importDiv .tableDiv .tableHeaderDiv.disabled {
+  opacity: 0.5;
+}
+.importDiv .tableDiv .tableHeaderDiv select {
+  border: 1px solid #dedede;
+  word-wrap: normal;
+  white-space: nowrap;
+}
+.importDiv .tableDiv .tableHeaderDiv .errorHeader {
+  border-bottom: 1px solid #dedede;
+  border-top: 1px solid #dedede;
+}
+.importDiv .tableDiv .tableBodyDiv {
+  overflow: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 32px;
+}
+.importDiv .tableDiv .tableBodyDiv.disabled {
+  opacity: 0.5;
+}
+.importDiv .tableDiv .tableBodyDiv thead tr {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+.importDiv .tableDiv .tableBodyDiv tbody .importRow {
+  border-bottom: none;
+}
+.importDiv .tableDiv .tableBodyDiv .importRow {
+  width: 100%;
+}
+.importDiv .tableDiv .tableBodyDiv .importRow .columnHeaderCell {
+  padding: .5em;
+  max-height: 10px;
+}
+.importDiv .tableDiv .importCellWidth {
+  width: 130px;
+}
+.importDiv .tableDiv .darkCellBackground {
+  background-color: #f6f6f6;
+}
+.importDiv .tableDiv .lightCellBackground {
+  background-color: white;
+}
+.importDiv .tableDiv .errorBackground {
+  background-color: #fef3f4;
+}
+.importDiv .tableDiv .errorRow {
+  color: red;
+}
+.importDiv .tableDiv .errorColumn .importCellWidth {
+  width: 200px;
+}
+.importDiv .tableDiv .checkImportedItems {
+  margin-top: -10px;
+}
+/*
+ * ShareRecord
+ */
+
+.shareRecord .infoText {
+  max-width: 600px;
+}
+/*
+ *   
+ */
+
+#importContent {
+  font-size: 13px;
+}
+#importContent ul {
+  list-style: disc;
+  padding: 0 0 0 15px;
+}
+#importContent .subHeader {
+  font-size: 18px;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+}
+#tileManagementContainer .actionsBox {
+  border-bottom: 0px;
+}
+#tileManagementContainer .editorContents {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  bottom: 0px;
+}
+#tileManagementContainer .tileCategory {
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  font-size: 18px;
+  color: #666666;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#tileManagementContainer .showContainer {
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  color: #666666;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 350px;
+  margin-bottom: 10px;
+}
+#tileManagementContainer .showContainer .showLbl {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#tileManagementContainer .tileContainer {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-size: 14px;
+  color: #333333;
+  position: relative;
+  height: 30px;
+}
+#tileManagementContainer .tileContainer label {
+  width: 350px;
+  position: absolute;
+}
+#tileManagementContainer .tileContainer input[type=checkbox] {
+  position: relative;
+  left: 350px;
+}
+#tileManagementContainer.editorbox .h2 {
+  padding-bottom: 5px;
+}
+.freGetStartedContainer {
+  position: relative;
+  background: #d9eaf7;
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 10px;
+  width: 730px;
+  margin-bottom: 20px;
+}
+.freGetStartedContainer .freGetStartedTitle {
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+  font-size: 21px;
+  color: #333333;
+}
+.freGetStartedContainer .freBannerSubTitle {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-size: 14px;
+  color: #666666;
+  padding-bottom: 15px;
+}
+.freGetStartedContainer .freCloseContainer {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.freGetStartedContainer .freGetStartedDetailContainer {
+  float: left;
+}
+.freGetStartedContainer .freGetStartedDetailContainer .freGetStartedNum {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-size: 24px;
+  color: #0072c6;
+}
+.freGetStartedContainer .freGetStartedDetailContainer .freGetStartedDetailText {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.freGetStartedContainer .freGetStartedDetailContainer .freGetStartedDetailText img {
+  float: left;
+  width: 50px;
+  height: 50px;
+}
+.freGetStartedContainer .freGetStartedDetailContainer .freGetStartedDetailText div {
+  float: left;
+  width: 250px;
+  margin-left: 10px;
+  font-size: 13px;
+}
+.freGetStartedContainer .freGetStartedDetailContainer .freGetStartedDetailText div a {
+  color: #333333;
+  text-decoration: underline;
+}
+.freGetStartedContainer .freGetStartedDetailContainer div:nth-child(2) {
+  margin-left: 10px;
+}
+.details_container {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  font-size: 13px;
+  overflow: auto;
+  margin-top: 0px!important;
+  margin-bottom: 30px!important;
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  max-width: 1150px;
+}
+.detailsPreviousItem {
+  background: url(../imgs/icons/icon_PreviousEntry.png) no-repeat left center;
+  padding-right: 30px;
+  padding-top: 8px;
+}
+.detailsPreviousItem:hover {
+  background: url(../imgs/icons/icon_PreviousEntry_hover.png) no-repeat left center;
+  text-decoration: none;
+}
+.detailsPreviousDisabledItem {
+  background: url(../imgs/icons/icon_PreviousEntry_disabled.png) no-repeat left center;
+  padding-right: 30px;
+  padding-top: 8px;
+  cursor: default !important;
+}
+.detailsPreviousDisabledItem:hover {
+  text-decoration: none;
+}
+.detailsNextItem {
+  background: url(../imgs/icons/icon_NextEntry.png) no-repeat left center;
+  padding-right: 30px;
+  padding-top: 6px;
+}
+.detailsNextItem:hover {
+  background: url(../imgs/icons/icon_NextEntry_hover.png) no-repeat left center;
+  text-decoration: none;
+}
+.detailsNextDisabledItem {
+  background: url(../imgs/icons/icon_NextEntry_disabled.png) no-repeat left center;
+  padding-right: 30px;
+  padding-top: 6px;
+  cursor: default !important;
+}
+.detailsNextDisabledItem:hover {
+  text-decoration: none;
+}
+.detailsEndItem {
+  display: inline-block;
+  height: 16px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #666666 !important;
+  background: url(../imgs/icons/icon_noLonger.png) no-repeat left center;
+  padding-left: 22px;
+  padding-right: 20px;
+  padding-bottom: 6px;
+  padding-top: 2px;
+  line-height: 20px;
+}
+.detailsEndItem:hover {
+  background: url(../imgs/icons/icon_noLonger_hover.png) no-repeat left center;
+  text-decoration: none;
+  color: black !important;
+}
+.detailsEdit {
+  display: inline-block;
+  height: 16px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #666666 !important;
+  background: url(../imgs/icons/icon_Edit.png) no-repeat left center;
+  padding-left: 22px;
+  padding-right: 20px;
+  padding-bottom: 6px;
+  padding-top: 2px;
+  line-height: 20px;
+}
+.detailsEdit:hover {
+  background: url(../imgs/icons/icon_Edit_hover.png) no-repeat left center;
+  text-decoration: none;
+  color: black !important;
+}
+.detailsThingDownload {
+  display: inline-block;
+  height: 16px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #666666 !important;
+  background: url(../imgs/icons/icon_Export.png) no-repeat left center;
+  padding-left: 22px;
+  padding-right: 20px;
+  padding-bottom: 6px;
+  padding-top: 2px;
+  line-height: 20px;
+}
+.detailsThingDownload:hover {
+  background: url(../imgs/icons/icon_Export_hover.png) no-repeat left center;
+  text-decoration: none;
+  color: black !important;
+}
+.detailsPrint {
+  display: inline-block;
+  height: 16px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #666666 !important;
+  background: url(../imgs/icons/icon_Print.png) no-repeat left center;
+  padding-left: 22px;
+  padding-right: 20px;
+  padding-bottom: 6px;
+  padding-top: 2px;
+  line-height: 20px;
+}
+.detailsPrint:hover {
+  background: url(../imgs/icons/icon_Print_hover.png) no-repeat left center;
+  text-decoration: none;
+  color: black !important;
+}
+.detailsMarkAsPersonal {
+  display: inline-block;
+  height: 16px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #666666 !important;
+  background: url(../imgs/icons/icon_MarkAsPersonal.png) no-repeat left center;
+  padding-left: 22px;
+  padding-right: 20px;
+  padding-right: 15px;
+  padding-bottom: 6px;
+  padding-top: 2px;
+  line-height: 20px;
+}
+.detailsMarkAsPersonal:hover {
+  background: url(../imgs/icons/icon_MarkAsPersonal_hover.png) no-repeat left center;
+  text-decoration: none;
+  color: black !important;
+}
+.detailsRemovePersonal {
+  display: inline-block;
+  height: 16px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #666666 !important;
+  background: url(../imgs/icons/icon_NotPersonal.png) no-repeat left center;
+  padding-left: 22px;
+  padding-right: 20px;
+  padding-right: 15px;
+  padding-bottom: 6px;
+  padding-top: 2px;
+  line-height: 20px;
+}
+.detailsRemovePersonal:hover {
+  background: url(../imgs/icons/icon_NotPersonal_hover.png) no-repeat left center;
+  text-decoration: none;
+  color: black !important;
+}
+.detailsDelete {
+  display: inline-block;
+  height: 16px;
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+  color: #666666 !important;
+  background: url(../imgs/icons/icon_Delete.png) no-repeat left center;
+  padding-left: 22px;
+  padding-right: 20px;
+  padding-right: 15px;
+  padding-bottom: 6px;
+  padding-top: 2px;
+  line-height: 20px;
+}
+.detailsDelete:hover {
+  background: url(../imgs/icons/icon_Delete_hover.png) no-repeat left center;
+  text-decoration: none;
+  color: black !important;
+}
+.detailsThingTitle {
+  color: #333333;
+  font-size: 24px;
+  padding-bottom: 15px;
+  margin-top: -8px;
+  font-family: "Segoe UI Light", "Segoe UI Web Light", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Light", "Helvetica Neue", Arial, Sans-Serif;
+}
+.detailsActionsContainer {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d7d7d7;
+  margin-bottom: 15px;
+  min-width: 550px;
+  white-space: nowrap;
+}
+.detailsImmutableDataWarning {
+  margin: 0 0 12px 0 !important;
+}
+.reloading {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent url(../imgs/ProgressAnimation_30x30.gif) center center no-repeat;
+}
+#viewAsXmlDiv {
+  position: relative;
+  margin-top: 50px;
+  height: 50px;
+  right: -40px;
+}
+#viewAsXmlDiv.absolute {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+}
+#viewAsXmlDiv a {
+  color: #666666;
+}
+#markPersonalContent,
+#removePersonalContent {
+  margin-bottom: 20px;
+}
+data-xml[transform="details"] * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+data-xml[transform="details"] .details_title {
+  width: 100%;
+  margin-bottom: 0px;
+  color: #333333;
+  font-size: 18px;
+}
+data-xml[transform="details"] .details_subtitle {
+  font-size: 14px;
+  color: #666666;
+}
+data-xml[transform="details"] .details_kvp {
+  margin-top: 12px;
+  clear: both;
+}
+data-xml[transform="details"] .details_kvp .details_key {
+  margin-bottom: 1px;
+  font-size: 13px;
+  color: #666666;
+}
+data-xml[transform="details"] .details_kvp .details_value {
+  font-size: 14px;
+  color: #333333;
+}
+data-xml[transform="details"] .details_kvp .details_section {
+  margin-left: 10px;
+  margin-top: 0px;
+  display: none;
+}
+data-xml[transform="details"] .details_hr {
+  width: 95%;
+  border-top: solid 1px #eeeeee;
+  margin: 15px 0px 10px 0px;
+  clear: both;
+  height: inherit;
+  font-size: inherit;
+}
+data-xml[transform="details"] .details_sectionTitle {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333333;
+}
+data-xml[transform="details"] .details_sectionSubtitle {
+  font-size: 13px;
+  color: #666666;
+}
+data-xml[transform="details"] .details_section {
+  width: 100%;
+  clear: both;
+  margin: 10px 0px;
+  overflow: auto;
+}
+data-xml[transform="details"] .details_table {
+  width: 100%;
+}
+data-xml[transform="details"] .details_colHeader {
+  color: #333333;
+}
+data-xml[transform="details"] .details_header {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  padding-bottom: 5px;
+}
+data-xml[transform="details"] .details_row,
+data-xml[transform="details"] .details_titleRow {
+  border-top: solid 1px #eeeeee;
+  padding-top: 2px;
+}
+data-xml[transform="details"] .details_titleRow {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  height: 22px;
+}
+data-xml[transform="details"] .details_titleRow .rowHeader {
+  float: none;
+  color: #333333;
+}
+data-xml[transform="details"] .details_row > .details_row {
+  margin-left: 15px;
+}
+data-xml[transform="details"] .details_rowHeader {
+  float: left;
+  width: 60%;
+  font-size: 13px;
+  color: #666666;
+  height: 22px;
+}
+data-xml[transform="details"] .details_rowValue {
+  font-size: 13px;
+  color: #333333;
+  height: 22px;
+}
+data-xml[transform="details"] .primaryStar {
+  color: steelblue;
+  margin-left: 3px;
+}
+data-xml[transform="details"] .xslPreformatted {
+  white-space: pre-wrap;
+  /* CSS3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, post millennium */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+
+}
+data-xml[transform="details"] .toggleContactDetails {
+  margin: 10px 0px 0px 0px!important;
+  font-size: 12px;
+  cursor: pointer;
+  color: #666666;
+}
+data-xml[transform="details"] .toggleContactDetails:hover {
+  color: #333333;
+}
+data-xml[transform="details"] .toggleContactDetails:before {
+  float: left;
+  content: "";
+  width: 0;
+  height: 0;
+  margin: 3px 3px 0px 3px;
+  border-top: 5px solid transparent;
+  border-left: 5px solid #666666;
+  border-bottom: 5px solid transparent;
+}
+data-xml[transform="details"] .toggleContactDetails.expanded {
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  color: #333333;
+}
+data-xml[transform="details"] .toggleContactDetails.expanded:hover {
+  color: #666666;
+}
+data-xml[transform="details"] .toggleContactDetails.expanded:before {
+  margin-top: -1px;
+  margin-right: 5px;
+  border-bottom: 8px solid #333333;
+  border-left: 8px solid transparent;
+}
+data-xml[transform="details"] .txtHideContactInfo {
+  display: none;
+}
+data-xml[transform="details"] table#lab-results {
+  margin-top: 12px;
+  margin-bottom: 7px;
+  width: 100%;
+}
+data-xml[transform="details"] #medicalImageStudy .details_kvp {
+  clear: none!important;
+}
+data-xml[transform="details"] #medicalImageStudy .studyImages {
+  float: left;
+  margin-top: 12px!important;
+}
+data-xml[transform="details"] #medicalImageStudy .studyImages .images_title {
+  margin-bottom: 1px;
+  font-size: 13px;
+  color: #666666;
+}
+data-xml[transform="details"] #medicalImageStudy .studyImages .previewImg {
+  margin-top: 5px!important;
+}
+data-xml[transform="details"] #medicalImageStudy .previewImg {
+  margin-right: 15px !important;
+  margin-top: 5px!important;
+  padding-bottom: 20px!important;
+}
+@media (min-width: 800px) {
+  data-xml[transform="details"] .details_leftcol {
+    float: left;
+    width: 50%;
+    padding-right: 3%;
+  }
+  data-xml[transform="details"] .details_rightcol {
+    float: left;
+    width: 45%;
+  }
+  data-xml[transform="details"] .details_col {
+    float: left;
+    width: 45%;
+    padding-right: 3%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  data-xml[transform="details"] .details_widecol {
+    float: left;
+    width: 90%;
+  }
+  data-xml[transform="details"] .details_section {
+    margin: 20px 0px 10px 0px;
+  }
+  data-xml[transform="details"] #lab-results {
+    border-collapse: collapse;
+  }
+  data-xml[transform="details"] #lab-results thead {
+    color: #666666;
+  }
+  data-xml[transform="details"] #lab-results td {
+    border-bottom: solid 1px #eeeeee;
+    padding: 3px 2px;
+  }
+}
+@media (max-width: 799px) {
+  data-xml[transform="details"] .details_leftcol {
+    width: 90%;
+  }
+  data-xml[transform="details"] .details_rightcol {
+    width: 90%;
+  }
+  data-xml[transform="details"] .details_col {
+    width: 90%;
+  }
+  data-xml[transform="details"] .details_titleRow {
+    color: black;
+  }
+  data-xml[transform="details"] table#lab-results {
+    display: block;
+  }
+  data-xml[transform="details"] #lab-results thead,
+  data-xml[transform="details"] #lab-results tbody,
+  data-xml[transform="details"] #lab-results th,
+  data-xml[transform="details"] #lab-results td,
+  data-xml[transform="details"] #lab-results tr {
+    display: block;
+  }
+  data-xml[transform="details"] #lab-results thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  data-xml[transform="details"] #lab-results tr {
+    margin-bottom: 12px;
+  }
+  data-xml[transform="details"] #lab-results td {
+    border: none;
+    position: relative;
+  }
+  data-xml[transform="details"] #lab-results tbody td:nth-child(1) {
+    font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+  }
+  data-xml[transform="details"] #lab-results td:before {
+    padding-right: 7px;
+    color: #666666;
+  }
+  data-xml[transform="details"] #lab-results td[name]:before {
+    content: attr(name);
+  }
+  data-xml[transform="details"] #lab-results td[class*='resultDate'] {
+    color: #666666;
+  }
+}
+/* ViewItemGrid */
+
+.viewItemGrid {
+  position: relative;
+}
+.viewItemGrid .nodata {
+  padding-top: 10px;
+  color: #666666;
+  font-size: 14px;
+  border-top: 1px solid #d7d7d7;
+}
+.viewItemGrid table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+.viewItemGrid table tr {
+  font-size: 13px;
+  color: #333333;
+}
+.viewItemGrid table tr.hover {
+  background-color: #e7e7e7;
+  cursor: pointer;
+}
+.viewItemGrid table tr.selected,
+.viewItemGrid table tr.checked {
+  background-color: #0072c6;
+  color: white;
+}
+.viewItemGrid table tr.selected .gridLink,
+.viewItemGrid table tr.checked .gridLink {
+  color: white !important;
+}
+.viewItemGrid table tr:first-child {
+  font-weight: normal !important;
+  color: #666666;
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  font-size: 11px;
+  cursor: default;
+}
+.viewItemGrid table tr:first-child:hover {
+  background-color: transparent;
+}
+.viewItemGrid table th {
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 0;
+  padding-left: 10px;
+}
+.viewItemGrid table td {
+  vertical-align: top;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 0;
+  padding-left: 10px;
+}
+.viewItemGrid table td:first-child,
+.viewItemGrid table th:first-child {
+  padding-left: 0;
+}
+.viewItemGrid .iconsHeader,
+.viewItemGrid .actionsHeader {
+  width: 45px;
+}
+.viewItemGrid .columnEllipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 15px;
+}
+.viewItemGrid .selectAllCheckbox,
+.viewItemGrid .itemrowCheckBox {
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+.viewItemGrid .checkboxHeader {
+  width: 20px;
+}
+.viewItemGrid .itemrowCheckbox {
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+.viewItemGrid .hv-dropdown-top {
+  position: relative;
+  border: none !important;
+}
+.viewItemGrid .hv-dropdown-top.open,
+.viewItemGrid .hv-dropdown-top:hover {
+  border: none !important;
+  background-color: transparent !important;
+}
+.viewItemGrid .hv-dropdown-content {
+  border: 2px solid black !important;
+  z-index: 3;
+}
+.viewItemGrid .actionsDropDown {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 7px;
+  padding-left: 8px;
+  display: block;
+}
+.viewItemGrid .action a {
+  font-size: 13px !important;
+}
+.viewItemGrid .actionsIcon {
+  padding-left: 18px;
+  padding-top: 15px;
+  margin: 2px;
+}
+.viewItemGrid .actionsImage {
+  background: url(../imgs/icons/icon_ActionsMenu.png) no-repeat left center;
+}
+.viewItemGrid .actionsImageSelected {
+  background: url(../imgs/icons/icon_ActionsMenu_selected.png) no-repeat left center;
+}
+.viewItemGrid .personalIcon {
+  padding-left: 16px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+}
+.viewItemGrid .personalImage {
+  background: url(../imgs/icons/icon_MarkAsPersonal.png) no-repeat left center;
+}
+.viewItemGrid .personalImageSelected {
+  background: url(../imgs/icons/icon_MarkAsPersonal_RowSelectedState.png) no-repeat left center;
+}
+.viewItemGrid .signatureIcon {
+  padding-left: 16px;
+  padding-bottom: 2px;
+}
+.viewItemGrid .signatureImage {
+  background: url(../imgs/icons/icon_Signature.png) no-repeat left center;
+}
+.viewItemGrid .signatureImageSelected {
+  background: url(../imgs/icons/icon_Signature_RowSelectedState.png) no-repeat left center;
+}
+.viewItemGrid .viewItemGridPager {
+  padding: 5px;
+  border-bottom: 1px solid #d7d7d7;
+  border-top: 1px solid #d7d7d7;
+  height: 20px;
+}
+.viewItemGrid .viewItemGridPager .pagerContainer {
+  margin-top: 2px;
+}

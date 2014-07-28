@@ -1,0 +1,417 @@
+﻿body {
+  font-family: "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial, Sans-Serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0px;
+  font-weight: normal;
+}
+h1,
+.h1 {
+  font-size: 36px;
+}
+h2,
+.h2 {
+  font-size: 16px;
+  font-family: "Segoe UI Semibold", "Segoe UI Web Semibold", "Segoe UI Web Regular", "Segoe UI", "Segoe UI Symbol", "HelveticaNeue-Medium", Arial, Sans-Serif;
+}
+h5,
+.h5 {
+  font-size: 14px;
+}
+h6,
+.h6 {
+  font-size: 18px;
+}
+.header .right .logo {
+  display: none;
+}
+.genHealthInfo {
+  margin-bottom: 20px;
+}
+.section {
+  margin-bottom: 20px;
+}
+.hv_e {
+  margin-bottom: 11px;
+}
+.hv_base {
+  background-color: #f8f8f8;
+}
+.hv_base a {
+  color: #5291cd;
+}
+.hv_base a,
+.hv_base a:visited,
+.hv_base a:active,
+.hv_base a:hover {
+  color: #5291cd;
+  text-decoration: none;
+}
+div[disabled] label {
+  color: gray !important;
+}
+div[disabled] input {
+  background-color: #efefef !important;
+}
+label.hv_l,
+span.hv_l {
+  font-weight: bold;
+}
+.hv_emdbPerson .hv_l {
+  font-weight: normal !important;
+  float: left;
+  width: 180px;
+}
+.hv_reviewMode .hv_emdbContact {
+  margin-left: 180px;
+}
+.hv_hidden {
+  display: none;
+}
+.hv_ch {
+  cursor: pointer;
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  margin-left: 5px;
+}
+span.hv_ex {
+  display: block;
+}
+.hv_i input[type='text'],
+.hv_i textarea {
+  width: 250px;
+}
+.hv_i select {
+  width: 255px;
+}
+div.error,
+.hv_er {
+  color: red;
+  font-weight: bold;
+}
+.hv_unit {
+  float: left;
+  width: 270px;
+}
+.hv_unit_v {
+  float: left;
+  width: 80px;
+}
+.hv_unit_v input[type='text'] {
+  width: 60px;
+}
+.hv_unit_u {
+  display: inline;
+}
+.hv_unit_u select {
+  width: 170px;
+}
+.hv_note {
+  clear: both;
+}
+.hv_note textarea {
+  width: 576px;
+  height: 60px;
+}
+.hv_editable_pb_h {
+  display: none;
+}
+.hv_editable_pb_v {
+  display: block;
+  background-color: #eeeeee !important;
+  padding: 10px;
+  clear: both;
+  margin-bottom: 10px;
+  width: 560px;
+  float: left;
+}
+.hv_embedded_pb {
+  display: none;
+}
+hr.hv_coll_r {
+  background-color: #cccccc;
+  border: 0 none;
+  color: #cccccc;
+  height: 1px;
+  margin-top: 20px;
+}
+.hv_coll .hv_coll_h {
+  cursor: pointer;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  padding-left: 0;
+  display: inline-block;
+}
+.hv_coll .hv_coll_h a {
+  color: #6b9ed6;
+  font-weight: bold;
+  padding-right: 5px;
+}
+.hv_coll .hv_coll_h img {
+  vertical-align: middle;
+  padding-left: 5px;
+}
+.hv_coll .hv_coll_c {
+  padding: 0;
+}
+.hv_autoc {
+  position: relative;
+}
+.hv_iconLink {
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+.hv_addLink {
+  background: transparent url(../imgs/icons/icon_add_blue.gif) no-repeat scroll 0 5px;
+}
+a.hv_unit_a {
+  clear: both;
+  float: left;
+}
+.hv_i_l .hv_i,
+.hv_i_l .hv_l {
+  float: left;
+  margin-right: 5px;
+}
+.hv_i_l .hv_i {
+  padding-bottom: 10px;
+}
+/*Generics */
+
+.hv_clearLeft {
+  clear: left;
+}
+.hv_clearRight {
+  clear: left;
+}
+.hv_clearBoth {
+  clear: both;
+}
+.hv_floatLeft {
+  float: left;
+}
+.hv_e_inline {
+  float: left;
+  padding-left: 2px;
+}
+.hv_e_newline {
+  float: left;
+  padding-left: 2px;
+  clear: both;
+}
+/*Phone and email shared */
+
+.hv_phone,
+.hv_email {
+  margin-bottom: 15px;
+}
+.hv_phoneE,
+.hv_emailE {
+  float: left;
+  margin-top: 16px;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 15px;
+}
+.hv_horElementWithExample {
+  float: left;
+}
+.hv_phone .hv_CheckBox,
+.hv_email .hv_CheckBox {
+  margin-top: 30px;
+}
+.hv_phone .hv_CheckBox .hv_i,
+.hv_email .hv_CheckBox .hv_i {
+  margin-right: 5px;
+  float: left;
+}
+.hv_phone .hv_CheckBox .hv_l,
+.hv_email .hv_CheckBox .hv_l {
+  float: left;
+}
+.hv_reviewMode .hv_phoneE,
+.hv_reviewMode .hv_emailE,
+.hv_reviewMode .hv_horElementWithExample {
+  margin: 0px !important;
+  width: 180px;
+}
+.hv_reviewMode .hv_phone,
+.hv_reviewMode .hv_email {
+  margin: 0px !important;
+}
+.hv_reviewMode .hv_CheckBox .hv_i span,
+.hv_reviewMode .hv_address .hv_primary .hv_i span {
+  float: left;
+}
+.hv_reviewMode .hv_CheckBox .hv_i,
+.hv_reviewMode .hv_address .hv_primary .hv_i {
+  clear: both;
+}
+.hv_phoneCntr .hv_addLink,
+.hv_emailCntr .hv_addLink {
+  clear: both;
+  display: block;
+  float: left;
+  padding-bottom: 10px;
+}
+.hv_phoneCntr .hv_i select,
+.hv_emailCntr .hv_i select {
+  width: 170px;
+}
+/*address*/
+
+.hv_address {
+  width: 95%;
+  *width: 92%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #dddddd;
+}
+.hv_address .hv_addressType {
+  float: left;
+}
+.hv_address .hv_primary {
+  float: left;
+  margin-top: 15px;
+  margin-bottom: 0;
+  margin-right: 30%;
+  margin-left: 15px;
+}
+.hv_address .hv_primary .hv_i,
+.hv_address .hv_primary .hv_l {
+  margin-right: 5px;
+  float: left;
+}
+.hv_reviewMode .hv_address .hv_primary {
+  width: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 300px;
+}
+/* Contacts*/
+
+.hv_existingRadio {
+  float: left;
+}
+.hv_newRadio {
+  float: left;
+  clear: both;
+  padding-bottom: 5px;
+}
+.hv_prescribedBySelect {
+  float: left;
+  margin-right: 10px;
+}
+.hv_instructions {
+  clear: both;
+}
+.hv_personRequiredHidden {
+  clear: both;
+  padding-bottom: 5px;
+  *padding-bottom: 0;
+}
+.hv_personRequiredHidden .hv_i {
+  display: none;
+}
+.hv_personRequiredHidden div.hv_er {
+  zoom: 1;
+}
+/*Date Time*/
+
+.hv_date .hv_i input[type='text'] {
+  width: 120px;
+}
+.hv_date .hv_i img.ui-datepicker-trigger {
+  padding-left: 2px;
+  vertical-align: middle;
+}
+.hv_time .hv_i input[type='text'] {
+  width: 60px;
+}
+.hv_time select {
+  width: auto;
+}
+.hv_dateAndTime {
+  clear: left;
+}
+.hv_dateAndTime .hv_l {
+  float: left;
+}
+.hv_dateAndTime_date .hv_l {
+  float: none;
+}
+.hv_dateAndTime_time {
+  clear: left;
+  float: left;
+}
+.hv_dateAndTime_zone {
+  float: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 10px;
+}
+.hv_dateAndTime_zone .hv_e {
+  margin-top: 16px;
+  margin-bottom: 0px;
+}
+.hv_dateAndTime_time .hv_l,
+.hv_dateAndTime_zone .hv_l {
+  float: none;
+}
+/*height & weight*/
+
+.hv_weight,
+.hv_length {
+  clear: both;
+}
+.hv_weight input[type='text'],
+.hv_length input[type='text'] {
+  width: 85px;
+}
+.hv_ounces .hv_i,
+.hv_inches .hv_i {
+  margin-left: 20px;
+}
+.hv_weight .hv_e,
+.hv_length .hv_e {
+  margin-bottom: 0px !important;
+}
+/*other*/
+
+.hv_legend {
+  float: right;
+  margin-right: 3px;
+}
+.hv_adverse {
+  clear: both;
+}
+.hv_reviewMode .hv_b {
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+
+  padding-right: 10px;
+}
+.hv_relative {
+  position: relative;
+}
+.ctlHistoryTbl .historyTimeStamp {
+  padding-right: 12px;
+}

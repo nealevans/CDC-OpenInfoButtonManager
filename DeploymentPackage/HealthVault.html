@@ -1,0 +1,1655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0047)https://account.healthvault.com/?culture=en-US# -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" lang="en-US" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Home - HealthVault</title>
+    
+    <!-- For pinned tile on windows 8 -->
+    <meta name="application-name" content="HealthVault">
+    <meta name="msapplication-square150x150logo" content="/images/HealthVault-square150x150logo.png">
+    <meta name="msapplication-square310x310logo" content="/images/HealthVault-square310x310logo.png">
+    <meta name="msapplication-square70x70logo" content="/images/HealthVault-square70x70logo.png">
+    <meta name="msapplication-wide310x150logo" content="/images/HealthVault-square310x150logo.png">
+    <!-- chrome -->
+    <link rel="shortcut icon" href="https://account.healthvault.com/favicon.ico?v=1.18.1022.10316" type="image/x-icon">
+    <link type="text/css" rel="Stylesheet" href="./Home - HealthVault_files/jquery-ui-1.8.14.custom.css">
+
+<link rel="stylesheet" href="./Home - HealthVault_files/default.css" type="text/css">
+<link rel="stylesheet" href="./Home - HealthVault_files/default(1).css" type="text/css" media="print">
+
+
+
+    <script type="text/javascript" src="./Home - HealthVault_files/jquery-1.8.2.min.js"></script><style type="text/css"></style>
+<script type="text/javascript" src="./Home - HealthVault_files/jquery.validate.min.js"></script>
+<script type="text/javascript" src="./Home - HealthVault_files/jquery.unobtrusive-ajax.min.js"></script>
+<script type="text/javascript" src="./Home - HealthVault_files/jquery.validate.unobtrusive.min.js"></script>
+<script type="text/javascript" src="./Home - HealthVault_files/jquery-ui-1.8.14.custom.min.js"></script>
+<script type="text/javascript" src="./Home - HealthVault_files/knockout-2.3.0.js"></script>
+
+    <script type="text/javascript" src="./Home - HealthVault_files/common.js"></script>
+
+
+    
+    
+    <!--[if lte IE 9]><script language="javascript" type="text/javascript" src="/JS/flot/excanvas.js?v=1.18.1022.10316"></script><![endif]-->
+    <script language="javascript" type="text/javascript" src="./Home - HealthVault_files/flot.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var offset = { top: 15, left: -15 };
+            if ("False" == "True") {
+                offset.left = 68;
+            }
+
+            $("#messagesTipLink").tip({
+                content: $("#messageTip"),
+                baseElement: $('<div class="tipBlue"></div>'),
+                position: "right",
+                offset: offset,
+                width: 400,
+                delay: 200
+            });
+
+
+            var exportLightBox = createLightbox({
+                header: "Select information to export",
+                content: "https://account.healthvault.com/healthinfo/export"
+            });
+
+            $(".exportAllLink").click(function () {
+                exportLightBox.show(this);
+            });
+
+            var printLightBox = createLightbox({
+                header: "Select information to print",
+                content: "https://account.healthvault.com/healthinfo/print"
+            });
+
+            $(".printAllLink").click(function () {
+                printLightBox.show(this);
+            });
+
+            $(".homeActionsDropDown", document).each(function () {
+                $(this).dropdown($(this).parent().parent().find(".actionsContent"), {});
+            });
+
+            $(".hideTile").live("click", function () {
+                var typeId = $(this).data("type");
+                var tile = $(this);
+                $.post(
+                    "/Home/HideTile",
+                    $.extend({}, g_antiForgeryToken, { tileId: typeId }),
+                    function (success) {
+                        if (success) {
+                            $(tile).closest(".homeTile").fadeOut();
+                        }
+                    });
+            });
+
+            $(".homeTile").click(function (e) {
+                if ($(e.target).is('.hideTile')) {
+                    e.preventDefault();
+                    return;
+                }
+
+                if ($(e.target).hasClass("homeTile")) {
+                    $(this).children("a:first-child").click();
+                }
+
+                var typeId = $(this).data("type");
+                if (typeId) {
+                    window.location.href = "/HealthInfo/ViewItems?typeId=" + typeId;
+                }
+            });
+
+        });
+
+        function attachActionsDropdown(e) {
+            $(e).find(".homeActionsDropDown").dropdown($(e).find(".actionsContent"), {});
+        }
+        
+        function callIM(gender, age, task, mainSearchCriteriaC, labAbnormalFlag){
+			var baseUrl = 'http://infobutton-dev.cloudapp.net:8080/infobutton-service/infoRequest?';
+			var organizationOID = document.getElementById("organizationId").value;
+			var organization = 'representedOrganization.id.root=' + organizationOID;
+
+			var genderParam = '&patientPerson.administrativeGenderCode.c=' + gender + '' ;
+			var ageParam = '&age.v.v=' + age + '&age.v.u=a';
+			var taskParam = '&taskContext.c.c=' + task;
+			
+			var mainSearchCriteriaParam = '&mainSearchCriteria.v.c=' + mainSearchCriteriaC + '&mainSearchCriteria.v.cs=' + getCs(mainSearchCriteriaC) + '&mainSearchCriteria.v.dn=' + getDn(mainSearchCriteriaC);
+		
+			//var severityObservationParam;
+			//if (labAbnormalFlag != null){
+			//	severityObservationParam = '&interpretationCode.c.c=' + labAbnormalFlag;
+			//}
+			
+			var performerParam = '&informationRecipient.languageCode.c=en&performer=PROV';
+			
+			var xslt = '&xsltTransform=' + getXslt(organizationOID);
+			
+			var url = baseUrl + organization + genderParam + ageParam 
+				+ taskParam + mainSearchCriteriaParam + performerParam + xslt;
+			var winRef = window.open(url, '', 'width=970, height=670, status=no, location=no, toolbar=no, scrollbars=no, resizable=yes');
+			//document.getElementById('urlDisplay').value = url;
+			return false;
+		}
+
+    </script>
+
+
+</head>
+<body><div id="popup" style="width: 251px; top: 188px; left: 275px; display: none;"><div class="sl_con"><ul class="suggestionList"><li data-index="0" class="active">Smokers keratosis</li><li data-index="1" class="">Smoker's respiratory syndrome</li><li data-index="2" class="">Smokers' cough</li><li data-index="3" class="">Smoke inhalation injury</li><li data-index="4" class="">Smokeless tobacco keratosis</li></ul></div></div>
+    
+
+    <script type="text/javascript">
+        hv.autoTimeout(1200000, "https://account.healthvault.com:443/signout?timeout=w\u0026redirect=https%3a%2f%2faccount.healthvault.com%3a443%2f%3fculture%3den-US");
+    </script>
+
+    <script type="text/javascript">
+        var g_dateFormats = new Array();
+        g_dateFormats[0] = "DD, MM dd, yy";
+        g_dateFormats[1] = "m/d/yy";
+        g_dateFormats[2] = 'yy/m/d';
+        g_dateFormats[3] = 'yy-m-d';
+
+        hv.editor.newUrl = "https://account.healthvault.com/healthinfo/new";
+        hv.editor.editUrl = "https://account.healthvault.com/healthinfo/edit";
+
+        var g_antiForgeryToken = { 
+            __RequestVerificationToken: $('<input name="__RequestVerificationToken" type="hidden" value="3oAoYh4E1LeLsNDmFiuDOfy0vQ5O28uyO5WbRK9cq9pc-mQdUbF1Z2H8Ns1m5ZnJ7avpU1dv7nRUKn-Z38Nb73HmL8ZpJH7jM4hc0wmCn2PBHT43k0huQALpDNRRi5t1a-q5FB6_efwYFPIw9h9RPw2" />').attr("value")
+        };
+        
+        if ($.datepicker) {
+            $.datepicker.regional['en-US'] = {
+                closeText: 'Close',
+                prevText: 'Back',
+                nextText: 'Next',
+                monthNames: ["January","February","March","April","May","June","July","August","September","October","November","December",""],
+                monthNamesShort: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],
+                dayNames: ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+                dayNamesMin: ["Su","Mo","Tu","We","Th","Fr","Sa"],
+                dateFormat: 'm/d/yy',
+                firstDay: 0,
+                isRTL: false,
+                showMonthAfterYear: false
+            };
+
+            $.datepicker.setDefaults($.datepicker.regional['en-US']);
+            $(document).ready(applyEllipsis);
+        }
+
+        parseGlobalFloat = function (input) {
+            if (input == null || input == "") {
+                return NaN;
+            }
+
+            var decimalSeparator = ".";
+            if (decimalSeparator == ",") {
+                if (input.indexOf('.') >= 0) {
+                    return NaN;
+                }
+                input = input.toString().replace(/,/, ".");
+            } else {
+                if (input.indexOf(',') >= 0) {
+                    return NaN;
+                }
+            }
+
+            // we want strict behavior, not what normal parseFloat does
+            return +input;
+        };
+        
+        globalFloatToString = function (input) {
+            if (input == null) {
+                return null;
+            }
+
+            var decimalSeparator = ".";
+            if (decimalSeparator == ",") {
+                return input.toString().replace(/\./, ",");
+            }
+            else {
+                return input.toString();
+            }
+        };
+
+
+    </script>
+    <script type="text/javascript">
+    g_errorMessage = "We\u0027ve encountered an unexpected error. Please try again.";
+    g_contentSizeMessage = "This item contains too much data to display here. To view the item, click Print.";
+    g_closeText = "Close";
+    g_imagePath = "/en-US/imgs/";
+    g_dropdownMenuTitle = "More actions";
+    g_recordPickerArrowTitle = "More record options";
+</script>
+    <div id="fb-root"></div>
+    
+
+
+
+<script type="text/javascript">
+    var renderBodyContent;
+    $(document).ready(function() {
+            showNotificationBar("Condition has been successfully added.");
+        handleHashChange();
+    });
+
+    $(document).editorOpened(function(event, result) {
+        var editorContainer = $("#editorContainer");
+        editorContainer.html(result);
+        if (editorContainer.hasClass("hide")) {
+            editorContainer.removeClass("hide");
+            renderBodyContent = $("#renderBodyContainer").detach();
+        }
+    });
+
+    $(document).editorClosed(function(event, result) {
+        hashManager.load();
+        hashManager.removeKey("edit");
+        if (result) {
+            window.location.reload(true);
+            return;
+        }
+
+        $("#editorContainer").empty().addClass("hide");
+        if (renderBodyContent) {
+            renderBodyContent.appendTo("#mainContentContainer");
+            renderBodyContent = null;
+        }
+    });
+
+    function handleHashChange() {
+        hashManager.load();
+        var editHashExists = false, typeId;
+        if (hashManager.keyExists("edit")) {
+            editHashExists = true;
+            var editArray = hashManager.getKey("edit").split("/");
+            if (editArray.length == 1) {
+                hv.editor.launch(editArray[0]);
+            } else if (editArray.length == 2) {
+                typeId = editArray[0];
+                if (editArray[1] == "old") {
+                    var oldEditor = $(document).find(".edmonton");
+                    var oldEditorTitle = oldEditor.length ? oldEditor.data("editor-title") : "";
+                    var edmondtonLightBox = createLightbox({
+                        header: oldEditorTitle,
+                        content: "https://account.healthvault.com/ItemEdit.aspx?typeid=" + typeId + "&r=true"
+                    });
+                    edmondtonLightBox.show();
+                } else {
+                    hv.editor.launch(typeId, editArray[1]);
+                }
+            }
+        } else {
+            closeEditorBoxHandler(hv.editor.addAnother);
+        }
+        
+        var gridContainer = $("#gridContainer");
+        var detailsContainer = $("#detailsContainer");
+        var chartContainer = $("#chartContainer");
+        if (hashManager.keyExists("id")) {
+            if (!editHashExists) {
+                gridContainer.addClass("hide");
+                detailsContainer.addClass("hide");
+                chartContainer.addClass("hide");
+                var idArray = hashManager.getKey("id").split("/");
+                typeId = idArray[0];
+                var thingId = idArray[1];
+                getItemDetails(null, 'SUMMARY', typeId, thingId);
+            }
+        } else {
+            if (gridContainer && detailsContainer && chartContainer) {
+                gridContainer.removeClass("hide");
+                detailsContainer.addClass("hide");
+                chartContainer.addClass("hide");
+            }
+        }
+    }
+    
+    window.onhashchange = handleHashChange;
+</script>
+
+<div class="appPageContainer">
+    <div class="newPageHeader">
+        
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var menu = $("#headerProfileMenu");
+        var addMenu = $("#headerAddMenu");
+        var profileMenuLink = $("#headerProfileMenuLink");
+        var addMenuLink = $("#headerAddMenuLink");
+
+        profileMenuLink.click(function (event) {
+            event.stopPropagation();
+            menu.toggleClass("hide");
+            addMenu.addClass("hide");
+            profileMenuLink.toggleClass("headerProfileMenuOpen");
+            $(document).one("click", function () {
+                menu.addClass("hide");
+                profileMenuLink.removeClass("headerProfileMenuOpen");
+            });
+        });
+
+        addMenuLink.click(function (event) {
+            event.stopPropagation();
+            addMenu.toggleClass("hide");
+            menu.addClass("hide");
+            addMenuLink.toggleClass("headerAddMenuOpen");
+            $(document).one("click", function () {
+                addMenu.addClass("hide");
+                addMenuLink.removeClass("headerAddMenuOpen");
+            });
+        });
+
+        $(".menuEditorLink").click(function () {
+            addMenu.toggleClass("hide");
+            addMenuLink.removeClass("headerAddMenuOpen");
+        });
+
+        $(".oldeditor").each(function () {
+            var title = $(this).data("editor-title");
+            var edmondtonLightBox = createLightbox({ header: title, content: $(this).attr("href") });
+            $(this).click(function (event) {
+                event.preventDefault();
+                edmondtonLightBox.show(this);
+            });
+        });
+    });
+</script>
+
+
+<div class="header">
+    <a href="https://account.healthvault.com/" title="HealthVault" class="logoLink">
+        <img class="logo" alt="HealthVault" src="./Home - HealthVault_files/HealthVaultLogo.png">
+    </a>
+    <div class="headerLinksContainer">
+            <a id="headerAddMenuLink" href="javascript:void(0);" title="Add">
+                <img class="addButton" src="./Home - HealthVault_files/icon_AddMenu.png" alt="Add">
+                <span class="addText">Add</span>
+                <img class="addDownArrow" src="./Home - HealthVault_files/icon_Account_downArrow.png" alt="Add">
+            </a>
+                    <div>
+                <a id="headerPrintLink" class="printAllLink" href="javascript:void(0);" title="Print">
+                    Print
+                </a>
+            </div>
+            <div>
+                <a id="headerExportLink" class="exportAllLink" href="javascript:void(0);" title="Export">
+                    Export
+                </a>
+            </div>
+    </div>
+    <div class="links">
+            <a id="headerProfileMenuLink" href="javascript:void(0);">
+                Neal Evans
+                <img class="accountDownArrow" src="./Home - HealthVault_files/icon_Account_downArrow.png" alt="Account settings">
+            </a>
+                    <a id="showhelp" target="_blank" href="https://account.healthvault.com/help/en-US/default.htm" title="Help">
+                <img alt="Help" class="helpIcon" src="./Home - HealthVault_files/icon_Help.png">
+            </a>
+    </div>
+</div>
+<div id="headerProfileMenu" class="hide">
+    <div class="menuItem">
+        <a id="editsettings" href="https://account.healthvault.com/account">
+            Account settings
+        </a>
+    </div>
+    <div class="menuItem">
+            <a href="https://account.healthvault.com/signout?force=true">
+                Sign out
+            </a>
+    </div>
+</div>
+    <div id="headerAddMenu" class="hide">
+        <div id="editorLinksContainer">
+            <div class="left recentEditorsContainer">
+                <div class="sectionLbl">Recent</div>
+                <div class="recentLinksColumn">
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="7ea7a1f9-880b-4bd4-b593-f5660f20eda8" data-editor-title="Condition" title="Condition">
+                <span>Condition</span>
+            </a>
+    </div>
+                </div>
+                <div class="sectionLbl">People</div>
+                <div class="editorLinksColumn menuLinks">
+                    <a href="https://account.healthvault.com/record/new">
+                        Add a person
+                    </a>
+                </div>
+            </div>
+            <div class="left recentSeparator"></div>
+            <div class="left infoEditorsContainer">
+                <div class="sectionLbl">Information types</div>
+                <div class="left editorLinksColumn">
+                        <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="52bf9104-2c5e-4f1f-a66d-552ebcc53df7" data-editor-title="Allergy" title="Allergy">
+                <span>Allergy</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="4b18aeb6-5f01-444c-8c70-dbf13a2f510b" data-editor-title="Appointment" title="Appointment">
+                <span>Appointment</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="879e7c04-4e8a-4707-9ad3-b054df467ce4" data-editor-title="Blood glucose" title="Blood glucose">
+                <span>Blood glucose</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="ca3c57f4-f4c1-4e15-be67-0a3caf5414ed" data-editor-title="Blood pressure" title="Blood pressure">
+                <span>Blood pressure</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="98f76958-e34f-459b-a760-83c1699add38" data-editor-title="Cholesterol" title="Cholesterol">
+                <span>Cholesterol</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="7ea7a1f9-880b-4bd4-b593-f5660f20eda8" data-editor-title="Condition" title="Condition">
+                <span>Condition</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="oldeditor menuEditorLink" href="https://account.healthvault.com/ItemEdit.aspx?typeid=9c48a2b8-952c-4f5a-935d-f3292326bf54&r=true" data-editor-title="Continuity of Care Document (CCD)" title="Continuity of Care Document (CCD)">
+                <span>Continuity of Care Document (CCD)</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="oldeditor menuEditorLink" href="https://account.healthvault.com/ItemEdit.aspx?typeid=1e1ccbfc-a55d-4d91-8940-fa2fbf73c195&r=true" data-editor-title="Continuity of Care Record (CCR)" title="Continuity of Care Record (CCR)">
+                <span>Continuity of Care Record (CCR)</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="oldeditor menuEditorLink" href="https://account.healthvault.com/ItemEdit.aspx?typeid=bd0403c5-4ae2-4b0e-a8db-1888678e4528&r=true" data-editor-title="Documents (Files)" title="Documents (Files)">
+                <span>Documents (Files)</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="25c94a9f-9d3d-4576-96dc-6791178a8143" data-editor-title="Emergency or provider contact" title="Emergency or provider contact">
+                <span>Emergency or provider contact</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="85a21ddb-db20-4c65-8d30-33c899ccf612" data-editor-title="Exercise" title="Exercise">
+                <span>Exercise</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="4a04fcc8-19c1-4d59-a8c7-2031a03f21de" data-editor-title="Family history" title="Family history">
+                <span>Family history</span>
+            </a>
+    </div>
+
+                </div>
+                <div class="left editorColumnGutter">&nbsp;</div>
+                <div class="left editorLinksColumn">
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="089646a6-7e25-4495-ad15-3e28d4c1a71d" data-editor-title="Food &amp; drink" title="Food &amp; drink">
+                <span>Food &amp; drink</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="40750a6a-89b2-455c-bd8d-b420a4cb500b" data-editor-title="Height" title="Height">
+                <span>Height</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="cd3587b5-b6e1-4565-ab3b-1c3ad45eb04f" data-editor-title="Immunization" title="Immunization">
+                <span>Immunization</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="9366440c-ec81-4b89-b231-308a4c4d70ed" data-editor-title="Insurance plan" title="Insurance plan">
+                <span>Insurance plan</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="5800eab5-a8c2-482a-a4d6-f1db25ae08c3" data-editor-title="Lab test results" title="Lab test results">
+                <span>Lab test results</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="ef9cf8d5-6c0b-4292-997f-4047240bc7be" data-editor-title="Medical device" title="Medical device">
+                <span>Medical device</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="oldeditor menuEditorLink" href="https://account.healthvault.com/ItemEdit.aspx?typeid=cdfc0a9b-6d3b-4d16-afa8-02b86d621a8d&r=true" data-editor-title="Medical image study" title="Medical image study">
+                <span>Medical image study</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="30cafccc-047d-4288-94ef-643571f7919d" data-editor-title="Medication" title="Medication">
+                <span>Medication</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="5d8419af-90f0-4875-a370-0f881c18f6b3" data-editor-title="Peak flow" title="Peak flow">
+                <span>Peak flow</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="df4db479-a1ba-42a2-8714-2b083b88150f" data-editor-title="Procedure" title="Procedure">
+                <span>Procedure</span>
+            </a>
+    </div>
+    <div class="menuLinks">
+            <a class="menuEditorLink" href="javascript:void(0);" data-editor="3d34d87e-7fc1-4153-800f-f56592cb0d17" data-editor-title="Weight" title="Weight">
+                <span>Weight</span>
+            </a>
+    </div>
+                </div>
+            </div>
+        </div>
+        <div id="otherwaysAddInfoContainer">
+            <div class="sectionLbl">
+                Other ways to add information to HealthVault
+            </div>
+            <div>
+                <div class="left otherwaysLinksColumn">
+                    <div class="menuLinks">
+                        <a href="https://account.healthvault.com/directory?target=1">
+                            Connect health &amp; fitness devices
+                        </a>
+                    </div>
+                    <div class="menuLinks">
+                        <a href="https://account.healthvault.com/directory">
+                            Use connected apps
+                        </a>
+                    </div>
+                </div>
+                <div class="left editorColumnGutter">&nbsp;</div>
+                <div class="left otherwaysLinksColumn">
+                    <div class="menuLinks">
+                        <a href="https://account.healthvault.com/help/en-US/Default_CSH.htm#topics/HealthInformation.htm#Adding_Info_From_Doctor" target="_blank">
+                            Get information from your doctor
+                        </a>
+                    </div>
+                    <div class="menuLinks">
+                        <a href="https://account.healthvault.com/help/en-US/Default_CSH.htm#topics/HealthInformation.htm#Importing_data" target="_blank">
+                            Import from a spreadsheet
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    
+    <div class="newMainContainer" style="top: 0;">
+        <div>
+                <div class="newLeftContent" style="top: 40px;">
+
+
+
+<div class="recordPickerWrapper" style="height: 75px;">
+    <div id="recordPickerBox" class="recordPicker">
+        <div class="currentRecordBox">
+            <div id="recordPhoto" class="left">
+                <img alt="Edit profile for Becky" src="./Home - HealthVault_files/recordimage.aspx" style="height:50px;width:50px;">
+            </div>
+            <div class="left horizontalGutterSmall">&nbsp;</div>
+            <div id="recordInfo" class="left recordInfo">
+                <span class="whiteText"><span>Becky</span></span>
+            </div>
+                <div class="left">&nbsp;</div>
+                <div class="left recordSwitcherRule"></div>
+                <div id="recordMenuTop" class="right recordSwitcherIcon">
+                    <a title="Switch person" href="javascript:void(0);" class="recordPerson">
+                        <img id="recordSwitcherArrow" src="./Home - HealthVault_files/icon_recordPicker_downArrow.png" alt="Switch person">
+                    </a>
+                </div>
+                <div class="clear">&nbsp;</div>
+        </div>
+        <div id="recordMenu">
+            <div class="recordListRule"></div>
+                <div id="recordItems" class="records">
+                        <div class="recordListBox">                                       
+                            <a title="Neal" class="whiteText" href="https://account.healthvault.com/Record/Switch?id=f8c0a4f0-78ba-4e80-8659-55bc123385db&returnUrl=https%3A%2F%2Faccount.healthvault.com%3A443%2F%3Fculture%3Den-US">
+                                <img alt="Neal" style="height:50px;width:50px;" src="./Home - HealthVault_files/recordimage(1).aspx">
+                                <span class="recordListName">Neal</span>
+                            </a>
+                        </div>
+                </div>
+                                <div class="recordPersonSeeAll">
+                        <a href="https://account.healthvault.com/recordlist.aspx" class="whiteText breakWords">
+                            See all
+                        </a>
+                    </div>
+                <div class="recordPersonAdd">
+                    <a class="whiteText inlineBlock breakWords" href="https://account.healthvault.com/record/new">
+                        <img class="recordPickerLinkImg" alt="Add a person" src="./Home - HealthVault_files/icon_addAPerson.png">
+                        Add a person
+                    </a>
+                </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#recordPickerBox").recordPicker();
+        });
+    </script>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        handleToggleCategories($("#toggleHealthViewsContainer"), $("#healthViewsContainer"));
+        handleToggleCategories($("#toggleMeasurementsContainer"), $("#measurementsContainer"));
+        handleToggleCategories($("#toggleHealthHistoryContainer"), $("#healthHistoryContainer"));
+        handleToggleCategories($("#toggleDocumentsContainer"), $("#documentsContainer"));
+        handleToggleCategories($("#toggleOtherContainer"), $("#otherContainer"));
+    });
+
+    function handleToggleCategories(toggleLink, categoryContainer) {
+        toggleLink.click(function () {
+            $(this).toggleClass("navigation-category-expandlink-open");
+            $(this).toggleClass("navigation-category-expandlink");
+            categoryContainer.slideToggle();
+        });
+    }
+</script>
+
+<div class="navContent">
+    <div class="categoryContainer hoverItem categorySelected">
+        <a href="https://account.healthvault.com/">
+            Home
+        </a>
+    </div>
+    <div class="categoryContainer hoverItem">
+        <a href="https://account.healthvault.com/record/edit?recordid=192f77fe-7d2d-4d51-8f36-ff2d87fe3ad8">
+            Basic profile
+        </a>
+    </div>
+        <div class="categoryContainer">
+            <div class="toggleLink">
+                <a id="toggleHealthViewsContainer" class="navigation-category-expandlink" href="javascript:void(0);">
+                    Health views
+                </a>
+            </div>
+            <div id="healthViewsContainer" class="categoryItemsContainer hide">
+                    <div class="itemContainer hoverItem">
+        <div class="itemSubContainer">
+            <a id="linkEmergencyProfile" href="https://account.healthvault.com/Emergency/Profile">
+                <span class="itemTypeLabel">Emergency profile</span>
+            </a>
+        </div>
+    </div>
+
+                    <div class="itemContainer hoverItem">
+        <div class="itemSubContainer">
+            <a id="linkWeightManagement" href="https://account.healthvault.com/WeightManagement">
+                <span class="itemTypeLabel">Weight management</span>
+            </a>
+        </div>
+    </div>
+
+            </div>
+        </div>
+    <div class="categoryContainer">
+        <div class="toggleLink">
+            <a id="toggleMeasurementsContainer" class="navigation-category-expandlink" href="javascript:void(0);">
+                Measurements
+            </a>
+        </div>
+        <div id="measurementsContainer" class="categoryItemsContainer hide">
+                        <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=879e7c04-4e8a-4707-9ad3-b054df467ce4">
+Blood glucose                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=ca3c57f4-f4c1-4e15-be67-0a3caf5414ed">
+Blood pressure                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=98f76958-e34f-459b-a760-83c1699add38">
+Cholesterol                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=85a21ddb-db20-4c65-8d30-33c899ccf612">
+Exercise                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=089646a6-7e25-4495-ad15-3e28d4c1a71d">
+Food &amp; drink                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=40750a6a-89b2-455c-bd8d-b420a4cb500b">
+Height                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=5800eab5-a8c2-482a-a4d6-f1db25ae08c3">
+Lab test results                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=5d8419af-90f0-4875-a370-0f881c18f6b3">
+Peak flow                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=3d34d87e-7fc1-4153-800f-f56592cb0d17">
+Weight                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="categoryContainer">
+        <div class="toggleLink">
+            <a id="toggleHealthHistoryContainer" class="navigation-category-expandlink" href="javascript:void(0);">
+                Health history
+            </a>
+        </div>
+        <div id="healthHistoryContainer" class="categoryItemsContainer hide">
+                        <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=52bf9104-2c5e-4f1f-a66d-552ebcc53df7">
+Allergy                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=4b18aeb6-5f01-444c-8c70-dbf13a2f510b">
+Appointment                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=7ea7a1f9-880b-4bd4-b593-f5660f20eda8">
+Condition <span class="itemTypeCount">2</span>                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=25c94a9f-9d3d-4576-96dc-6791178a8143">
+Emergency or provider contact                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=4a04fcc8-19c1-4d59-a8c7-2031a03f21de">
+Family history                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=cd3587b5-b6e1-4565-ab3b-1c3ad45eb04f">
+Immunization                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=9366440c-ec81-4b89-b231-308a4c4d70ed">
+Insurance plan                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=ef9cf8d5-6c0b-4292-997f-4047240bc7be">
+Medical device                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=30cafccc-047d-4288-94ef-643571f7919d">
+Medication                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=df4db479-a1ba-42a2-8714-2b083b88150f">
+Procedure                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="categoryContainer">
+        <div class="toggleLink">
+            <a id="toggleDocumentsContainer" class="navigation-category-expandlink" href="javascript:void(0);">
+                Documents
+            </a>
+        </div>
+        <div id="documentsContainer" class="categoryItemsContainer hide">
+                        <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=9c48a2b8-952c-4f5a-935d-f3292326bf54">
+Continuity of Care Document (CCD)                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=1e1ccbfc-a55d-4d91-8940-fa2fbf73c195">
+Continuity of Care Record (CCR)                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=bd0403c5-4ae2-4b0e-a8db-1888678e4528">
+Documents (Files)                    </a>
+                </div>
+            </div>
+            <div class="itemContainer hoverItem">
+                <div class="itemSubContainer">
+                    <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=cdfc0a9b-6d3b-4d16-afa8-02b86d621a8d">
+Medical image study                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+            <div class="categoryContainer hoverItem">
+            <a href="https://account.healthvault.com/authorize?appid=9404D92C-02C8-4E17-B3AD-7AB7D38B8FCA&selrecordid=192f77fe-7d2d-4d51-8f36-ff2d87fe3ad8&trm=POST">
+                Health messages
+            </a>
+        </div>
+        <div class="categoryContainer hoverItem">
+            <a href="https://account.healthvault.com/Apps">
+                Apps &amp; devices
+            </a>
+        </div>
+        <div class="categoryContainer hoverItem">
+            <a href="https://account.healthvault.com/sharedinfo.aspx">
+                Sharing
+            </a>
+        </div>
+            <div class="categoryContainer hoverItem">
+                <a href="https://account.healthvault.com/history.aspx">
+                    Record history
+                </a>
+            </div>
+
+
+</div>
+                </div>
+            <div class="newRightContent rightContentWithNavigation" style="top: 40px;">
+                <div id="divNoScriptWarning" class="ctlNoScriptWarning" style="display: none;">
+    The HealthVault website uses scripting to display its pages. You must enable scripting in your browser. See your browser's Help for information about enabling scripting.
+</div>
+
+<script type="text/javascript">
+    $('#divNoScriptWarning').toggle();
+</script>
+
+                <div id="browserWarning" class="alertBox">
+                    Note: HealthVault does not support Internet Explorer 6 or earlier. To get the best experience using HealthVault, we recommend that you upgrade to a newer version of <a href="http://go.microsoft.com/fwlink/?LinkID=223629" target="_blank">Internet Explorer</a>.
+                </div>
+                <div id="mainContentContainer" class="mainContentContainer">
+                    <div id="editorContainer" class="editorContainer hide"></div>
+                    
+                <div id="renderBodyContainer" class=" renderBodyContainer">
+                        <div class="renderBodyContainerContent">
+                            
+
+
+
+
+
+
+
+
+
+<script type="text/html" id="itemGridChartTemplate">
+    <div class="itemGridChart">
+        <div class="titleContainer" data-bind="with: currentView()">
+            <div class="moveLeft" data-bind="click: $parent.canMoveLeft() ? moveLeft : null, css: { disabled: !$parent.canMoveLeft() }"></div>
+            <div class="title" data-bind="text: title"></div>
+            <div class="moveRight" data-bind="click: $parent.canMoveRight() ? moveRight : null, css: { disabled: !$parent.canMoveRight() }"></div>
+        </div>
+        <div class="graphContainer">
+            <div data-bind="html: leftYAxisLabel, css: { leftYAxisLabel: leftYAxisLabel }"></div>
+            <div class="graphArea" data-bind="widget: plotter.graphElement, event: { plothover: tooltip.hover.bind(tooltip) }, css: { hasLeftYAxisLabel: leftYAxisLabel, hasRightYAxisLabel: rightYAxisLabel }"></div>
+            <div data-bind="html: rightYAxisLabel, css: { rightYAxisLabel: rightYAxisLabel }"></div>
+        </div>
+        <div class="contentLoading" data-bind="visible: isLoading">
+            <img src="/images/ProgressAnimation_30x30.gif" />
+        </div>
+        <div data-bind="widget: tooltip.tooltipElement">
+            <!-- ko stopBinding: true -->
+            <div class="itemGridChartTooltip" data-bind="visible: visible, style: { top: top() + 'px', left: left() + 'px' }">
+                <!-- ko with: tooltip -->
+                    <div data-bind="template: { name: template }"></div>
+                <!-- /ko -->
+            </div>
+            <!-- /ko -->
+        </div>
+        <div class="changeViewContainer" data-bind="foreach: supportedViews">
+            <div data-bind="text: $parent[$data].title(), click: $parent[$data].bind($parent), css: { active: $parent.currentView() instanceof $parent[$data].view }"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="itemGridChartPrintTemplate">
+    <div class="itemGridChart">
+        <div class="titleContainer" data-bind="with: currentView()">
+            <div class="title" data-bind="text: title"></div>
+        </div>
+        <div class="graphContainer">
+            <div data-bind="html: leftYAxisLabel, css: { leftYAxisLabel: leftYAxisLabel }"></div>
+            <div class="graphArea" data-bind="widget: plotter.graphElement, event: { plothover: tooltip.hover.bind(tooltip) }, css: { hasLeftYAxisLabel: leftYAxisLabel, hasRightYAxisLabel: rightYAxisLabel }"></div>
+            <div data-bind="html: rightYAxisLabel, css: { rightYAxisLabel: rightYAxisLabel }"></div>
+        </div>
+        <div class="contentLoading" data-bind="visible: isLoading">
+            <img src="/images/ProgressAnimation_30x30.gif" />
+        </div>
+        <div data-bind="widget: tooltip.tooltipElement">
+            <!-- ko stopBinding: true -->
+            <div class="itemGridChartTooltip" data-bind="visible: visible, style: { top: top() + 'px', left: left() + 'px' }">
+                <!-- ko with: tooltip -->
+                    <div data-bind="template: { name: template }"></div>
+                <!-- /ko -->
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="trendLineChartTemplate">
+    <div class="graphContainer">
+        <div class="graphArea" data-bind="widget: plotter.graphElement, event: { plothover: tooltip.hover.bind(tooltip) }"></div>
+    </div>
+    <div data-bind="widget: tooltip.tooltipElement">
+        <!-- ko stopBinding: true -->
+        <div class="itemGridChartTooltip" data-bind="visible: visible, style: { top: top() + 'px', left: left() + 'px' }">
+            <!-- ko with: tooltip -->
+            <div data-bind="template: { name: template }"></div>
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+    </div>
+</script>
+
+<script type="text/html" id="singlePtTooltip">
+    <div class="toolTipDate" data-bind="text: date"></div>
+    <span class="toolTipValue" data-bind="text: value"></span>
+    <span class="toolTipUnits" data-bind="text: units"></span>
+</script>
+
+<script type="text/html" id="heightTooltip">
+    <div class="toolTipDate" data-bind="text: date"></div>
+    <!-- ko if: metric -->
+        <span class="toolTipValue" data-bind="text: cm"></span>
+        <span class="toolTipUnits">cm</span>
+    <!-- /ko -->
+    <!-- ko ifnot: metric -->
+        <!-- ko if: feet > 0 -->
+        <span class="toolTipValue" data-bind="text: feet"></span>
+        <span class="toolTipUnits">ft</span>
+        <!-- /ko -->
+        <span class="toolTipValue" data-bind="text: inches"></span>
+        <span class="toolTipUnits">in</span>
+    <!-- /ko -->
+</script>
+
+<script type="text/html" id="bloodPressureTooltip">
+    <div class="toolTipDate" data-bind="text: date"></div>
+    <div>
+        <span class="toolTipLabel">Systolic</span>
+        <span class="toolTipValue" data-bind="text: systolic"></span>
+        <span class="toolTipUnits">mmHg</span>
+    </div>
+    <div>
+        <span class="toolTipLabel">Diastolic</span>
+        <span class="toolTipValue" data-bind="text: diastolic"></span>
+        <span class="toolTipUnits">mmHg</span>
+    </div>
+</script>
+
+<script type="text/html" id="cholesterolTooltip">
+    <div class="toolTipDate" data-bind="text: date"></div>
+    <div data-bind="visible: ldl >= 0">
+        <span class="toolTipLabel">LDL</span>
+        <span class="toolTipValue" data-bind="text: ldl"></span>
+        <span class="toolTipUnits" data-bind="text: units"></span>
+    </div>
+    <div data-bind="visible: hdl >= 0">
+        <span class="toolTipLabel">HDL</span>
+        <span class="toolTipValue" data-bind="text: hdl"></span>
+        <span class="toolTipUnits" data-bind="text: units"></span>
+    </div>
+</script>
+
+
+
+
+<div class="homePageHeading">
+    <div id="currentTab" class="homeTab selected"><a href="javascript:void(0);">current</a></div>
+    <div id="allTab" class="homeTab"><a href="https://account.healthvault.com/HealthInfo/ViewItems">all</a></div>
+    <div id="actionsContainer">
+        <div class="manageTilesLink"><a href="https://account.healthvault.com/Tiles">Manage tiles</a></div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+<div class="freGetStartedContainer">
+    <div class="freGetStartedInfoContainer">
+        <div class="freGetStartedTitle">
+            Let's get started
+        </div>
+        <div class="freBannerSubTitle">
+            Welcome, Becky. Here are a few tips to help you get started taking control of your health information.
+        </div>
+    </div>
+    <div class="freCloseContainer">
+        <img src="./Home - HealthVault_files/icon_home_freChecklist_close.png">
+    </div>
+    <div class="freGetStartedDetailContainer">
+        <div class="freGetStartedDetailText">
+            <img src="./Home - HealthVault_files/icon_home_freChecklist_basicStats.png" class="freGetStartedIcon">
+            <div>
+                <span></span> <span class="freGetStartedNum">1.</span> Enter your basic stats. You could start with your <a class="basicInfoLnk" href="javascript:void(0)">weight</a> and <a class="basicInfoLnk" href="javascript:void(0)">height</a>.
+            </div>
+        </div>
+            <div class="freGetStartedDetailText">
+        <img src="./Home - HealthVault_files/icon_home_freChecklist_emergencyProfile.png">
+        <div>
+            <span></span> <span class="freGetStartedNum">2.</span> Fill out your <a href="https://account.healthvault.com/Emergency/Profile">emergency profile</a>. In just a few minutes, you'll have printable, sharable emergency health info.
+        </div>
+    </div>
+
+    </div>
+    <div class="freGetStartedDetailContainer">
+            <div class="freGetStartedDetailText">
+        <img src="./Home - HealthVault_files/icon_home_freChecklist_appDevices.png">
+        <div>
+            <span></span> <span class="freGetStartedNum">3.</span>  Connect your health <a href="https://account.healthvault.com/Apps">apps &amp; devices</a> to keep all your health info in one place.
+        </div>
+    </div>
+
+            <div class="freGetStartedDetailText">
+        <img src="./Home - HealthVault_files/icon_home_freChecklist_medicalInfo.png">
+        <div>
+            <span></span> <span class="freGetStartedNum">4.</span> Learn how to get your <a href="https://account.healthvault.com/help/en-US/Default_CSH.htm#topics/HealthInformation.htm#Adding_Info_From_Doctor">medical information</a> from your doctor.
+        </div>
+    </div>
+
+    </div>
+</div>
+
+<div class="clear"></div>
+
+
+        <div class="sectionTitle">Measurements</div>
+        <div class="sectionContainer ">
+            
+
+
+<div class="clear"></div>
+    <div class="emptyTiles">
+                <div class="homeTile nodata">
+                    <a data-editor="3d34d87e-7fc1-4153-800f-f56592cb0d17" data-editor-title="Weight" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_weight.png" class="tileIcon" alt="Weight">
+                        <div class="tileTitle">Weight</div>
+                            </a><div class="actionsColumn right"><a data-editor="3d34d87e-7fc1-4153-800f-f56592cb0d17" data-editor-title="Weight" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="3d34d87e-7fc1-4153-800f-f56592cb0d17" data-editor-title="Weight" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="3d34d87e-7fc1-4153-800f-f56592cb0d17" data-editor-title="Weight" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="3d34d87e-7fc1-4153-800f-f56592cb0d17" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+                <div class="homeTile nodata">
+                    <a data-editor="089646a6-7e25-4495-ad15-3e28d4c1a71d" data-editor-title="Food &amp; drink" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_foodDrink.png" class="tileIcon" alt="Food &amp; drink">
+                        <div class="tileTitle">Food &amp; drink</div>
+                            </a><div class="actionsColumn right"><a data-editor="089646a6-7e25-4495-ad15-3e28d4c1a71d" data-editor-title="Food &amp; drink" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="089646a6-7e25-4495-ad15-3e28d4c1a71d" data-editor-title="Food &amp; drink" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="089646a6-7e25-4495-ad15-3e28d4c1a71d" data-editor-title="Food &amp; drink" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="089646a6-7e25-4495-ad15-3e28d4c1a71d" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+                <div class="homeTile nodata">
+                    <a data-editor="85a21ddb-db20-4c65-8d30-33c899ccf612" data-editor-title="Exercise" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_exercise.png" class="tileIcon" alt="Exercise">
+                        <div class="tileTitle">Exercise</div>
+                            </a><div class="actionsColumn right"><a data-editor="85a21ddb-db20-4c65-8d30-33c899ccf612" data-editor-title="Exercise" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="85a21ddb-db20-4c65-8d30-33c899ccf612" data-editor-title="Exercise" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="85a21ddb-db20-4c65-8d30-33c899ccf612" data-editor-title="Exercise" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="85a21ddb-db20-4c65-8d30-33c899ccf612" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+                <div class="homeTile nodata">
+                    <a data-editor="85a21ddb-db20-4c65-8d30-33c899ccf612" data-editor-title="Steps" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_steps.png" class="tileIcon" alt="Steps">
+                        <div class="tileTitle">Steps</div>
+                            </a><div class="actionsColumn right"><a data-editor="85a21ddb-db20-4c65-8d30-33c899ccf612" data-editor-title="Steps" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="85a21ddb-db20-4c65-8d30-33c899ccf612" data-editor-title="Steps" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="85a21ddb-db20-4c65-8d30-33c899ccf612" data-editor-title="Steps" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="2d3d4d54-1592-4bbc-bc88-7708a562e774" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+                </div><div class="emptyTiles">
+                <div class="homeTile nodata">
+                    <a data-editor="ca3c57f4-f4c1-4e15-be67-0a3caf5414ed" data-editor-title="Blood pressure" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_bloodPressure.png" class="tileIcon" alt="Blood pressure">
+                        <div class="tileTitle">Blood pressure</div>
+                            </a><div class="actionsColumn right"><a data-editor="ca3c57f4-f4c1-4e15-be67-0a3caf5414ed" data-editor-title="Blood pressure" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="ca3c57f4-f4c1-4e15-be67-0a3caf5414ed" data-editor-title="Blood pressure" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="ca3c57f4-f4c1-4e15-be67-0a3caf5414ed" data-editor-title="Blood pressure" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="ca3c57f4-f4c1-4e15-be67-0a3caf5414ed" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+                <div class="homeTile nodata">
+                    <a data-editor="879e7c04-4e8a-4707-9ad3-b054df467ce4" data-editor-title="Blood glucose" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_bloodGlucose.png" class="tileIcon" alt="Blood glucose">
+                        <div class="tileTitle">Blood glucose</div>
+                            </a><div class="actionsColumn right"><a data-editor="879e7c04-4e8a-4707-9ad3-b054df467ce4" data-editor-title="Blood glucose" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="879e7c04-4e8a-4707-9ad3-b054df467ce4" data-editor-title="Blood glucose" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="879e7c04-4e8a-4707-9ad3-b054df467ce4" data-editor-title="Blood glucose" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="879e7c04-4e8a-4707-9ad3-b054df467ce4" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+                <div class="homeTile nodata">
+                    <a data-editor="98f76958-e34f-459b-a760-83c1699add38" data-editor-title="Cholesterol" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_cholesterol.png" class="tileIcon" alt="Cholesterol">
+                        <div class="tileTitle">Cholesterol</div>
+                            </a><div class="actionsColumn right"><a data-editor="98f76958-e34f-459b-a760-83c1699add38" data-editor-title="Cholesterol" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="98f76958-e34f-459b-a760-83c1699add38" data-editor-title="Cholesterol" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="98f76958-e34f-459b-a760-83c1699add38" data-editor-title="Cholesterol" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="98f76958-e34f-459b-a760-83c1699add38" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+    </div>
+<div class="clear"></div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="verticalSpaceGutter"></div>
+
+        <div class="sectionTitle">Current health</div>
+        <div class="sectionContainer listView">
+            
+
+
+
+
+<div class="homeTile listView" data-type="7ea7a1f9-880b-4bd4-b593-f5660f20eda8">
+    <div class="tileTitle">Conditions</div>
+        <div class="actionsColumn right">
+        <div class="actionsContainer hv-dropdown-top">
+            <a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="7ea7a1f9-880b-4bd4-b593-f5660f20eda8" data-editor-title="Conditions" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><a href="https://account.healthvault.com/HealthInfo/ViewItems?typeid=7ea7a1f9-880b-4bd4-b593-f5660f20eda8" title="See all">See all</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="7ea7a1f9-880b-4bd4-b593-f5660f20eda8" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; display: none; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+
+        <div class="tileContents">
+<div class="itemValue">
+    <a href="https://account.healthvault.com/HealthInfo/ViewItems?typeid=7ea7a1f9-880b-4bd4-b593-f5660f20eda8#id=7ea7a1f9-880b-4bd4-b593-f5660f20eda8/e2f1596f-fe51-4358-822c-4271c25b876e">
+        <span class=""><span>Heart disease</span></span>
+    </a>
+    <a href="http://service.oib.utah.edu:8080/infobutton-service/infoRequest?representedOrganization.id.root=1.3.6.1.4.1.5884&patientPerson.administrativeGenderCode.c=F&age.v.v=47&age.v.u=a&taskContext.c.c=PROBLISTREV&mainSearchCriteria.v.c=428&mainSearchCriteria.v.cs=2.16.840.1.113883.6.103&mainSearchCriteria.v.dn=Heart%20Failure&performer=PROV&informationRecipient=PROV&xsltTransform=Infobutton_UI"> <img title="OpenInfobutton" src="./Home - HealthVault_files/infobutton_icon.png"> </a>
+
+</div>                <div class="verticalSpaceNormal">&nbsp;</div>
+<div class="itemValue">
+    <a href="https://account.healthvault.com/HealthInfo/ViewItems?typeid=7ea7a1f9-880b-4bd4-b593-f5660f20eda8#id=7ea7a1f9-880b-4bd4-b593-f5660f20eda8/ce27f6da-ccfa-4cd6-893b-62c93dee61a8">
+        <span class=""><span>Diabetes mellitus</span></span>
+    </a>
+    <a href="http://service.oib.utah.edu:8080/infobutton-service/infoRequest?representedOrganization.id.root=1.3.6.1.4.1.3768&patientPerson.administrativeGenderCode.c=F&age.v.v=47&age.v.u=a&taskContext.c.c=PROBLISTREV&mainSearchCriteria.v.c=250.00&mainSearchCriteria.v.cs=2.16.840.1.113883.6.103&mainSearchCriteria.v.dn=Diabetes%20mellitus%20type%202&performer=PROV&informationRecipient=PROV&xsltTransform=Infobutton_UI"> <img title="OpenInfobutton" src="./Home - HealthVault_files/infobutton_icon.png"> </a>
+
+
+</div>                <div class="verticalSpaceNormal">&nbsp;</div>
+        </div>
+</div>
+<div class="clear"></div>
+    <div class="emptyTiles">
+                <div class="homeTile nodata">
+                    <a data-editor="4b18aeb6-5f01-444c-8c70-dbf13a2f510b" data-editor-title="Upcoming appointments" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_appointments.png" class="tileIcon" alt="Upcoming appointments">
+                        <div class="tileTitle">Upcoming appointments</div>
+                            </a><div class="actionsColumn right"><a data-editor="4b18aeb6-5f01-444c-8c70-dbf13a2f510b" data-editor-title="Upcoming appointments" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="4b18aeb6-5f01-444c-8c70-dbf13a2f510b" data-editor-title="Upcoming appointments" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="4b18aeb6-5f01-444c-8c70-dbf13a2f510b" data-editor-title="Upcoming appointments" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="4b18aeb6-5f01-444c-8c70-dbf13a2f510b" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+                <div class="homeTile nodata">
+                    <a data-editor="30cafccc-047d-4288-94ef-643571f7919d" data-editor-title="Medications" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_medications.png" class="tileIcon" alt="Medications">
+                        <div class="tileTitle">Medications</div>
+                            </a><div class="actionsColumn right"><a data-editor="30cafccc-047d-4288-94ef-643571f7919d" data-editor-title="Medications" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="30cafccc-047d-4288-94ef-643571f7919d" data-editor-title="Medications" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="30cafccc-047d-4288-94ef-643571f7919d" data-editor-title="Medications" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="30cafccc-047d-4288-94ef-643571f7919d" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+                <div class="homeTile nodata">
+                    <a data-editor="cd3587b5-b6e1-4565-ab3b-1c3ad45eb04f" data-editor-title="Immunizations" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_immunizations.png" class="tileIcon" alt="Immunizations">
+                        <div class="tileTitle">Immunizations</div>
+                            </a><div class="actionsColumn right"><a data-editor="cd3587b5-b6e1-4565-ab3b-1c3ad45eb04f" data-editor-title="Immunizations" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="cd3587b5-b6e1-4565-ab3b-1c3ad45eb04f" data-editor-title="Immunizations" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="cd3587b5-b6e1-4565-ab3b-1c3ad45eb04f" data-editor-title="Immunizations" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="cd3587b5-b6e1-4565-ab3b-1c3ad45eb04f" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+                <div class="homeTile nodata">
+                    <a data-editor="df4db479-a1ba-42a2-8714-2b083b88150f" data-editor-title="Procedures" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_procedures.png" class="tileIcon" alt="Procedures">
+                        <div class="tileTitle">Procedures</div>
+                            </a><div class="actionsColumn right"><a data-editor="df4db479-a1ba-42a2-8714-2b083b88150f" data-editor-title="Procedures" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="df4db479-a1ba-42a2-8714-2b083b88150f" data-editor-title="Procedures" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="df4db479-a1ba-42a2-8714-2b083b88150f" data-editor-title="Procedures" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="df4db479-a1ba-42a2-8714-2b083b88150f" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+                </div><div class="emptyTiles">
+                <div class="homeTile nodata">
+                    <a data-editor="52bf9104-2c5e-4f1f-a66d-552ebcc53df7" data-editor-title="Allergies" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_allergies.png" class="tileIcon" alt="Allergies">
+                        <div class="tileTitle">Allergies</div>
+                            </a><div class="actionsColumn right"><a data-editor="52bf9104-2c5e-4f1f-a66d-552ebcc53df7" data-editor-title="Allergies" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="52bf9104-2c5e-4f1f-a66d-552ebcc53df7" data-editor-title="Allergies" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="52bf9104-2c5e-4f1f-a66d-552ebcc53df7" data-editor-title="Allergies" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="52bf9104-2c5e-4f1f-a66d-552ebcc53df7" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+                <div class="homeTile nodata">
+                    <a data-editor="ef9cf8d5-6c0b-4292-997f-4047240bc7be" data-editor-title="Devices" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_medicalDevice.png" class="tileIcon" alt="Devices">
+                        <div class="tileTitle">Devices</div>
+                            </a><div class="actionsColumn right"><a data-editor="ef9cf8d5-6c0b-4292-997f-4047240bc7be" data-editor-title="Devices" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="ef9cf8d5-6c0b-4292-997f-4047240bc7be" data-editor-title="Devices" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="ef9cf8d5-6c0b-4292-997f-4047240bc7be" data-editor-title="Devices" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="ef9cf8d5-6c0b-4292-997f-4047240bc7be" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+                <div class="homeTile nodata">
+                    <a data-editor="5800eab5-a8c2-482a-a4d6-f1db25ae08c3" data-editor-title="Lab test results" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_labs.png" class="tileIcon" alt="Lab test results">
+                        <div class="tileTitle">Lab test results</div>
+                            </a><div class="actionsColumn right"><a data-editor="5800eab5-a8c2-482a-a4d6-f1db25ae08c3" data-editor-title="Lab test results" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="5800eab5-a8c2-482a-a4d6-f1db25ae08c3" data-editor-title="Lab test results" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="5800eab5-a8c2-482a-a4d6-f1db25ae08c3" data-editor-title="Lab test results" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="5800eab5-a8c2-482a-a4d6-f1db25ae08c3" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+    </div>
+<div class="clear"></div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="verticalSpaceGutter"></div>
+
+        <div class="sectionTitle">Contacts &amp; insurance</div>
+        <div class="sectionContainer ">
+            
+
+
+<div class="clear"></div>
+    <div class="emptyTiles">
+                <div class="homeTile nodata">
+                    <a data-editor="25c94a9f-9d3d-4576-96dc-6791178a8143" data-editor-title="Emergency or provider contact" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_contacts.png" class="tileIcon" alt="Emergency or provider contact">
+                        <div class="tileTitle">Emergency or provider contact</div>
+                            </a><div class="actionsColumn right"><a data-editor="25c94a9f-9d3d-4576-96dc-6791178a8143" data-editor-title="Emergency or provider contact" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="25c94a9f-9d3d-4576-96dc-6791178a8143" data-editor-title="Emergency or provider contact" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="25c94a9f-9d3d-4576-96dc-6791178a8143" data-editor-title="Emergency or provider contact" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="25c94a9f-9d3d-4576-96dc-6791178a8143" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+                <div class="homeTile nodata">
+                    <a data-editor="9366440c-ec81-4b89-b231-308a4c4d70ed" data-editor-title="Insurance plan" href="javascript:void(0);">
+                        <img src="./Home - HealthVault_files/icon_home_insurancePlan.png" class="tileIcon" alt="Insurance plan">
+                        <div class="tileTitle">Insurance plan</div>
+                            </a><div class="actionsColumn right"><a data-editor="9366440c-ec81-4b89-b231-308a4c4d70ed" data-editor-title="Insurance plan" href="javascript:void(0);">
+        </a><div class="actionsContainer hv-dropdown-top"><a data-editor="9366440c-ec81-4b89-b231-308a4c4d70ed" data-editor-title="Insurance plan" href="javascript:void(0);">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a data-editor="9366440c-ec81-4b89-b231-308a4c4d70ed" data-editor-title="Insurance plan" href="javascript:void(0);" title="Add">Add</a></div>
+                <div class="action"><div class="actionSeparator"></div></div>
+                <div class="action"><a class="hideTile" data-type="9366440c-ec81-4b89-b231-308a4c4d70ed" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+                    
+                </div>
+    </div>
+<div class="clear"></div>
+
+        </div>
+        <div class="clear"></div>
+        <div class="verticalSpaceGutter"></div>
+
+
+<div class="clear">&nbsp;</div>
+
+<div class="sectionContainer lightGrayTile">    
+        <div id="messages">
+
+<div class="homeTile listView" data-type="72dc49e1-1486-4634-b651-ef560ed051e5">
+    <div class="tileTitle">Health messages</div>
+        <div class="actionsColumn right">
+        <div class="actionsContainer hv-dropdown-top">
+            <a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 19px; min-width: 18px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a class="hideTile" data-type="72dc49e1-1486-4634-b651-ef560ed051e5" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 19px; width: 18px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+
+    <div class="tileContents">
+                <div class="left"><img alt="" class="directAddress" src="./Home - HealthVault_files/messages_DirectAddressIcon.png"></div>
+                <div class="left h11 directAddress">rebecca.evans3339@direct.healthvault.com
+                    <a class="directTipLink" style="position: relative;">
+                        <img alt="About your Direct address" src="./Home - HealthVault_files/moreInfo_ToolTipIcon.png">
+                    </a>
+                </div>
+            <div class="clear">&nbsp;</div>
+                <div class="verticalSpaceSmall">&nbsp;</div>
+                <div class="grayText">
+                    Give this Direct address to health care providers so they can send you health messages.
+                </div>
+
+    </div>
+        <a href="https://account.healthvault.com/authorize?appid=9404D92C-02C8-4E17-B3AD-7AB7D38B8FCA&selrecordid=192f77fe-7d2d-4d51-8f36-ff2d87fe3ad8&trm=POST" class="seeAllLink">Go to Message Center</a>
+</div>
+
+
+
+</div>
+        
+            <div id="updates"><a href="https://account.healthvault.com/historydetails.aspx">
+    </a><div class="homeTile listView"><a href="https://account.healthvault.com/historydetails.aspx">
+        <div class="tileTitle">Updates</div>
+            </a><div class="actionsColumn right"><a href="https://account.healthvault.com/historydetails.aspx">
+        </a><div class="actionsContainer hv-dropdown-top"><a href="https://account.healthvault.com/historydetails.aspx">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 19px; min-width: 18px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a class="hideTile" data-type="8d77e898-49a8-4004-b14e-7ed87a8f14fe" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 19px; width: 18px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+        <div class="tileContents">
+            <div class="itemValue">
+                
+
+        <div class="itemValue">    
+            <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=7ea7a1f9-880b-4bd4-b593-f5660f20eda8&ref=updates">Condition</a>
+            <div class="blackText">
+Updated by you.            </div>
+            <div class="grayText">7/28/2014</div>
+        </div> 
+        <div class="verticalSpaceSmaller">&nbsp;</div>
+        <div class="itemValue">    
+            <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=92ba621e-66b3-4a01-bd73-74844aed4f5b&ref=updates">Personal demographic information</a>
+            <div class="blackText">
+Updated by you.            </div>
+            <div class="grayText">7/28/2014</div>
+        </div> 
+        <div class="verticalSpaceSmaller">&nbsp;</div>
+        <div class="itemValue">    
+            <a href="https://account.healthvault.com/healthinfo/viewitems?typeid=a5294488-f865-4ce3-92fa-187cd3b58930&ref=updates">Personal image</a>
+            <div class="blackText">
+Updated by you.            </div>
+            <div class="grayText">7/28/2014</div>
+        </div> 
+        <div class="verticalSpaceSmaller">&nbsp;</div>
+
+    <div class="verticalSpaceNormal">&nbsp;</div>
+    <a class="seeAllLink" href="https://account.healthvault.com/historydetails.aspx">See all</a>
+    <div class="verticalSpaceNormal">&nbsp;</div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+        
+    <a href="https://account.healthvault.com/Directory/Index">
+    </a><div class="homeTile listView"><a href="https://account.healthvault.com/Directory/Index">
+        <div class="tileTitle">Apps</div>
+            </a><div class="actionsColumn right"><a href="https://account.healthvault.com/Directory/Index">
+        </a><div class="actionsContainer hv-dropdown-top"><a href="https://account.healthvault.com/Directory/Index">
+            </a><a class="homeActionsDropDown" href="javascript:void(0);" title="Actions">
+                <img alt="Actions" src="./Home - HealthVault_files/icon_ActionsMenu.png">
+            </a>
+        <div class="actionsContent standardDropDownContent hv-dropdown-content" style="display: none; top: 15px; min-width: 0px; right: -1px; background-color: rgb(255, 255, 255);">
+                <div class="action"><a class="hideTile" data-type="e78a3ac4-75a6-428f-9284-eaaca212b3a5" href="javascript:void(0);" title="Remove tile">Remove tile</a></div>
+        </div><div class="hv-dropdown-hider hide" style="top: 15px; width: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div></div>
+        
+    </div>
+
+        <div class="tileContents">
+            <div class="itemValue">
+                
+
+
+
+Apps can help you get more out of—and put more into—Becky's HealthVault record.        <a href="https://account.healthvault.com/Directory/Index">
+            Get some apps now
+        </a>
+
+            </div>
+        </div>
+    </div>
+        <div class="clear">&nbsp;</div>
+</div>
+
+<div class="clear"></div>
+<div class="verticalSpaceGutter">&nbsp;</div>
+
+<div id="messageTip" class="h13 hide">
+    Send a message to a participating health care provider
+</div>
+
+                        </div>
+                    </div></div>
+                
+                <div class="newPageFooter">
+                    
+
+
+
+<div class="footer">
+    <div class="linkContainer">
+        <div class="left links">© 2014 Microsoft</div>
+                <a class="left links" id="showhelpfooter" target="_blank" href="https://account.healthvault.com/help/en-US/default.htm">
+                    Help</a>
+                <a class="left links" href="https://www.healthvault.com/feedback/?culture=en-US" target="_blank">
+                    Feedback</a>
+                <a class="left links" href="https://account.healthvault.com/help.aspx?topicid=PrivacyPolicy&amp;culture=en-US" target="_blank">
+                    Privacy &amp; Cookies</a>
+                <a class="left links" href="https://account.healthvault.com/help.aspx?topicid=ServiceAgreement&amp;culture=en-US" target="_blank">
+                    Legal</a>
+                <a class="left links" href="https://account.healthvault.com/help.aspx?topicid=CodeofConduct&amp;culture=en-US" target="_blank">
+                    Code of Conduct</a>
+                <a class="left links" href="http://msdn.microsoft.com/healthvault" target="_blank">
+                    Developers</a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="shellPageOverlay" class="pageOverlay" style="z-index: 100; display: none;"></div><div id="notificationBar" style="display: none;">Condition has been successfully added.</div><div class="tipBlue"><div class="topArrow"></div><div class="bottomArrow"></div><div class="leftArrow"></div><div class="rightArrow"></div><div id="directTip" class="h13 hide" style="width: 350px; display: block; visibility: visible;">
+    Give this Direct address to health care providers so they can send you health messages.
+    <a href="https://account.healthvault.com/help/en-US/Default_CSH.htm#topics/HealthInformation.htm#HealthInfo_Direct" target="_blank">Learn more</a>
+    <div class="verticalSpacerGutter">&nbsp;</div>
+    <a href="https://account.healthvault.com/document/directpdf" target="_blank">Print a note for your doctor</a>
+</div></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div><div class="tipBlue"><div class="topArrow"></div><div class="bottomArrow"></div><div class="leftArrow"></div><div class="rightArrow"></div><div id="directTip" class="h13 hide" style="width: 350px; display: block; visibility: visible;">
+    Give this Direct address to health care providers so they can send you health messages.
+    <a href="https://account.healthvault.com/help/en-US/Default_CSH.htm#topics/HealthInformation.htm#HealthInfo_Direct" target="_blank">Learn more</a>
+    <div class="verticalSpacerGutter">&nbsp;</div>
+    <a href="https://account.healthvault.com/document/directpdf" target="_blank">Print a note for your doctor</a>
+</div></div></body></html>
